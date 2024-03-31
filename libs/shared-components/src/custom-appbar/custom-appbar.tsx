@@ -63,7 +63,8 @@ const useStyles = makeStyles<ICustomAppbarProps>()((theme, props) => ({
         px: 0,
     },
     logoStyle: {
-        width: '140px',
+        marginLeft: 10,
+        width: '50px',
         height: 'auto',
         cursor: 'pointer',
     },
