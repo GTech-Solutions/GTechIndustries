@@ -65,12 +65,5 @@
       }
     }
   },
-  "nxCloudAccessToken": "ZTgwYmY4ZDItNjFmMS00ZmIyLWE0YmItNDIxM2FhNjIzM2QwfHJlYWQtd3JpdGU=",
-  "targetDefaults": {
-    "@nx/js:tsc": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
-    }
-  }
+  "nxCloudAccessToken": "ZTgwYmY4ZDItNjFmMS00ZmIyLWE0YmItNDIxM2FhNjIzM2QwfHJlYWQtd3JpdGU="
 }

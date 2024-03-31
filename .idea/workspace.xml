@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nx.json" beforeDir="false" afterPath="$PROJECT_DIR$/nx.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,42 +15,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
-  <component name="ProjectId" id="2eQjjwqjaNZjo2QrDB90EuFgawz" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Nx.gtech-industries:serve.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "dev.nx.console.project_details_files": [
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts"
-    ]
+    "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -62,29 +27,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="gtech-industries:serve" type="NxRunConfigurationType">
-      <option name="nx-projects" value="gtech-industries" />
-      <option name="nx-targets" value="serve" />
-      <option name="nx-target-configuration" value="" />
-      <envs />
-      <option name="arguments" value="" />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="" />
-      <created>1711843836466</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1711843836466</updated>
-      <workItem from="1711843839417" duration="438000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
