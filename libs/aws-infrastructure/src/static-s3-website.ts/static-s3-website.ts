@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import {aws_ssm, Duration, Tags} from "aws-cdk-lib";
+import { aws_ssm, Duration, Stack, Tags } from 'aws-cdk-lib';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as iam from 'aws-cdk-lib/aws-iam';
@@ -19,13 +19,13 @@ export interface StaticS3WebsiteProps extends cdk.StackProps{
 }
 
 export class StaticS3Website extends cdk.Stack {
-  constructor(scope: Construct, id: string, props: StaticS3WebsiteProps) {
-    super(scope, id, props);
+  constructor(parent: Stack, name: string, props: StaticS3WebsiteProps) {
+    super(parent, name);
 
-    Tags.of(scope).add('environment', props.environment);
-    Tags.of(scope).add('application', props.application);
-    Tags.of(scope).add('creator', 'Mike G');
-    Tags.of(scope).add('automation', 'AWS CDK');
+    Tags.of(parent).add('environment', props.environment);
+    Tags.of(parent).add('application', props.application);
+    Tags.of(parent).add('creator', 'Mike G');
+    Tags.of(parent).add('automation', 'AWS CDK');
 
     const zone = HostedZone.fromLookup(this, `${props.application}-Zone`, { domainName: props.domainName });
 
@@ -36,7 +36,7 @@ export class StaticS3Website extends cdk.Stack {
     });
 
     const cloudfrontOAI = new cloudfront.OriginAccessIdentity(this, `${props.application}-S3-Cloudfront-OAI`, {
-      comment: `OAI for ${id}`,
+      comment: `OAI for ${name}`,
     });
 
     // Content bucket
