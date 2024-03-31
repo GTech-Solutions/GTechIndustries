@@ -9,7 +9,8 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <div>Testing GTech Deploy</div>
+      <div>Testing GTech
+      </div>
     </StyledApp>
   );
 }
