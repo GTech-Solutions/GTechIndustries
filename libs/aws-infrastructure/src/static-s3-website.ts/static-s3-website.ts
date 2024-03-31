@@ -14,6 +14,7 @@ import {HostedZone} from "aws-cdk-lib/aws-route53";
 
 export interface StaticS3WebsiteProps extends cdk.StackProps{
   domainName: string;
+  hostedZoneId: string;
   environment: string;
   application: string
 }
@@ -27,7 +28,7 @@ export class StaticS3Website extends cdk.Stack {
     Tags.of(parent).add('creator', 'Mike G');
     Tags.of(parent).add('automation', 'AWS CDK');
 
-    const zone = HostedZone.fromLookup(this, `${props.application}-Zone`, { domainName: props.domainName });
+    const zone = HostedZone.fromHostedZoneId(this, `${props.application}-Zone`, props.hostedZoneId);
 
     // TLS certificate
     const certificate = new Certificate(this, 'SiteCertificate', {
