@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org/aws-infrastructure": ["libs/aws-infrastructure/src/index.ts"]
+      "@org/aws-infrastructure": ["libs/aws-infrastructure/src/index.ts"],
+      "@org/shared-components": ["libs/shared-components/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

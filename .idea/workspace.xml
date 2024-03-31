@@ -5,15 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/custom-theme-type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-theme-variant.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/layout-route/layout-route.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website/static-s3-website.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website/static-s3-website.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/nx-welcome.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nx.json" beforeDir="false" afterPath="$PROJECT_DIR$/nx.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ReactComponent" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,7 +51,7 @@
     "Nx.gtech-industries:serve.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/.github",
+    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/src/app/styling",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,6 +83,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/styling" />
       <recent name="$PROJECT_DIR$/.github" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -75,7 +92,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Nx.gtech-industries:build">
+  <component name="RunManager" selected="Nx.gtech-industries:serve">
     <configuration name="gtech-industries:build" type="NxRunConfigurationType">
       <option name="nx-projects" value="gtech-industries" />
       <option name="nx-targets" value="build" />
@@ -102,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
-      <workItem from="1711890472814" duration="2785000" />
+      <workItem from="1711890472814" duration="5771000" />
     </task>
     <servers />
   </component>
