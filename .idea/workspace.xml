@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/gtech-stack.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website.ts/static-s3-website-stack.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nx.json" beforeDir="false" afterPath="$PROJECT_DIR$/nx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/bin/lib.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/cdk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website-stack.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/test/lib.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/lib.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/tsconfig.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +29,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2eQt6mJVzaNQVh0m445OGFo0zrr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Nx.gtech-industries:serve.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib"
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "dev.nx.console.project_details_files": [
@@ -47,6 +74,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src" />
+      <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -60,7 +89,19 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="" />
+      <created>1711848459616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711848459616</updated>
+      <workItem from="1711848463601" duration="680000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
