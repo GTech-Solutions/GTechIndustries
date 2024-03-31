@@ -98,7 +98,7 @@ jobs:
           STACK_NAME: StaticS3WebsiteStack
         with:
           working_dir: ./libs/aws-infrastructure/src
-          cdk_subcommand: 'synth -c domainName=${{ vars.VEGA_UI_URL }} -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries'
+          cdk_subcommand: 'synth -c domainName=g-tech-industries.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries'
           cdk_stack: StaticS3WebsiteStack
           debug_log: true
 
@@ -109,7 +109,7 @@ jobs:
           STACK_NAME: StaticS3WebsiteStack
         with:
           working_dir: ./libs/aws-infrastructure/src
-          cdk_subcommand: 'deploy --require-approval never -c domainName=${{ vars.VEGA_UI_URL }} -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries'
+          cdk_subcommand: 'deploy --require-approval never -c domainName=g-tech-industries.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries'
           cdk_stack: StaticS3WebsiteStack
           debug_log: true
 
