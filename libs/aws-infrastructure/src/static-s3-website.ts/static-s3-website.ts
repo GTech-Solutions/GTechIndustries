@@ -18,7 +18,7 @@ export interface StaticS3WebsiteProps extends cdk.StackProps{
   application: string
 }
 
-export class StaticS3WebsiteStack extends cdk.Stack {
+export class StaticS3Website extends cdk.Stack {
   constructor(scope: Construct, id: string, props: StaticS3WebsiteProps) {
     super(scope, id, props);
 
