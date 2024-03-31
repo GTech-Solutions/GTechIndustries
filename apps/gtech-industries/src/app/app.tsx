@@ -3,19 +3,17 @@ import useGtechIndustriesTheme from './styling/use-gtech-industries-theme';
 import { useState } from 'react';
 import { Routes } from './routes/routes';
 import { BrowserRouter } from 'react-router-dom';
+import { useAtomValue } from 'jotai';
+import { themeColorMode } from '@gtech/shared-components';
 
 export function App() {
-    //ToDo hoist into global state
-    const [themeMode, setThemeMode] = useState('light');
-
+    const themeMode = useAtomValue(themeColorMode);
     const appTheme = useGtechIndustriesTheme(themeMode);
 
     return (
         <ThemeProvider theme={appTheme.theme}>
             <CssBaseline />
-            <BrowserRouter>
-                <Routes />
-            </BrowserRouter>
+            <Routes />
         </ThemeProvider>
     );
 }
