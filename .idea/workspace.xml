@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.svgrrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-appbar/custom-appbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-appbar/custom-appbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/tsconfig.lib.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/tsconfig.lib.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +38,7 @@
   "keyToString": {
     "Nx.gtech-industries:build.executor": "Run",
     "Nx.gtech-industries:serve.executor": "Run",
+    "Nx.shared-components:build.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries",
@@ -90,7 +85,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Nx.gtech-industries:serve">
+  <component name="RunManager" selected="Nx.shared-components:build">
     <configuration name="gtech-industries:build" type="NxRunConfigurationType">
       <option name="nx-projects" value="gtech-industries" />
       <option name="nx-targets" value="build" />
@@ -107,6 +102,19 @@
       <option name="arguments" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="shared-components:build" type="NxRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="nx-projects" value="shared-components" />
+      <option name="nx-targets" value="build" />
+      <option name="nx-target-configuration" value="" />
+      <envs />
+      <option name="arguments" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Nx.shared-components:build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -117,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
-      <workItem from="1711890472814" duration="13476000" />
+      <workItem from="1711890472814" duration="13767000" />
     </task>
     <servers />
   </component>
