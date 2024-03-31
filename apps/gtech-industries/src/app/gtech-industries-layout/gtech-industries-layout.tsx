@@ -1,7 +1,7 @@
 import React from 'react';
 import { CustomAppbar } from '@gtech/shared-components';
 import { MenuItem, Typography } from '@mui/material';
-import { ReactComponent as GTechLogo } from './gtech-logo.svg';
+import { GTechLogo } from '../images/svgs';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface IGtechIndustriesLayoutProps {}
