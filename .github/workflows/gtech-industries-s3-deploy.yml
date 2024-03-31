@@ -98,7 +98,7 @@ jobs:
           STACK_NAME: StaticS3WebsiteStack
         with:
           working_dir: ./libs/aws-infrastructure/src
-          cdk_subcommand: 'synth -c domainName=g-tech-industries.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries -c hostedZoneId=${{vars.S3_HOSTED_ZONE_ID}}'
+          cdk_subcommand: 'synth -c domainName=g-tech-industries.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries -c hostedZoneId=${{vars.S3_HOSTED_ZONE_ID}}-c builtSourcePath=../../../dist/apps/gtech-industries/'
           cdk_stack: StaticS3WebsiteStack
           debug_log: true
 
@@ -109,7 +109,7 @@ jobs:
           STACK_NAME: StaticS3WebsiteStack
         with:
           working_dir: ./libs/aws-infrastructure/src
-          cdk_subcommand: 'deploy --require-approval never -c domainName=g-tech-industries.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries -c hostedZoneId=${{vars.S3_HOSTED_ZONE_ID}}'
+          cdk_subcommand: 'deploy --require-approval never -c domainName=g-tech-industries.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries -c hostedZoneId=${{vars.S3_HOSTED_ZONE_ID}} -c builtSourcePath=../../../dist/apps/gtech-industries/'
           cdk_stack: StaticS3WebsiteStack
           debug_log: true
 

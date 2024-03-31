@@ -12,6 +12,7 @@ class StaticS3WebsiteStack extends cdk.Stack {
       environment: app.node.tryGetContext('environment'),
       application: app.node.tryGetContext('application'),
       hostedZoneId: app.node.tryGetContext('hostedZoneId'),
+      builtSourcePath: app.node.tryGetContext('builtSourcePath'),
     });
   }
 }
