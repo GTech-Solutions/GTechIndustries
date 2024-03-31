@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nx.json" beforeDir="false" afterPath="$PROJECT_DIR$/nx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,15 +21,44 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Nx.gtech-industries:serve.executor": "Run",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.tslint": "(autodetect)",
     "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib"
+  },
+  "keyToStringList": {
+    "dev.nx.console.project_details_files": [
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/project.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/.eslintrc.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/jest.config.ts",
+      "/Users/michaelgilge/Code/GTechIndustries/nx.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="gtech-industries:serve" type="NxRunConfigurationType">
+      <option name="nx-projects" value="gtech-industries" />
+      <option name="nx-targets" value="serve" />
+      <option name="nx-target-configuration" value="" />
+      <envs />
+      <option name="arguments" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="TaskManager">
     <servers />
