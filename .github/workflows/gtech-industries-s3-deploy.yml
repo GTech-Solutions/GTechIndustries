@@ -1,0 +1,115 @@
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - libs/aws-infrastructure/**
+      - apps/gtech-industries/**
+      - libs/**
+    branches:
+      - develop
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy_gtech_industries_s3:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref_name }}
+    env:
+      NODE_OPTIONS: --max-old-space-size=6144
+    permissions:
+      id-token: write
+      contents: read
+      actions: read
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
+
+      - name: Print github ref_name
+        run: echo github.ref_name
+
+      - name: Print expected rolearn
+        run: echo arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GTechIndustriesGithubConnnection
+
+      - name: Queue
+        uses: ahmadnassri/action-workflow-queue@v1.1.4
+        with:
+          timeout: 3000000
+
+      - name: Branch Name
+        run: echo "branch=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Branch Name Case Transformation
+        id: branch
+        uses: ASzc/change-string-case-action@v6
+        with:
+          string: ${{ env.branch }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4.0.1
+        id: get-aws-creds
+        with:
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GTechIndustriesGithubConnnection
+          role-session-name: GithubDeployGTechIndustriesUI
+          aws-region: us-west-2
+
+      # ---- Manage NPM Dependencies ----
+      - uses: actions/setup-node@v4.0.1
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: ./package-lock.json
+      - name: Install dependencies
+        id: npm-ci
+        run: npm ci
+
+      # ---- Build GTech Industries ----
+      - uses: nrwl/nx-set-shas@v3
+        name: Build Gtech Industries
+        with:
+          main-branch-name: ${{ env.branch }}
+          working-directory: apps/gtech-industries
+
+      - name: run nx build on gtech industries - development
+        id: nx-build-develop
+        if: ${{ steps.branch.outputs.lowercase == 'develop' }}
+        run: npx nx run gtech-industries:build:development
+
+      - name: run nx build on gtech industries - production
+        if: ${{ steps.branch.outputs.lowercase == 'main' }}
+        id: nx-build-main
+        run: npx nx run gtech-industries:build:production
+
+      # ---- AWS CDK Deploy Infrastructure ----
+      - name: cdk synth GTechIndustriesUIStaticSiteStack
+        uses: youyo/aws-cdk-github-actions@v2
+        id: cdk-synth-stack
+        env:
+          STACK_NAME: StaticS3WebsiteStack
+        with:
+          working_dir: ./libs/aws-infrastructure/src
+          cdk_subcommand: 'synth -c domainName=g-tech-industries.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries'
+          cdk_stack: StaticS3WebsiteStack
+          debug_log: true
+
+      - name: cdk deploy StaticS3WebsiteStack
+        uses: youyo/aws-cdk-github-actions@v2
+        id: cdk-deploy-stack
+        env:
+          STACK_NAME: StaticS3WebsiteStack
+        with:
+          working_dir: ./libs/aws-infrastructure/src
+          cdk_subcommand: 'deploy --require-approval never -c domainName=g-tech-industries.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=gtech-industries'
+          cdk_stack: StaticS3WebsiteStack
+          debug_log: true
+
