@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/gtech-industries-s3-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/gtech-industries-s3-deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/gtech-industries-s3-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gtech-industries-s3-deploy.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +64,7 @@
       <recent name="$PROJECT_DIR$/.github" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src" />
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
       <recent name="$PROJECT_DIR$" />
@@ -89,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
-      <workItem from="1711848463601" duration="1824000" />
+      <workItem from="1711848463601" duration="2046000" />
     </task>
     <servers />
   </component>
