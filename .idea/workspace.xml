@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/custom-theme-type.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-theme-variant.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/layout-route/layout-route.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-appbar/custom-appbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/nx-welcome.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nx.json" beforeDir="false" afterPath="$PROJECT_DIR$/nx.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
     </list>
@@ -51,14 +50,14 @@
     "Nx.gtech-industries:serve.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/src/app/styling",
+    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "fileTemplates",
     "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -83,10 +82,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/styling" />
       <recent name="$PROJECT_DIR$/.github" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout" />
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src" />
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
       <recent name="$PROJECT_DIR$" />
@@ -119,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
-      <workItem from="1711890472814" duration="5771000" />
+      <workItem from="1711890472814" duration="9937000" />
     </task>
     <servers />
   </component>
