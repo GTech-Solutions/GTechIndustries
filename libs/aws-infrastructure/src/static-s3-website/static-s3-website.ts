@@ -1,16 +1,13 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { aws_ssm, Duration, Stack, Tags } from 'aws-cdk-lib';
-import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import {Certificate, CertificateValidation} from "aws-cdk-lib/aws-certificatemanager";
 import * as cloudfront_origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 import {HostedZone} from "aws-cdk-lib/aws-route53";
-
-
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 
 export interface StaticS3WebsiteProps extends cdk.StackProps{
   domainName: string;
@@ -20,7 +17,7 @@ export interface StaticS3WebsiteProps extends cdk.StackProps{
   builtSourcePath: string;
 }
 
-export class StaticS3Website extends cdk.Stack {
+export class StaticS3Website extends Construct {
   constructor(parent: Stack, name: string, props: StaticS3WebsiteProps) {
     super(parent, name);
 
@@ -89,7 +86,7 @@ export class StaticS3Website extends cdk.Stack {
 
     // Deploy site contents to S3 bucket
     new s3deploy.BucketDeployment(this, `${props.application}-UI-Deploy-With-Invalidation`, {
-      sources: [s3deploy.Source.asset(props.builtSourcePath)],
+      sources: [s3deploy.Source.asset('../../../dist/apps/gtech-industries/')],
       destinationBucket: siteBucket,
       distribution,
       cacheControl: [s3deploy.CacheControl.noCache()],

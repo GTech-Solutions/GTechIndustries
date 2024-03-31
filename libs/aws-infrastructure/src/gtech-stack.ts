@@ -1,18 +1,17 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { StaticS3Website } from './static-s3-website.ts/static-s3-website';
+import { StaticS3Website } from './static-s3-website/static-s3-website';
 
 class StaticS3WebsiteStack extends cdk.Stack {
   constructor(parent: cdk.App, name: string, props: cdk.StackProps) {
     super(parent, name, props);
 
     new StaticS3Website(this, `${app.node.tryGetContext('application')}-UI-StaticSite`, {
-      domainName: app.node.tryGetContext('domainName'),
-      environment: app.node.tryGetContext('environment'),
-      application: app.node.tryGetContext('application'),
-      hostedZoneId: app.node.tryGetContext('hostedZoneId'),
-      builtSourcePath: app.node.tryGetContext('builtSourcePath'),
+      domainName: this.node.tryGetContext('domainName'),
+      environment: this.node.tryGetContext('environment'),
+      application: this.node.tryGetContext('application'),
+      hostedZoneId: this.node.tryGetContext('hostedZoneId'),
+      builtSourcePath: this.node.tryGetContext('builtSourcePath'),
     });
   }
 }
@@ -25,3 +24,5 @@ new StaticS3WebsiteStack(app, 'StaticS3WebsiteStack', {
     region: process.env['AWS_PRIMARY_REGION'],
   },
 });
+
+app.synth();
