@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/gtech-stack.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website.ts/static-s3-website-stack.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/gtech-industries-s3-deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/.npmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/bin/lib.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/cdk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website-stack.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/test/lib.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/lib.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +32,7 @@
     "Nx.gtech-industries:serve.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/.github",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +61,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src" />
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
@@ -97,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
-      <workItem from="1711848463601" duration="680000" />
+      <workItem from="1711848463601" duration="1532000" />
     </task>
     <servers />
   </component>
