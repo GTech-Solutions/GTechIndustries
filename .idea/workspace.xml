@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gtech-industries-s3-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gtech-industries-s3-deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/gtech-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/gtech-stack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website.ts/static-s3-website.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website/static-s3-website.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website/static-s3-website.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website/static-s3-website.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,40 +29,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Nx.gtech-industries:build.executor&quot;: &quot;Run&quot;,
-    &quot;Nx.gtech-industries:serve.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries/.github&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Nx.gtech-industries:build.executor": "Run",
+    "Nx.gtech-industries:serve.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/.github",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;dev.nx.console.project_details_files&quot;: [
-      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/project.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/package.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/.eslintrc.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/jest.config.ts&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/nx.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json&quot;,
-      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts&quot;
+  "keyToStringList": {
+    "dev.nx.console.project_details_files": [
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/project.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/.eslintrc.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/jest.config.ts",
+      "/Users/michaelgilge/Code/GTechIndustries/nx.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.github" />
@@ -102,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
-      <workItem from="1711890472814" duration="869000" />
+      <workItem from="1711890472814" duration="2785000" />
     </task>
     <servers />
   </component>
