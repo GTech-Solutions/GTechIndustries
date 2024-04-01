@@ -4,6 +4,9 @@ import { AppBar, Box, Container, Toolbar, ToolbarProps } from '@mui/material';
 import { AppBarProps } from '@mui/material/AppBar/AppBar';
 import { ContainerProps } from '@mui/material/Container/Container';
 import { ReactComponent } from 'tss-react/tools/ReactComponent';
+import { ToggleColorMode } from '../toggle-color-mode/toggle-color-mode';
+import { useAtom } from 'jotai';
+import { themeColorMode } from '../atoms/atoms';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ICustomAppbarProps {
@@ -16,15 +19,40 @@ export interface ICustomAppbarProps {
 
 const CustomAppbar: React.FC<ICustomAppbarProps> = (props) => {
     const { classes, cx } = useStyles(props);
+    const [mode, toggleColorMode] = useAtom(themeColorMode);
+
+    const onChangeColorMode = () => {
+        switch (mode) {
+            case 'light':
+                toggleColorMode('dark');
+                break;
+            case 'dark':
+                toggleColorMode('light');
+                break;
+            default:
+                toggleColorMode('light');
+                break;
+        }
+    };
 
     const Logo = props.logo;
+
     return (
         <AppBar className={cx(classes.appBar)} {...props.appbarProps}>
             <Container {...props.containerProps} maxWidth='lg'>
                 <Toolbar {...props.toolbarProps} className={cx(classes.toolBar)} variant='regular'>
                     <Box className={cx(classes.imageBox)}>
                         <Logo className={cx(classes.logoStyle)} />
-                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>{props.menuItems?.map((menuItem) => menuItem)}</Box>
+                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>{props.menuItems}</Box>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: { xs: 'none', md: 'flex' },
+                            gap: 0.5,
+                            alignItems: 'center',
+                        }}
+                    >
+                        <ToggleColorMode mode={mode} toggleColorMode={onChangeColorMode} />
                     </Box>
                 </Toolbar>
             </Container>
