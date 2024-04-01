@@ -13,7 +13,7 @@ import {
     GridToolbarExport,
     GridToolbarFilterButton,
 } from '@mui/x-data-grid-pro';
-import { KeyboardArrowDown, KeyboardArrowUp, RestartAlt } from '@mui/icons-material';
+import { KeyboardArrowDown, KeyboardArrowUp, RestartAlt, Save } from '@mui/icons-material';
 import { useGridApiContext, useGridRootProps, GridInitialState } from '@mui/x-data-grid-pro';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -135,8 +135,8 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
 
     return (
         <Stack alignItems={'start'} direction={'row'} justifyContent={'space-between'}>
-            <Stack alignItems={'start'}>
-                <Stack alignItems={'start'} direction={'row'} justifyContent={'space-between'}>
+            <Stack width={'100%'} alignItems={'start'}>
+                <Stack width={'100%'} alignItems={'center'} direction={'row'} justifyContent={'space-between'}>
                     <Button
                         className={cx(classes.filterOptionButton)}
                         endIcon={isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
@@ -145,28 +145,30 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     >
                         {isOpen ? 'Hide' : 'Show'} table utilities
                     </Button>
-                    {isOpen && props.withManualSaveTableState && (
-                        <Button onClick={onSaveTableState} {...rootProps.slotProps?.baseButton}>
-                            Save table state
-                        </Button>
-                    )}
+                    <Stack direction={'row'}>
+                        {isOpen && props.withManualSaveTableState && (
+                            <>
+                                <Button
+                                    aria-label={'Reset table controls'}
+                                    startIcon={<RestartAlt />}
+                                    variant={'text'}
+                                    disabled={!isDirty}
+                                    onClick={onClickReset}
+                                >
+                                    Reset
+                                </Button>
+                                <Button startIcon={<Save />} variant={'text'} onClick={onSaveTableState} {...rootProps.slotProps?.baseButton}>
+                                    Save table state
+                                </Button>
+                            </>
+                        )}
+                    </Stack>
                 </Stack>
                 <Collapse in={isOpen} timeout='auto' unmountOnExit>
                     <GridToolbarContainer>
                         <GridToolbarColumnsButton />
                         <GridToolbarFilterButton />
-                        {/*
                         <GridToolbarDensitySelector slotProps={{ tooltip: { title: 'Change density' } }} />
-*/}
-                        <Button
-                            aria-label={'Reset table controls'}
-                            startIcon={<RestartAlt />}
-                            variant={'text'}
-                            disabled={!isDirty}
-                            onClick={onClickReset}
-                        >
-                            Reset
-                        </Button>
                         <Box sx={{ flexGrow: 1 }} />
                         <GridToolbarExport
                             slotProps={{
