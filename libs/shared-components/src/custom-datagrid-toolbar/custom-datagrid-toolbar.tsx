@@ -183,7 +183,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
 
 const useStyles = makeStyles<ICustomDataGridToolbarProps>()((theme, props) => ({
     filterOptionButton: {
-        color: theme.palette.grey[900],
+        color: theme.palette.text.primary,
         fontWeight: 'bold',
         textTransform: 'none',
     },
