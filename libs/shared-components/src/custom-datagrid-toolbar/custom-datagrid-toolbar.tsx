@@ -13,7 +13,7 @@ import { useGridApiContext, useGridRootProps, GridInitialState } from '@mui/x-da
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ICustomDataGridToolbarProps {
-    identifier: string;
+    dataGridIdentifier: string;
     withAutoSaveTableState?: boolean;
     withManualSaveTableState?: boolean;
 }
@@ -25,6 +25,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     const rootProps = useGridRootProps();
     const apiRef = useGridApiContext();
     const [initialState, setInitialState] = React.useState<GridInitialState>();
+    const LOCAL_STORAGE_KEY = `dataGridState-${props.dataGridIdentifier}`;
 
     useEffect(() => {
         if (apiRef.current) {
@@ -46,16 +47,22 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         }
     }, []);
 
+    useEffect(() => {
+        if (initialState !== undefined) {
+            setIsDirty(true);
+        }
+    }, [initialState]);
+
     const onSaveTableState = React.useCallback(() => {
         if (apiRef?.current?.exportState && localStorage) {
             const currentState = apiRef.current.exportState();
-            localStorage.setItem('dataGridState', JSON.stringify(currentState));
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(currentState));
         }
     }, [apiRef]);
 
     React.useLayoutEffect(() => {
         if (props.withAutoSaveTableState || props.withManualSaveTableState) {
-            const stateFromLocalStorage = localStorage?.getItem('dataGridState');
+            const stateFromLocalStorage = localStorage?.getItem(LOCAL_STORAGE_KEY);
             setInitialState(stateFromLocalStorage ? JSON.parse(stateFromLocalStorage) : {});
 
             apiRef.current.restoreState(stateFromLocalStorage ? JSON.parse(stateFromLocalStorage) : ({} as GridInitialState));
@@ -89,7 +96,11 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     >
                         {isOpen ? 'Hide' : 'Show'} table utilities
                     </Button>
-                    {isOpen && props.withManualSaveTableState && <Button {...rootProps.slotProps?.baseButton}>Save table state</Button>}
+                    {isOpen && props.withManualSaveTableState && (
+                        <Button onClick={onSaveTableState} {...rootProps.slotProps?.baseButton}>
+                            Save table state
+                        </Button>
+                    )}
                 </Stack>
                 <Collapse in={isOpen} timeout='auto' unmountOnExit>
                     <GridToolbarContainer>

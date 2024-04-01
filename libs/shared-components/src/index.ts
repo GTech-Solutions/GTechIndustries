@@ -3,4 +3,4 @@ export * from './custom-appbar/custom-appbar';
 export * from './atoms/atoms';
 export * from './custom-datagrid/custom-data-grid';
 export * from './custom-datagrid-toolbar/custom-datagrid-toolbar';
-export * from './utilities/table-identifiers';
+export * from './utilities/data-grid-identifiers';

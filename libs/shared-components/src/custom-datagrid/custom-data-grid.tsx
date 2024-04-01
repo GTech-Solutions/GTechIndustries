@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { useDemoData } from '@mui/x-data-grid-generator';
-import { DataGridPro, GridColDef, DEFAULT_GRID_AUTOSIZE_OPTIONS, useGridApiRef } from '@mui/x-data-grid-pro';
-import { Paper } from '@mui/material';
+import { DataGridPro, DEFAULT_GRID_AUTOSIZE_OPTIONS, useGridApiRef } from '@mui/x-data-grid-pro';
+import { DataGridProProps } from '@mui/x-data-grid-pro/models/dataGridProProps';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface ICustomDataGridProps {
+export interface ICustomDataGridProps extends DataGridProProps {
     dataGridIdentifier: string;
     withAutoSaveTableState?: boolean;
     withManualSaveTableState?: boolean;
@@ -14,13 +14,6 @@ export interface ICustomDataGridProps {
 const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
     const { classes, cx } = useStyles(props);
     const apiRef = useGridApiRef();
-    const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
-
-    const { data, loading } = useDemoData({
-        dataSet: 'Commodity',
-        rowLength: 100,
-        maxColumns: 8,
-    });
 
     const autosizeOptions = {
         includeHeaders: DEFAULT_GRID_AUTOSIZE_OPTIONS.includeHeaders,
@@ -31,8 +24,8 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
 
     return (
         <DataGridPro
+            {...props}
             apiRef={apiRef}
-            {...data}
             autosizeOnMount
             autosizeOptions={autosizeOptions}
             autoPageSize
@@ -50,7 +43,6 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
                     withManualSaveTableState: props.withManualSaveTableState,
                 },
             }}
-            loading={loading}
         />
     );
 };
