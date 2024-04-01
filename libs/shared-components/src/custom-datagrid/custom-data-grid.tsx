@@ -5,7 +5,11 @@ import { DataGridPro, GridColDef, DEFAULT_GRID_AUTOSIZE_OPTIONS, useGridApiRef }
 import { Paper } from '@mui/material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface ICustomDataGridProps {}
+export interface ICustomDataGridProps {
+    dataGridIdentifier: string;
+    withAutoSaveTableState?: boolean;
+    withManualSaveTableState?: boolean;
+}
 
 const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
     const { classes, cx } = useStyles(props);
@@ -38,6 +42,13 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
                 },
                 pinnedColumns: { left: ['id'], right: ['Is Filled'] },
                 pagination: { paginationModel: { pageSize: 5 } },
+            }}
+            slotProps={{
+                toolbar: {
+                    dataGridIdentifier: props.dataGridIdentifier,
+                    withAutoSaveTableState: props.withAutoSaveTableState,
+                    withManualSaveTableState: props.withManualSaveTableState,
+                },
             }}
             loading={loading}
         />

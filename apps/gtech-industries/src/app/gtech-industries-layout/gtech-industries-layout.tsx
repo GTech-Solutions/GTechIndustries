@@ -1,6 +1,6 @@
 import React from 'react';
 import { CustomAppbar } from '@gtech/shared-components';
-import { alpha, Box, Container, MenuItem, Typography } from '@mui/material';
+import { alpha, Box, Container, Menu, MenuItem, Typography } from '@mui/material';
 import { GTechLogo } from '../images/svgs';
 import { useNavigate } from 'react-router-dom';
 import { routeUrls } from '../routes/routeUrls';
@@ -13,21 +13,43 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
     const { classes, cx } = useStyles(props);
     const navigate = useNavigate();
     const [isMenuDrawerOpen, setIsMenuDrawerOpen] = React.useState(false);
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
 
     const handleMenuItemClick = (url: string) => {
         navigate(url);
         setIsMenuDrawerOpen(false);
     };
 
+    const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     return (
         <>
+            <Menu
+                id='basic-menu'
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                }}
+            >
+                <MenuItem onClick={() => handleMenuItemClick(routeUrls.dataGridAutoSave)}>With auto save state</MenuItem>
+                <MenuItem onClick={() => handleMenuItemClick(routeUrls.dataGridManualSave)}>With manual save state</MenuItem>
+            </Menu>
             <CustomAppbar
                 isDrawerOpen={isMenuDrawerOpen}
                 setShowDrawer={setIsMenuDrawerOpen}
                 logo={GTechLogo}
                 appbarProps={{ position: 'fixed' }}
                 menuItems={[
-                    <MenuItem key={routeUrls.dataGrid} onClick={() => handleMenuItemClick(routeUrls.dataGrid)}>
+                    <MenuItem key={routeUrls.dataGridAutoSave} onClick={(event) => handleClick(event)}>
                         <Typography variant='body2' color='text.primary'>
                             DataGrid
                         </Typography>

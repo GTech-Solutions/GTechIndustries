@@ -1,4 +1,5 @@
 export const routeUrls = {
-    dataGrid: 'datagrid',
+    dataGridAutoSave: 'datagridautosave',
+    dataGridManualSave: 'datagridmanualsave',
     treeView: 'treeview',
 };
