@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useThemeVariant } from './use-theme-variant';
 import { alpha, createTheme, Theme } from '@mui/material';
 import { CustomDataGrid, CustomDataGridToolbar } from '@gtech/shared-components';
-import { GridSlotsComponent } from '@mui/x-data-grid';
+import { GridLogicOperator, GridSlotsComponent } from '@mui/x-data-grid';
 import type {} from '@mui/x-data-grid-pro/themeAugmentation';
 
 export interface UseGtechIndustriesTheme {
@@ -51,6 +51,56 @@ export function useGtechIndustriesTheme(mode: string, primary_color?: string, se
                             },
                             slots: {
                                 toolbar: CustomDataGridToolbar as GridSlotsComponent['toolbar'],
+                            },
+                            slotProps: {
+                                pagination: {
+                                    rowsPerPageOptions: [15, 25, 50, 100],
+                                },
+                                baseButton: { variant: 'text' },
+                                filterPanel: {
+                                    logicOperators: [GridLogicOperator.And],
+                                    filterFormProps: {
+                                        // Customize inputs by passing props
+                                        logicOperatorInputProps: {
+                                            variant: 'outlined',
+                                            size: 'small',
+                                        },
+                                        columnInputProps: {
+                                            variant: 'outlined',
+                                            size: 'small',
+                                            sx: { mt: 'auto' },
+                                        },
+                                        operatorInputProps: {
+                                            variant: 'outlined',
+                                            size: 'small',
+                                            sx: { mt: 'auto' },
+                                        },
+                                        valueInputProps: {
+                                            InputComponentProps: {
+                                                variant: 'outlined',
+                                                size: 'small',
+                                                sx: { mt: 'auto' },
+                                                notched: true.toString(),
+                                            },
+                                        },
+                                        deleteIconProps: {
+                                            sx: {
+                                                '& .MuiSvgIcon-root': { color: '#d32f2f' },
+                                            },
+                                        },
+                                    },
+                                    sx: {
+                                        // Customize inputs using css selectors
+                                        '& .MuiDataGrid-filterForm': { p: 2 },
+                                        '& .MuiDataGrid-filterForm:nth-child(even)': {
+                                            backgroundColor: (theme: Theme) => (theme.palette.mode === 'dark' ? '#444' : '#f5f5f5'),
+                                        },
+                                        '& .MuiDataGrid-filterFormLogicOperatorInput': { mr: 2, width: 'auto' },
+                                        '& .MuiDataGrid-filterFormColumnInput': { mr: 2, width: 'auto' },
+                                        '& .MuiDataGrid-filterFormOperatorInput': { mr: 2, width: 'auto' },
+                                        '& .MuiDataGrid-filterFormValueInput': { width: 'auto' },
+                                    },
+                                },
                             },
                         },
                     },

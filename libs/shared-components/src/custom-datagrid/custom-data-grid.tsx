@@ -32,7 +32,13 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
             autosizeOnMount
             autosizeOptions={autosizeOptions}
             autoPageSize
-            initialState={{ pinnedColumns: { left: ['id'], right: ['Is Filled'] }, pagination: { paginationModel: { pageSize: 5 } } }}
+            initialState={{
+                columns: {
+                    columnVisibilityModel: { id: false },
+                },
+                pinnedColumns: { left: ['id'], right: ['Is Filled'] },
+                pagination: { paginationModel: { pageSize: 5 } },
+            }}
             loading={loading}
         />
     );
