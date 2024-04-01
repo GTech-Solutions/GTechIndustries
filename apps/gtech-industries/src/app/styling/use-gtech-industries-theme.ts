@@ -208,7 +208,7 @@ function useGtechIndustriesTheme(mode: PaletteMode): ThemeOptions {
             MuiDataGrid: {
                 defaultProps: {
                     pageSizeOptions: [15, 25, 50, 100],
-                    density: 'compact',
+                    density: 'standard',
                     paginationModel: {
                         pageSize: 15,
                         page: 0,

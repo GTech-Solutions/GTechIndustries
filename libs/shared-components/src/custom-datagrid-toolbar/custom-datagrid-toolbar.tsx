@@ -29,7 +29,7 @@ export interface IDataGridControl {
     paginationModel: GridPaginationModel;
     filterModel: GridFilterModel;
     sortModel: GridSortModel;
-    density: GridDensity;
+    density: GridDensity | undefined;
     columnModel: GridColumnVisibilityModel;
 }
 
@@ -37,7 +37,7 @@ export const defaultDataGridControl: IDataGridControl = {
     paginationModel: { page: 0, pageSize: 15 },
     filterModel: { items: [], quickFilterValues: [] },
     columnModel: {},
-    density: 'standard',
+    density: undefined,
     sortModel: [],
 };
 
@@ -81,6 +81,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                 sortModel: initialState?.sorting?.sortModel,
             };
 
+            console.log(initialStateAsDefault, defaultDataGridControl);
             //check if initial state is equal to defaultDataGridControl with props.defaultHiddenColumns as columnModel
             const isInitialStateEqualToDefault =
                 JSON.stringify(initialStateAsDefault) ===
@@ -88,7 +89,8 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     ...defaultDataGridControl,
                     columnModel: props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel,
                 });
-            setIsDirty(isInitialStateEqualToDefault);
+            setIsDirty(!isInitialStateEqualToDefault);
+            !isOpen && setIsOpen(!isInitialStateEqualToDefault);
         }
     }, [initialState, props.defaultHiddenColumns]);
 
@@ -124,7 +126,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         apiRef.current.setFilterModel(defaultDataGridControl.filterModel);
         apiRef.current.setSortModel(defaultDataGridControl.sortModel);
         apiRef.current.setPaginationModel(defaultDataGridControl.paginationModel);
-        apiRef.current.setDensity(defaultDataGridControl.density);
+        apiRef.current.setDensity(defaultDataGridControl.density ?? 'standard');
         apiRef.current.setColumnVisibilityModel(props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel);
         setIsDirty(false);
     };
