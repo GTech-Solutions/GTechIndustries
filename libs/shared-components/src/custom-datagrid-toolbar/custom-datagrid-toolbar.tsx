@@ -74,14 +74,16 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         if (initialState !== undefined) {
             //turn initial state into defaultDataGridControl
             const initialStateAsDefault = {
-                paginationModel: initialState?.pagination?.paginationModel,
-                filterModel: initialState?.filter?.filterModel,
-                columnModel: initialState?.columns?.columnVisibilityModel,
-                density: initialState?.density,
-                sortModel: initialState?.sorting?.sortModel,
+                paginationModel: initialState?.pagination?.paginationModel ?? defaultDataGridControl.paginationModel,
+                filterModel: initialState?.filter?.filterModel ?? defaultDataGridControl.filterModel,
+                columnModel:
+                    initialState?.columns?.columnVisibilityModel ?? props.defaultHiddenColumns
+                        ? props.defaultHiddenColumns
+                        : defaultDataGridControl.columnModel,
+                density: initialState?.density ?? defaultDataGridControl.density,
+                sortModel: initialState?.sorting?.sortModel ?? defaultDataGridControl.sortModel,
             };
 
-            console.log(initialStateAsDefault, defaultDataGridControl);
             //check if initial state is equal to defaultDataGridControl with props.defaultHiddenColumns as columnModel
             const isInitialStateEqualToDefault =
                 JSON.stringify(initialStateAsDefault) ===
@@ -153,7 +155,9 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     <GridToolbarContainer>
                         <GridToolbarColumnsButton />
                         <GridToolbarFilterButton />
+                        {/*
                         <GridToolbarDensitySelector slotProps={{ tooltip: { title: 'Change density' } }} />
+*/}
                         <Button
                             aria-label={'Reset table controls'}
                             startIcon={<RestartAlt />}
