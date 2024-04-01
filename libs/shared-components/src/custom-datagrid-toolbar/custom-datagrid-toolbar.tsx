@@ -145,24 +145,22 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     >
                         {isOpen ? 'Hide' : 'Show'} table utilities
                     </Button>
-                    <Stack direction={'row'}>
-                        {isOpen && props.withManualSaveTableState && (
-                            <>
-                                <Button
-                                    aria-label={'Reset table controls'}
-                                    startIcon={<RestartAlt />}
-                                    variant={'text'}
-                                    disabled={!isDirty}
-                                    onClick={onClickReset}
-                                >
-                                    Reset
-                                </Button>
-                                <Button startIcon={<Save />} variant={'text'} onClick={onSaveTableState} {...rootProps.slotProps?.baseButton}>
-                                    Save table state
-                                </Button>
-                            </>
-                        )}
-                    </Stack>
+                    {isOpen && props.withManualSaveTableState && (
+                        <Stack direction={'row'}>
+                            <Button
+                                aria-label={'Reset table controls'}
+                                startIcon={<RestartAlt />}
+                                variant={'text'}
+                                disabled={!isDirty}
+                                onClick={onClickReset}
+                            >
+                                Reset
+                            </Button>
+                            <Button startIcon={<Save />} variant={'text'} onClick={onSaveTableState} {...rootProps.slotProps?.baseButton}>
+                                Save table state
+                            </Button>
+                        </Stack>
+                    )}
                 </Stack>
                 <Collapse in={isOpen} timeout='auto' unmountOnExit>
                     <GridToolbarContainer>
