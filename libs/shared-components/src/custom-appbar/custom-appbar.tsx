@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { makeStyles } from 'tss-react/mui';
-import { AppBar, Box, Container, Toolbar, ToolbarProps } from '@mui/material';
+import { AppBar, Box, Button, Container, Drawer, Toolbar, ToolbarProps } from '@mui/material';
 import { AppBarProps } from '@mui/material/AppBar/AppBar';
 import { ContainerProps } from '@mui/material/Container/Container';
-import { ReactComponent } from 'tss-react/tools/ReactComponent';
 import { ToggleColorMode } from '../toggle-color-mode/toggle-color-mode';
 import { useAtom } from 'jotai';
 import { themeColorMode } from '../atoms/atoms';
+import { Menu, MenuBook } from '@mui/icons-material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ICustomAppbarProps {
@@ -15,6 +15,8 @@ export interface ICustomAppbarProps {
     toolbarProps?: ToolbarProps;
     menuItems?: React.ReactNode[];
     logo: React.ElementType;
+    isDrawerOpen: boolean;
+    setShowDrawer: (value: boolean) => void;
 }
 
 const CustomAppbar: React.FC<ICustomAppbarProps> = (props) => {
@@ -48,11 +50,29 @@ const CustomAppbar: React.FC<ICustomAppbarProps> = (props) => {
                     <Box
                         sx={{
                             display: { xs: 'none', md: 'flex' },
-                            gap: 0.5,
-                            alignItems: 'center',
                         }}
+                        className={cx(classes.colorModeToggle)}
                     >
                         <ToggleColorMode mode={mode} toggleColorMode={onChangeColorMode} />
+                    </Box>
+                    <Box sx={{ display: { sm: '', md: 'none' } }}>
+                        <Button
+                            variant='text'
+                            color='primary'
+                            aria-label='menu'
+                            onClick={() => props.setShowDrawer(true)}
+                            className={cx(classes.menuIconBox)}
+                        >
+                            <Menu />
+                        </Button>
+                        <Drawer anchor='right' open={props.isDrawerOpen} onClose={() => props.setShowDrawer(false)}>
+                            <Box className={cx(classes.drawerContainerBox)}>
+                                <Box className={cx(classes.drawerColorModeToggle)}>
+                                    <ToggleColorMode mode={mode} toggleColorMode={onChangeColorMode} />
+                                </Box>
+                                {props.menuItems}
+                            </Box>
+                        </Drawer>
                     </Box>
                 </Toolbar>
             </Container>
@@ -66,6 +86,26 @@ const useStyles = makeStyles<ICustomAppbarProps>()((theme, props) => ({
         backgroundColor: 'transparent',
         backgroundImage: 'none',
         marginTop: 2,
+    },
+    drawerContainerBox: {
+        minWidth: '60dvw',
+        padding: 2,
+        backgroundColor: 'background.paper',
+        flexGrow: 1,
+    },
+    drawerColorModeToggle: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'end',
+        flexGrow: 1,
+    },
+    colorModeToggle: {
+        gap: 0.5,
+        alignItems: 'center',
+    },
+    menuIconBox: {
+        minWidth: '30px',
+        padding: '4px',
     },
     toolBar: {
         display: 'flex',

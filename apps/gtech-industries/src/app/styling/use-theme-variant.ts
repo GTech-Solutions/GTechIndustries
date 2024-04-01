@@ -59,8 +59,9 @@ const useThemeVariant = (mode: string, primary_color?: string, secondary_color?:
             disabled: 'rgba(26, 27, 96, 0.28)',
         },
         background: {
-            paper: '#FFFFFF',
-            default: '#F1F3F9',
+            default: '#fff',
+            paper: '#FBFCFE',
+            ...(mode === 'dark' && { default: '#090E10', paper: '#131B20' }),
         },
         action: {
             active: 'rgba(26, 27, 96, 0.54)',
@@ -116,19 +117,19 @@ const useThemeVariant = (mode: string, primary_color?: string, secondary_color?:
             white: '#F8F8FF',
         },
         primary: paletteHelpers.augmentColor({
-            color: { main: primary_color ? primary_color : '#2979F1' },
+            color: { main: primary_color ? primary_color : '#0A66C2' },
             name: 'primary',
         }),
         secondary: paletteHelpers.augmentColor({
-            color: { main: secondary_color ? secondary_color : '#1A1B60' },
+            color: { main: secondary_color ? secondary_color : '#6709AA' },
             name: 'secondary',
         }),
         error: paletteHelpers.augmentColor({
-            color: { main: '#DA4167' },
+            color: { main: '#D32F2F' },
             name: 'error',
         }),
         warning: paletteHelpers.augmentColor({
-            color: { main: '#FAB616' },
+            color: { main: '#F79F00' },
             name: 'warning',
         }),
         info: paletteHelpers.augmentColor({
@@ -136,7 +137,7 @@ const useThemeVariant = (mode: string, primary_color?: string, secondary_color?:
             name: 'info',
         }),
         success: paletteHelpers.augmentColor({
-            color: { main: '#57A773' },
+            color: { main: '#1F7A1F' },
             name: 'success',
         }),
         grey: {
@@ -157,8 +158,9 @@ const useThemeVariant = (mode: string, primary_color?: string, secondary_color?:
             disabled: '#7472A4',
         },
         background: {
-            paper: '#3B3C7D',
-            default: '#1A1B60',
+            default: '#fff',
+            paper: '#FBFCFE',
+            ...(mode === 'dark' && { default: '#090E10', paper: '#131B20' }),
         },
         action: {
             active: 'rgba(248, 248, 255, 0.56)',
