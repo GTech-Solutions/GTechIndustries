@@ -19,6 +19,7 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
     const handleMenuItemClick = (url: string) => {
         navigate(url);
         setIsMenuDrawerOpen(false);
+        handleClose();
     };
 
     const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
@@ -95,7 +96,7 @@ const useStyles = makeStyles<IGtechIndustriesLayoutProps>()((theme, props) => ({
     dataGridContainer: {
         width: '100%',
         height: 'calc(100vh - 10rem)',
-        backgroundColor: '#fff',
+        backgroundColor: 'background.default',
     },
 }));
 

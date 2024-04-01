@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/manual-save-data-grid-controller/manual-save-data-grid-controller.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/manual-save-data-grid-controller/manual-save-data-grid-controller.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/atoms/atoms.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/atoms/atoms.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-appbar/custom-appbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-appbar/custom-appbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
-      <workItem from="1711890472814" duration="43766000" />
+      <workItem from="1711890472814" duration="44909000" />
     </task>
     <servers />
   </component>
@@ -138,18 +139,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts</url>
-          <line>110</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts</url>
-          <line>30</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx</url>
           <line>31</line>

@@ -85,7 +85,7 @@ const useStyles = makeStyles<ICustomAppbarProps>()((theme, props) => ({
         boxShadow: 'none',
         backgroundColor: 'transparent',
         backgroundImage: 'none',
-        marginTop: 2,
+        marginTop: 8,
     },
     drawerContainerBox: {
         minWidth: '60dvw',
