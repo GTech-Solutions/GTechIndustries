@@ -17,6 +17,7 @@ const ManualSaveDataGridController: React.FC<IManualSaveDataGridControlllerProps
 
     return (
         <CustomDataGrid
+            defaultHiddenColumns={{ id: false }}
             dataGridIdentifier={dataGridIdentifiers.dataGridManualSave}
             columns={data.columns}
             rows={data.rows}

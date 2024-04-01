@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { Box, Button, Collapse, Stack } from '@mui/material';
 import {
+    GridColumnVisibilityModel,
+    GridDensity,
+    GridFilterModel,
+    GridPaginationModel,
+    GridSortModel,
     GridToolbarColumnsButton,
     GridToolbarContainer,
     GridToolbarDensitySelector,
@@ -16,7 +21,26 @@ export interface ICustomDataGridToolbarProps {
     dataGridIdentifier: string;
     withAutoSaveTableState?: boolean;
     withManualSaveTableState?: boolean;
+    defaultHiddenColumns?: GridColumnVisibilityModel;
 }
+
+export interface IDataGridControl {
+    totalRows?: number;
+    paginationModel: GridPaginationModel;
+    filterModel: GridFilterModel;
+    sortModel: GridSortModel;
+    density: GridDensity;
+    columnModel: GridColumnVisibilityModel;
+}
+
+export const defaultDataGridControl: IDataGridControl = {
+    paginationModel: { page: 0, pageSize: 15 },
+    filterModel: { items: [], quickFilterValues: [] },
+    columnModel: {},
+    density: 'standard',
+    sortModel: [],
+    totalRows: 0,
+};
 
 const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => {
     const { classes, cx } = useStyles(props);
@@ -81,7 +105,12 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     }, [onSaveTableState]);
 
     const onClickReset = () => {
-        setIsDirty(false);
+        localStorage.removeItem(LOCAL_STORAGE_KEY);
+        apiRef.current.setFilterModel(defaultDataGridControl.filterModel);
+        apiRef.current.setSortModel(defaultDataGridControl.sortModel);
+        apiRef.current.setPaginationModel(defaultDataGridControl.paginationModel);
+        apiRef.current.setDensity(defaultDataGridControl.density);
+        apiRef.current.setColumnVisibilityModel(props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel);
     };
 
     return (

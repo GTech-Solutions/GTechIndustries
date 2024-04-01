@@ -17,6 +17,7 @@ const AutoSaveDataGridController: React.FC<IAutoSaveDataGridControllerProps> = (
 
     return (
         <CustomDataGrid
+            defaultHiddenColumns={{ id: false }}
             loading={loading}
             columns={data.columns}
             rows={data.rows}

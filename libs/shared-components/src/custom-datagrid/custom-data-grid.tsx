@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { useDemoData } from '@mui/x-data-grid-generator';
-import { DataGridPro, DEFAULT_GRID_AUTOSIZE_OPTIONS, useGridApiRef } from '@mui/x-data-grid-pro';
+import { DataGridPro, DEFAULT_GRID_AUTOSIZE_OPTIONS, GridColumnVisibilityModel, useGridApiRef } from '@mui/x-data-grid-pro';
 import { DataGridProProps } from '@mui/x-data-grid-pro/models/dataGridProProps';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -9,11 +9,18 @@ export interface ICustomDataGridProps extends DataGridProProps {
     dataGridIdentifier: string;
     withAutoSaveTableState?: boolean;
     withManualSaveTableState?: boolean;
+    defaultHiddenColumns?: GridColumnVisibilityModel;
 }
 
 const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
     const { classes, cx } = useStyles(props);
     const apiRef = useGridApiRef();
+
+    useLayoutEffect(() => {
+        if (apiRef.current && props.defaultHiddenColumns) {
+            apiRef.current.setColumnVisibilityModel(props.defaultHiddenColumns);
+        }
+    }, [props.defaultHiddenColumns]);
 
     const autosizeOptions = {
         includeHeaders: DEFAULT_GRID_AUTOSIZE_OPTIONS.includeHeaders,
@@ -30,9 +37,6 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
             autosizeOptions={autosizeOptions}
             autoPageSize
             initialState={{
-                columns: {
-                    columnVisibilityModel: { id: false },
-                },
                 pinnedColumns: { left: ['id'], right: ['Is Filled'] },
                 pagination: { paginationModel: { pageSize: 5 } },
             }}
@@ -41,6 +45,7 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
                     dataGridIdentifier: props.dataGridIdentifier,
                     withAutoSaveTableState: props.withAutoSaveTableState,
                     withManualSaveTableState: props.withManualSaveTableState,
+                    defaultHiddenColumns: props.defaultHiddenColumns,
                 },
             }}
         />
