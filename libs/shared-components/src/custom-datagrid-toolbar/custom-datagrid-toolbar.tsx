@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { Box, Button, Collapse, Stack } from '@mui/material';
 import {
@@ -39,7 +39,6 @@ export const defaultDataGridControl: IDataGridControl = {
     columnModel: {},
     density: 'standard',
     sortModel: [],
-    totalRows: 0,
 };
 
 const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => {
@@ -73,9 +72,25 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
 
     useEffect(() => {
         if (initialState !== undefined) {
-            setIsDirty(true);
+            //turn initial state into defaultDataGridControl
+            const initialStateAsDefault = {
+                paginationModel: initialState?.pagination?.paginationModel,
+                filterModel: initialState?.filter?.filterModel,
+                columnModel: initialState?.columns?.columnVisibilityModel,
+                density: initialState?.density,
+                sortModel: initialState?.sorting?.sortModel,
+            };
+
+            //check if initial state is equal to defaultDataGridControl with props.defaultHiddenColumns as columnModel
+            const isInitialStateEqualToDefault =
+                JSON.stringify(initialStateAsDefault) ===
+                JSON.stringify({
+                    ...defaultDataGridControl,
+                    columnModel: props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel,
+                });
+            setIsDirty(isInitialStateEqualToDefault);
         }
-    }, [initialState]);
+    }, [initialState, props.defaultHiddenColumns]);
 
     const onSaveTableState = React.useCallback(() => {
         if (apiRef?.current?.exportState && localStorage) {
@@ -111,6 +126,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         apiRef.current.setPaginationModel(defaultDataGridControl.paginationModel);
         apiRef.current.setDensity(defaultDataGridControl.density);
         apiRef.current.setColumnVisibilityModel(props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel);
+        setIsDirty(false);
     };
 
     return (
