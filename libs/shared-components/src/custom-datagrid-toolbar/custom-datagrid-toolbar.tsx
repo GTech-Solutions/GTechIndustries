@@ -72,7 +72,6 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
             });
             apiRef.current.subscribeEvent('paginationModelChange', () => {
                 setIsDirty(true);
-                setIsOpen(true);
             });
             apiRef.current.subscribeEvent('densityChange', () => {
                 setIsDirty(true);

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" afterDir="false" />
     </list>
@@ -36,6 +37,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Jest.App.executor": "Run",
+    "Jest.CustomDataGridToolbar.executor": "Run",
+    "Jest.CustomDataGridToolbar.renders without crashing.executor": "Run",
     "Nx.gtech-industries:build.executor": "Run",
     "Nx.gtech-industries:serve.executor": "Run",
     "Nx.shared-components:build.executor": "Run",
@@ -46,6 +50,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/jest",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier",
     "settings.editor.selected.configurable": "fileTemplates",
@@ -85,7 +90,57 @@
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Nx.gtech-industries:serve">
+  <component name="RunManager" selected="Jest.CustomDataGridToolbar.toggles collapse on button click">
+    <configuration name="App" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/apps/gtech-industries" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/apps/gtech-industries/src/app/app.spec.tsx" />
+      <test-names>
+        <test-name value="App" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="CustomDataGridToolbar" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-names>
+        <test-name value="CustomDataGridToolbar" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="CustomDataGridToolbar.renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-names>
+        <test-name value="CustomDataGridToolbar" />
+        <test-name value="renders without crashing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="CustomDataGridToolbar.toggles collapse on button click" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-names>
+        <test-name value="CustomDataGridToolbar" />
+        <test-name value="toggles collapse on button click" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="gtech-industries:build" type="NxRunConfigurationType">
       <option name="nx-projects" value="gtech-industries" />
       <option name="nx-targets" value="build" />
@@ -112,6 +167,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.CustomDataGridToolbar.toggles collapse on button click" />
+        <item itemvalue="Jest.CustomDataGridToolbar.renders without crashing" />
+        <item itemvalue="Jest.CustomDataGridToolbar" />
+        <item itemvalue="Jest.App" />
         <item itemvalue="Nx.shared-components:build" />
       </list>
     </recent_temporary>
@@ -125,7 +184,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
-      <workItem from="1711890472814" duration="66985000" />
+      <workItem from="1711890472814" duration="69178000" />
     </task>
     <servers />
   </component>
