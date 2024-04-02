@@ -15,8 +15,7 @@ import {
 } from '@mui/x-data-grid-pro';
 import { KeyboardArrowDown, KeyboardArrowUp, RestartAlt, Save } from '@mui/icons-material';
 import { useGridApiContext, useGridRootProps, GridInitialState } from '@mui/x-data-grid-pro';
-import { useAtom, useAtomValue } from 'jotai';
-import { dataGridDensity } from '../atoms/atoms';
+import { useAtom, useAtomValue, WritableAtom } from 'jotai';
 import { atomWithStorage } from 'jotai/vanilla/utils';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -25,6 +24,7 @@ export interface ICustomDataGridToolbarProps {
     withAutoSaveTableState?: boolean;
     withManualSaveTableState?: boolean;
     defaultHiddenColumns?: GridColumnVisibilityModel;
+    dataGridDensity: WritableAtom<GridDensity, any, void>;
 }
 
 export interface IDataGridControl {
@@ -51,7 +51,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     const rootProps = useGridRootProps();
     const apiRef = useGridApiContext();
     const LOCAL_STORAGE_KEY = `dataGridState-${props.dataGridIdentifier}`;
-    const density = useAtomValue(dataGridDensity);
+    const density = useAtomValue(props.dataGridDensity);
     const dataGridStateAtom = useMemo(
         () => atomWithStorage<GridInitialState>(LOCAL_STORAGE_KEY, {}, undefined, { getOnInit: true }),
         [props.dataGridIdentifier, props.withAutoSaveTableState, props.withManualSaveTableState]

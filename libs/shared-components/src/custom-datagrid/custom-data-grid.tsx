@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useMemo } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { useDemoData } from '@mui/x-data-grid-generator';
 import {
@@ -6,12 +6,13 @@ import {
     DEFAULT_GRID_AUTOSIZE_OPTIONS,
     GridColumnVisibilityModel,
     GridDensity,
+    GridInitialState,
     GridPaginationModel,
     useGridApiRef,
 } from '@mui/x-data-grid-pro';
 import { DataGridProProps } from '@mui/x-data-grid-pro/models/dataGridProProps';
 import { useAtom } from 'jotai';
-import { dataGridDensity } from '../atoms/atoms';
+import { atomWithStorage } from 'jotai/vanilla/utils';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ICustomDataGridProps extends DataGridProProps {
@@ -25,6 +26,10 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
     const { classes, cx } = useStyles(props);
     const apiRef = useGridApiRef();
     const [paginationModel, setPaginationModel] = React.useState<GridPaginationModel>({ page: 0, pageSize: 15 });
+    const dataGridDensity = useMemo(
+        () => atomWithStorage<GridDensity>(`${props.dataGridIdentifier}-density`, 'standard', undefined, { getOnInit: true }),
+        [props.dataGridIdentifier, props.withAutoSaveTableState, props.withManualSaveTableState]
+    );
     const [density, setDensity] = useAtom(dataGridDensity);
 
     useLayoutEffect(() => {
@@ -59,7 +64,7 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
                     withAutoSaveTableState: props.withAutoSaveTableState,
                     withManualSaveTableState: props.withManualSaveTableState,
                     defaultHiddenColumns: props.defaultHiddenColumns,
-                    density: density,
+                    dataGridDensity: dataGridDensity,
                 },
                 pagination: {
                     showFirstButton: true,

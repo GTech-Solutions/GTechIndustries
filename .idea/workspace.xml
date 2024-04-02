@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/atoms/atoms.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/atoms/atoms.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,49 +36,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Jest.App.executor": "Run",
-    "Jest.CustomDataGridToolbar.executor": "Run",
-    "Jest.CustomDataGridToolbar.renders without crashing.executor": "Run",
-    "Jest.CustomDataGridToolbar.saves the state to local storage on button click.executor": "Run",
-    "Jest.CustomDataGridToolbar.toggles collapse on button click.executor": "Run",
-    "Nx.gtech-industries:build.executor": "Run",
-    "Nx.gtech-industries:serve.executor": "Run",
-    "Nx.shared-components:build.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Jest.App.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.renders without crashing.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.saves the state to local storage on button click.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.toggles collapse on button click.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.gtech-industries:build.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.gtech-industries:serve.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.shared-components:build.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "dev.nx.console.project_details_files": [
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/jest.config.ts",
-      "/Users/michaelgilge/Code/GTechIndustries/nx.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts"
+  &quot;keyToStringList&quot;: {
+    &quot;dev.nx.console.project_details_files&quot;: [
+      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/project.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/package.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/.eslintrc.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/jest.config.ts&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/nx.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -204,8 +204,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx</url>
-          <line>42</line>
-          <properties lambdaOrdinal="-1" />
+          <line>47</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
