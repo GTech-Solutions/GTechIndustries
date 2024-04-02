@@ -93,6 +93,8 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     ...defaultDataGridControl,
                     columnModel: props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel,
                 });
+
+            !isInitialStateEqualToDefault && setIsOpen(true);
             setIsDirty(!isInitialStateEqualToDefault);
         }
     }, [initialState, props.defaultHiddenColumns]);
