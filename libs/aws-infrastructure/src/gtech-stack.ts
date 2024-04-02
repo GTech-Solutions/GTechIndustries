@@ -1,28 +1,26 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
 import { StaticS3Website } from './static-s3-website/static-s3-website';
+import { GithubAccessRole } from './iam-roles/github-access-role';
 
-class StaticS3WebsiteStack extends cdk.Stack {
-  constructor(parent: cdk.App, name: string, props: cdk.StackProps) {
-    super(parent, name, props);
+//Found help separating the stacks in the following link: https://github.com/aws/aws-cdk/issues/11625
+const app = new cdk.App();
+const bundlingStacks = app.node.tryGetContext('aws:cdk:bundling-stacks') as Array<string>;
 
-    new StaticS3Website(this, `${app.node.tryGetContext('application')}-UI-StaticSite`, {
-      domainName: this.node.tryGetContext('domainName'),
-      environment: this.node.tryGetContext('environment'),
-      application: this.node.tryGetContext('application'),
-      hostedZoneId: this.node.tryGetContext('hostedZoneId'),
-      builtSourcePath: this.node.tryGetContext('builtSourcePath'),
+if (bundlingStacks.includes('GithubAccessRoleStack')) {
+    new GithubAccessRole(app, 'GithubAccessRoleStack', {
+        env: {
+            account: process.env['AWS_ACCOUNT'],
+            region: process.env['AWS_PRIMARY_REGION'],
+        },
     });
-  }
 }
 
-const app = new cdk.App();
-
-new StaticS3WebsiteStack(app, 'StaticS3WebsiteStack', {
-  env: {
-    account: process.env['AWS_ACCOUNT'],
-    region: process.env['AWS_PRIMARY_REGION'],
-  },
-});
-
-app.synth();
+if (bundlingStacks.includes('StaticS3WebsiteStack')) {
+    new StaticS3Website(app, 'StaticS3WebsiteStack', {
+        env: {
+            account: process.env['AWS_ACCOUNT'],
+            region: process.env['AWS_PRIMARY_REGION'],
+        },
+    });
+}

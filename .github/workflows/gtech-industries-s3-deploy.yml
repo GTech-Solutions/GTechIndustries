@@ -39,7 +39,7 @@ jobs:
         run: echo github.ref_name
 
       - name: Print expected rolearn
-        run: echo arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GTechIndustriesGithubConnnection
+        run: echo arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GithubDeployRole
 
       - name: Queue
         uses: ahmadnassri/action-workflow-queue@v1.1.4
@@ -59,7 +59,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4.0.1
         id: get-aws-creds
         with:
-          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GTechIndustriesGithubConnnection
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GithubDeployRole
           role-session-name: GithubDeployGTechIndustriesUI
           aws-region: us-west-2
 
