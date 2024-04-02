@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { useDemoData } from '@mui/x-data-grid-generator';
-import { DataGridPro, DEFAULT_GRID_AUTOSIZE_OPTIONS, GridColumnVisibilityModel, useGridApiRef } from '@mui/x-data-grid-pro';
+import { DataGridPro, DEFAULT_GRID_AUTOSIZE_OPTIONS, GridColumnVisibilityModel, GridPaginationModel, useGridApiRef } from '@mui/x-data-grid-pro';
 import { DataGridProProps } from '@mui/x-data-grid-pro/models/dataGridProProps';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -15,6 +15,7 @@ export interface ICustomDataGridProps extends DataGridProProps {
 const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
     const { classes, cx } = useStyles(props);
     const apiRef = useGridApiRef();
+    const [paginationModel, setPaginationModel] = React.useState<GridPaginationModel>({ page: 0, pageSize: 15 });
 
     useLayoutEffect(() => {
         if (apiRef.current && props.defaultHiddenColumns) {
@@ -32,13 +33,13 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
     return (
         <DataGridPro
             {...props}
+            paginationModel={paginationModel}
+            onPaginationModelChange={setPaginationModel}
             apiRef={apiRef}
             autosizeOnMount
             autosizeOptions={autosizeOptions}
-            autoPageSize
             initialState={{
-                pinnedColumns: { left: ['id'], right: ['Is Filled'] },
-                pagination: { paginationModel: { pageSize: 5 } },
+                pagination: { paginationModel: { pageSize: paginationModel.pageSize, page: paginationModel.page } },
             }}
             slotProps={{
                 toolbar: {
@@ -47,7 +48,12 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
                     withManualSaveTableState: props.withManualSaveTableState,
                     defaultHiddenColumns: props.defaultHiddenColumns,
                 },
+                pagination: {
+                    page: paginationModel?.page,
+                    rowsPerPage: paginationModel?.pageSize,
+                },
             }}
+            pagination
         />
     );
 };

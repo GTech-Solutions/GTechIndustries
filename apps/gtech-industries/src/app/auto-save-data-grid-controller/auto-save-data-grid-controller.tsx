@@ -11,7 +11,7 @@ const AutoSaveDataGridController: React.FC<IAutoSaveDataGridControllerProps> = (
 
     const { data, loading } = useDemoData({
         dataSet: 'Commodity',
-        rowLength: 100,
+        rowLength: 500,
         maxColumns: 8,
     });
 

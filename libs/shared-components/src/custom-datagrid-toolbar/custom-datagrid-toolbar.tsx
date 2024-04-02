@@ -51,6 +51,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     const LOCAL_STORAGE_KEY = `dataGridState-${props.dataGridIdentifier}`;
 
     useEffect(() => {
+        //ToDo abstract /make this better
         if (apiRef.current) {
             apiRef.current.subscribeEvent('columnVisibilityModelChange', () => {
                 setIsDirty(true);
@@ -63,6 +64,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
             });
             apiRef.current.subscribeEvent('paginationModelChange', () => {
                 setIsDirty(true);
+                setIsOpen(true);
             });
             apiRef.current.subscribeEvent('densityChange', () => {
                 setIsDirty(true);
@@ -92,7 +94,6 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     columnModel: props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel,
                 });
             setIsDirty(!isInitialStateEqualToDefault);
-            !isOpen && setIsOpen(!isInitialStateEqualToDefault);
         }
     }, [initialState, props.defaultHiddenColumns]);
 
@@ -130,7 +131,10 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         apiRef.current.setPaginationModel(defaultDataGridControl.paginationModel);
         apiRef.current.setDensity(defaultDataGridControl.density ?? 'standard');
         apiRef.current.setColumnVisibilityModel(props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel);
-        setIsDirty(false);
+
+        setTimeout(() => {
+            setIsDirty(false);
+        }, 250);
     };
 
     return (
@@ -145,7 +149,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     >
                         {isOpen ? 'Hide' : 'Show'} table utilities
                     </Button>
-                    {isOpen && props.withManualSaveTableState && (
+                    {isOpen && (
                         <Stack direction={'row'}>
                             <Button
                                 aria-label={'Reset table controls'}
@@ -156,9 +160,11 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                             >
                                 Reset
                             </Button>
-                            <Button startIcon={<Save />} variant={'text'} onClick={onSaveTableState} {...rootProps.slotProps?.baseButton}>
-                                Save table state
-                            </Button>
+                            {props.withManualSaveTableState && (
+                                <Button startIcon={<Save />} variant={'text'} onClick={onSaveTableState} {...rootProps.slotProps?.baseButton}>
+                                    Save table state
+                                </Button>
+                            )}
                         </Stack>
                     )}
                 </Stack>

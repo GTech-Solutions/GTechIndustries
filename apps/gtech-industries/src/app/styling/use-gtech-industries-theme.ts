@@ -209,16 +209,16 @@ function useGtechIndustriesTheme(mode: PaletteMode): ThemeOptions {
                 defaultProps: {
                     pageSizeOptions: [15, 25, 50, 100],
                     density: 'standard',
-                    paginationModel: {
-                        pageSize: 15,
-                        page: 0,
-                    },
+
                     slots: {
                         toolbar: CustomDataGridToolbar as GridSlotsComponent['toolbar'],
                     },
                     slotProps: {
                         pagination: {
+                            /*
                             rowsPerPageOptions: [15, 25, 50, 100],
+*/
+                            rowsPerPage: 15,
                         },
                         baseButton: { variant: 'text' },
                         filterPanel: {

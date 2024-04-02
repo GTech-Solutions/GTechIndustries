@@ -11,7 +11,7 @@ const ManualSaveDataGridController: React.FC<IManualSaveDataGridControlllerProps
 
     const { data, loading } = useDemoData({
         dataSet: 'Employee',
-        rowLength: 100,
+        rowLength: 5000,
         maxColumns: 6,
     });
 
