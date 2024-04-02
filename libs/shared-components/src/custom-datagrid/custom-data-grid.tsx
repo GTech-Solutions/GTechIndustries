@@ -62,6 +62,8 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
                     density: density,
                 },
                 pagination: {
+                    showFirstButton: true,
+                    showLastButton: true,
                     page: paginationModel?.page,
                     rowsPerPage: paginationModel?.pageSize,
                 },

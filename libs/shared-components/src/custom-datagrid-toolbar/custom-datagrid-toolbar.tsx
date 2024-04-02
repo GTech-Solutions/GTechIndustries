@@ -110,7 +110,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         }
     }, [apiRef, density]);
 
-    React.useLayoutEffect(() => {
+    useLayoutEffect(() => {
         if (props.withAutoSaveTableState || props.withManualSaveTableState) {
             const stateFromLocalStorage = localStorage?.getItem(LOCAL_STORAGE_KEY);
             const densityFromLocalStorage = localStorage.getItem(`data-grid-density`) as GridDensity;
