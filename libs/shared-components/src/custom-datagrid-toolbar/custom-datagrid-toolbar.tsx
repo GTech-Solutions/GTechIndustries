@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { Box, Button, Collapse, Stack } from '@mui/material';
 import {
@@ -15,8 +15,9 @@ import {
 } from '@mui/x-data-grid-pro';
 import { KeyboardArrowDown, KeyboardArrowUp, RestartAlt, Save } from '@mui/icons-material';
 import { useGridApiContext, useGridRootProps, GridInitialState } from '@mui/x-data-grid-pro';
-import { useAtomValue } from 'jotai';
+import { useAtom, useAtomValue } from 'jotai';
 import { dataGridDensity } from '../atoms/atoms';
+import { atomWithStorage } from 'jotai/vanilla/utils';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ICustomDataGridToolbarProps {
@@ -49,9 +50,14 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     const [isDirty, setIsDirty] = useState<boolean>(false);
     const rootProps = useGridRootProps();
     const apiRef = useGridApiContext();
-    const [initialState, setInitialState] = React.useState<GridInitialState>();
     const LOCAL_STORAGE_KEY = `dataGridState-${props.dataGridIdentifier}`;
     const density = useAtomValue(dataGridDensity);
+    const dataGridStateAtom = useMemo(
+        () => atomWithStorage<GridInitialState>(LOCAL_STORAGE_KEY, {}),
+        [props.dataGridIdentifier, props.withAutoSaveTableState, props.withManualSaveTableState]
+    );
+    const [initialState, setInitialState] = useAtom(dataGridStateAtom);
+    const [isLayingOut, setIsLayingOut] = useState<boolean>(true);
 
     useEffect(() => {
         //ToDo abstract /make this better
@@ -105,22 +111,14 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     const onSaveTableState = React.useCallback(() => {
         if (apiRef?.current?.exportState && localStorage) {
             const currentState = apiRef.current.exportState();
-            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(currentState));
-            localStorage.setItem(`data-grid-density`, density);
+            console.log(currentState);
+            setInitialState(currentState);
         }
-    }, [apiRef, density]);
+    }, []);
 
     useLayoutEffect(() => {
-        if (props.withAutoSaveTableState || props.withManualSaveTableState) {
-            const stateFromLocalStorage = localStorage?.getItem(LOCAL_STORAGE_KEY);
-            const densityFromLocalStorage = localStorage.getItem(`data-grid-density`) as GridDensity;
-            setInitialState(stateFromLocalStorage ? JSON.parse(stateFromLocalStorage) : {});
-
-            apiRef.current.setDensity(densityFromLocalStorage);
-            apiRef.current.restoreState(stateFromLocalStorage ? JSON.parse(stateFromLocalStorage) : ({} as GridInitialState));
-        }
-
-        if (props.withAutoSaveTableState) {
+        console.log('cslled');
+        if (props.withAutoSaveTableState && !isLayingOut) {
             // handle refresh and navigating away/refreshing
             window.addEventListener('beforeunload', onSaveTableState);
 
@@ -130,10 +128,18 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                 onSaveTableState();
             };
         }
+        setIsLayingOut(false);
+    }, [onSaveTableState]);
+
+    useLayoutEffect(() => {
+        if (props.withAutoSaveTableState || props.withManualSaveTableState) {
+            apiRef.current.setDensity(density);
+            apiRef.current.restoreState(initialState);
+        }
     }, [onSaveTableState]);
 
     const onClickReset = () => {
-        localStorage.removeItem(LOCAL_STORAGE_KEY);
+        setInitialState({});
         apiRef.current.setFilterModel(defaultDataGridControl.filterModel);
         apiRef.current.setSortModel(defaultDataGridControl.sortModel);
         apiRef.current.setPaginationModel(defaultDataGridControl.paginationModel);
