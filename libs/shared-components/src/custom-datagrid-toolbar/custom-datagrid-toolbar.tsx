@@ -15,6 +15,8 @@ import {
 } from '@mui/x-data-grid-pro';
 import { KeyboardArrowDown, KeyboardArrowUp, RestartAlt, Save } from '@mui/icons-material';
 import { useGridApiContext, useGridRootProps, GridInitialState } from '@mui/x-data-grid-pro';
+import { useAtomValue } from 'jotai';
+import { dataGridDensity } from '../atoms/atoms';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ICustomDataGridToolbarProps {
@@ -49,6 +51,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     const apiRef = useGridApiContext();
     const [initialState, setInitialState] = React.useState<GridInitialState>();
     const LOCAL_STORAGE_KEY = `dataGridState-${props.dataGridIdentifier}`;
+    const density = useAtomValue(dataGridDensity);
 
     useEffect(() => {
         //ToDo abstract /make this better
@@ -103,14 +106,17 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         if (apiRef?.current?.exportState && localStorage) {
             const currentState = apiRef.current.exportState();
             localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(currentState));
+            localStorage.setItem(`data-grid-density`, density);
         }
-    }, [apiRef]);
+    }, [apiRef, density]);
 
     React.useLayoutEffect(() => {
         if (props.withAutoSaveTableState || props.withManualSaveTableState) {
             const stateFromLocalStorage = localStorage?.getItem(LOCAL_STORAGE_KEY);
+            const densityFromLocalStorage = localStorage.getItem(`data-grid-density`) as GridDensity;
             setInitialState(stateFromLocalStorage ? JSON.parse(stateFromLocalStorage) : {});
 
+            apiRef.current.setDensity(densityFromLocalStorage);
             apiRef.current.restoreState(stateFromLocalStorage ? JSON.parse(stateFromLocalStorage) : ({} as GridInitialState));
         }
 
@@ -131,7 +137,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         apiRef.current.setFilterModel(defaultDataGridControl.filterModel);
         apiRef.current.setSortModel(defaultDataGridControl.sortModel);
         apiRef.current.setPaginationModel(defaultDataGridControl.paginationModel);
-        apiRef.current.setDensity(defaultDataGridControl.density ?? 'standard');
+        apiRef.current.setDensity('standard');
         apiRef.current.setColumnVisibilityModel(props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel);
 
         setTimeout(() => {

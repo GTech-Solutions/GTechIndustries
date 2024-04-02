@@ -1,8 +1,17 @@
 import React, { useEffect, useLayoutEffect } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { useDemoData } from '@mui/x-data-grid-generator';
-import { DataGridPro, DEFAULT_GRID_AUTOSIZE_OPTIONS, GridColumnVisibilityModel, GridPaginationModel, useGridApiRef } from '@mui/x-data-grid-pro';
+import {
+    DataGridPro,
+    DEFAULT_GRID_AUTOSIZE_OPTIONS,
+    GridColumnVisibilityModel,
+    GridDensity,
+    GridPaginationModel,
+    useGridApiRef,
+} from '@mui/x-data-grid-pro';
 import { DataGridProProps } from '@mui/x-data-grid-pro/models/dataGridProProps';
+import { useAtom } from 'jotai';
+import { dataGridDensity } from '../atoms/atoms';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ICustomDataGridProps extends DataGridProProps {
@@ -16,6 +25,7 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
     const { classes, cx } = useStyles(props);
     const apiRef = useGridApiRef();
     const [paginationModel, setPaginationModel] = React.useState<GridPaginationModel>({ page: 0, pageSize: 15 });
+    const [density, setDensity] = useAtom(dataGridDensity);
 
     useLayoutEffect(() => {
         if (apiRef.current && props.defaultHiddenColumns) {
@@ -33,6 +43,8 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
     return (
         <DataGridPro
             {...props}
+            density={density}
+            onDensityChange={(newDensity) => setDensity(newDensity)}
             paginationModel={paginationModel}
             onPaginationModelChange={setPaginationModel}
             apiRef={apiRef}
@@ -47,6 +59,7 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
                     withAutoSaveTableState: props.withAutoSaveTableState,
                     withManualSaveTableState: props.withManualSaveTableState,
                     defaultHiddenColumns: props.defaultHiddenColumns,
+                    density: density,
                 },
                 pagination: {
                     page: paginationModel?.page,
