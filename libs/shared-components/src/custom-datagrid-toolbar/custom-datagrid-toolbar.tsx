@@ -53,11 +53,10 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     const LOCAL_STORAGE_KEY = `dataGridState-${props.dataGridIdentifier}`;
     const density = useAtomValue(dataGridDensity);
     const dataGridStateAtom = useMemo(
-        () => atomWithStorage<GridInitialState>(LOCAL_STORAGE_KEY, {}),
+        () => atomWithStorage<GridInitialState>(LOCAL_STORAGE_KEY, {}, undefined, { getOnInit: true }),
         [props.dataGridIdentifier, props.withAutoSaveTableState, props.withManualSaveTableState]
     );
     const [initialState, setInitialState] = useAtom(dataGridStateAtom);
-    const [isLayingOut, setIsLayingOut] = useState<boolean>(true);
 
     useEffect(() => {
         //ToDo abstract /make this better
@@ -117,8 +116,14 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     }, []);
 
     useLayoutEffect(() => {
-        console.log('cslled');
-        if (props.withAutoSaveTableState && !isLayingOut) {
+        if (props.withAutoSaveTableState || props.withManualSaveTableState) {
+            apiRef.current.setDensity(density);
+            apiRef.current.restoreState(initialState);
+        }
+
+        if (props.withAutoSaveTableState) {
+            //  apiRef.current.restoreState(initialState);
+
             // handle refresh and navigating away/refreshing
             window.addEventListener('beforeunload', onSaveTableState);
 
@@ -127,14 +132,6 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                 window.removeEventListener('beforeunload', onSaveTableState);
                 onSaveTableState();
             };
-        }
-        setIsLayingOut(false);
-    }, [onSaveTableState]);
-
-    useLayoutEffect(() => {
-        if (props.withAutoSaveTableState || props.withManualSaveTableState) {
-            apiRef.current.setDensity(density);
-            apiRef.current.restoreState(initialState);
         }
     }, [onSaveTableState]);
 
@@ -163,24 +160,22 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     >
                         {isOpen ? 'Hide' : 'Show'} table utilities
                     </Button>
-                    {isOpen && (
-                        <Stack direction={'row'}>
-                            <Button
-                                aria-label={'Reset table controls'}
-                                startIcon={<RestartAlt />}
-                                variant={'text'}
-                                disabled={!isDirty}
-                                onClick={onClickReset}
-                            >
-                                Reset
+                    <Stack direction={'row'}>
+                        <Button
+                            aria-label={'Reset table controls'}
+                            startIcon={<RestartAlt />}
+                            variant={'text'}
+                            disabled={!isDirty}
+                            onClick={onClickReset}
+                        >
+                            Reset
+                        </Button>
+                        {props.withManualSaveTableState && (
+                            <Button startIcon={<Save />} variant={'text'} onClick={onSaveTableState} {...rootProps.slotProps?.baseButton}>
+                                Save table state
                             </Button>
-                            {props.withManualSaveTableState && (
-                                <Button startIcon={<Save />} variant={'text'} onClick={onSaveTableState} {...rootProps.slotProps?.baseButton}>
-                                    Save table state
-                                </Button>
-                            )}
-                        </Stack>
-                    )}
+                        )}
+                    </Stack>
                 </Stack>
                 <Collapse in={isOpen} timeout='auto' unmountOnExit>
                     <GridToolbarContainer>
