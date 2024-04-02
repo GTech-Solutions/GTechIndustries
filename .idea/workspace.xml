@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +41,8 @@
     "Jest.App.executor": "Run",
     "Jest.CustomDataGridToolbar.executor": "Run",
     "Jest.CustomDataGridToolbar.renders without crashing.executor": "Run",
+    "Jest.CustomDataGridToolbar.saves the state to local storage on button click.executor": "Run",
+    "Jest.CustomDataGridToolbar.toggles collapse on button click.executor": "Run",
     "Nx.gtech-industries:build.executor": "Run",
     "Nx.gtech-industries:serve.executor": "Run",
     "Nx.shared-components:build.executor": "Run",
@@ -90,7 +93,7 @@
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.CustomDataGridToolbar.toggles collapse on button click">
+  <component name="RunManager" selected="Jest.CustomDataGridToolbar.saves the state to local storage on button click">
     <configuration name="App" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -128,6 +131,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="CustomDataGridToolbar.saves the state to local storage on button click" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-names>
+        <test-name value="CustomDataGridToolbar" />
+        <test-name value="saves the state to local storage on button click" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="CustomDataGridToolbar.toggles collapse on button click" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -157,21 +173,13 @@
       <option name="arguments" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="shared-components:build" type="NxRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="nx-projects" value="shared-components" />
-      <option name="nx-targets" value="build" />
-      <option name="nx-target-configuration" value="" />
-      <envs />
-      <option name="arguments" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.CustomDataGridToolbar.toggles collapse on button click" />
+        <item itemvalue="Jest.CustomDataGridToolbar.saves the state to local storage on button click" />
         <item itemvalue="Jest.CustomDataGridToolbar.renders without crashing" />
+        <item itemvalue="Jest.CustomDataGridToolbar.toggles collapse on button click" />
         <item itemvalue="Jest.CustomDataGridToolbar" />
         <item itemvalue="Jest.App" />
-        <item itemvalue="Nx.shared-components:build" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +192,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
-      <workItem from="1711890472814" duration="69178000" />
+      <workItem from="1711890472814" duration="70511000" />
     </task>
     <servers />
   </component>

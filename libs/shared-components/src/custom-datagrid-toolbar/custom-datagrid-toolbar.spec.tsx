@@ -1,8 +1,9 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import { CustomDataGridToolbar } from '@gtech/shared-components';
+import { render, fireEvent, screen } from '@testing-library/react';
+import { CustomDataGridToolbar } from './custom-datagrid-toolbar';
 import { DataGridPro } from '@mui/x-data-grid-pro';
 import { GridSlotsComponent } from '@mui/x-data-grid';
+import userEvent from '@testing-library/user-event';
 
 // Jest will automatically use the mocked version of useGridRootProps
 // Mocking useGridRootProps
@@ -10,6 +11,17 @@ jest.mock('@mui/x-data-grid-pro', () => ({
     ...jest.requireActual('@mui/x-data-grid-pro'), // Use actual implementation for everything else
     useGridRootProps: jest.fn(() => ({})),
 }));
+
+const mockGetItem = jest.fn();
+const mockSetItem = jest.fn();
+const mockRemoveItem = jest.fn();
+Object.defineProperty(window, 'localStorage', {
+    value: {
+        getItem: (...args: string[]) => mockGetItem(...args),
+        setItem: (...args: string[]) => mockSetItem(...args),
+        removeItem: (...args: string[]) => mockRemoveItem(...args),
+    },
+});
 
 const renderDataGrid = (columns, toolbarProps) => {
     return render(
@@ -22,6 +34,11 @@ const renderDataGrid = (columns, toolbarProps) => {
 };
 
 describe('CustomDataGridToolbar', () => {
+    beforeEach(() => {
+        mockSetItem.mockClear();
+        mockSetItem.mockClear();
+    });
+
     it('renders without crashing', () => {
         const columns: [] = []; // Define your columns array here
         const toolbarProps = { dataGridIdentifier: 'test' };
@@ -38,6 +55,22 @@ describe('CustomDataGridToolbar', () => {
         fireEvent.click(toggleButton);
         expect(getByText(/Hide table utilities/i)).toBeTruthy();
     });
+
+    it('renders with the toolbar expanded when there are filters present', () => {});
+
+    it('saves the state to local storage on button click', async () => {
+        const columns: [] = []; // Define your columns array here
+        const toolbarProps = { dataGridIdentifier: 'test', withManualSaveTableState: true };
+
+        renderDataGrid(columns, toolbarProps);
+        const button = screen.getByRole('button', { name: /Save table state/i });
+
+        await userEvent.click(button);
+        expect(mockSetItem).toHaveBeenCalledTimes(1);
+        //  expect(mockSetItem).toHaveBeenCalledWith('mydata', 'myvalue');
+    });
+
+    it('on destruction of the datagrid the state is saved to local storage', () => {});
 
     it('resets state on Reset button click', () => {
         const { getByText } = render(<CustomDataGridToolbar dataGridIdentifier='test' />);

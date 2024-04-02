@@ -11,6 +11,7 @@
     "@mui/material": "^5.15.14",
     "@mui/x-data-grid": "^7.1.0",
     "@mui/x-data-grid-generator": "^7.0.0",
+    "@testing-library/user-event": "^14.5.2",
     "aws-cdk-lib": "^2.134.0",
     "file-loader": "^6.2.0",
     "jotai": "^2.7.2",
