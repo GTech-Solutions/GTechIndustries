@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website/static-s3-website.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website/static-s3-website.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +51,15 @@
     "Jest.GithubAccessRoleStack.creates the identity provider.executor": "Run",
     "Jest.GithubAccessRoleStack.executor": "Run",
     "Jest.SQS Queue Created.executor": "Run",
+    "Jest.StaticS3WebsiteStack.adds an A record to route 53.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates an s3 bucket deploy with invalidation.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates certificate for the specified domain name.executor": "Run",
     "Jest.StaticS3WebsiteStack.creates the GithubDeployRole.executor": "Run",
     "Jest.StaticS3WebsiteStack.creates the S3 bucket for hosting the site.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates the cloudfront distribution.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates the cloudfront origin access identity.executor": "Run",
     "Jest.StaticS3WebsiteStack.executor": "Run",
+    "Jest.StaticS3WebsiteStack.modifies the resource policy for the hosting bucket.executor": "Run",
     "Jest.creates an iam role.executor": "Run",
     "Nx.gtech-industries:build.executor": "Run",
     "Nx.gtech-industries:serve.executor": "Run",
@@ -106,33 +111,7 @@
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.StaticS3WebsiteStack.creates the S3 bucket for hosting the site">
-    <configuration name="GithubAccessRoleStack.creates the GithubDeployRole" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" />
-      <test-names>
-        <test-name value="GithubAccessRoleStack" />
-        <test-name value="creates the GithubDeployRole" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="GithubAccessRoleStack.creates the identity provider" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" />
-      <test-names>
-        <test-name value="GithubAccessRoleStack" />
-        <test-name value="creates the identity provider" />
-      </test-names>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Jest.StaticS3WebsiteStack">
     <configuration name="StaticS3WebsiteStack" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -145,7 +124,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="StaticS3WebsiteStack.creates the GithubDeployRole" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="StaticS3WebsiteStack.adds an A record to route 53" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
@@ -154,11 +133,11 @@
       <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
       <test-names>
         <test-name value="StaticS3WebsiteStack" />
-        <test-name value="creates the GithubDeployRole" />
+        <test-name value="adds an A record to route 53" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="StaticS3WebsiteStack.creates the S3 bucket for hosting the site" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="StaticS3WebsiteStack.creates an s3 bucket deploy with invalidation" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
@@ -167,7 +146,33 @@
       <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
       <test-names>
         <test-name value="StaticS3WebsiteStack" />
-        <test-name value="creates the S3 bucket for hosting the site" />
+        <test-name value="creates an s3 bucket deploy with invalidation" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="StaticS3WebsiteStack.creates the cloudfront distribution" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
+      <test-names>
+        <test-name value="StaticS3WebsiteStack" />
+        <test-name value="creates the cloudfront distribution" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="StaticS3WebsiteStack.modifies the resource policy for the hosting bucket" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
+      <test-names>
+        <test-name value="StaticS3WebsiteStack" />
+        <test-name value="modifies the resource policy for the hosting bucket" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -189,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.StaticS3WebsiteStack.creates the S3 bucket for hosting the site" />
-        <item itemvalue="Jest.StaticS3WebsiteStack.creates the GithubDeployRole" />
         <item itemvalue="Jest.StaticS3WebsiteStack" />
-        <item itemvalue="Jest.GithubAccessRoleStack.creates the identity provider" />
-        <item itemvalue="Jest.GithubAccessRoleStack.creates the GithubDeployRole" />
+        <item itemvalue="Jest.StaticS3WebsiteStack.creates an s3 bucket deploy with invalidation" />
+        <item itemvalue="Jest.StaticS3WebsiteStack.adds an A record to route 53" />
+        <item itemvalue="Jest.StaticS3WebsiteStack.creates the cloudfront distribution" />
+        <item itemvalue="Jest.StaticS3WebsiteStack.modifies the resource policy for the hosting bucket" />
       </list>
     </recent_temporary>
   </component>
@@ -238,6 +243,12 @@
           <line>72</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts</url>
+          <line>68</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
