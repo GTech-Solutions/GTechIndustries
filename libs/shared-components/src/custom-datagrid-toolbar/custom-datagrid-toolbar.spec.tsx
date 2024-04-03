@@ -67,7 +67,7 @@ describe('CustomDataGridToolbar', () => {
 
     it('saves the state to local storage on button click', async () => {
         const columns: [] = []; // Define your columns array here
-        const toolbarProps = { dataGridIdentifier: 'test', withManualSaveTableState: true, dataGridDensity: 'test' };
+        const toolbarProps = { dataGridIdentifier: 'test', withManualSaveTableState: true, dataGridDensity: testDensityAtom };
 
         renderDataGrid(columns, toolbarProps);
         const button = screen.getByRole('button', { name: /Save table state/i });
