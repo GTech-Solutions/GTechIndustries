@@ -60,6 +60,7 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
             }}
             slotProps={{
                 toolbar: {
+                    ...props.slotProps?.toolbar,
                     dataGridIdentifier: props.dataGridIdentifier,
                     withAutoSaveTableState: props.withAutoSaveTableState,
                     withManualSaveTableState: props.withManualSaveTableState,
@@ -67,6 +68,7 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
                     dataGridDensity: dataGridDensity,
                 },
                 pagination: {
+                    ...props.slotProps?.pagination,
                     showFirstButton: true,
                     showLastButton: true,
                     page: paginationModel?.page,

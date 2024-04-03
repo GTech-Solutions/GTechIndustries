@@ -6,12 +6,16 @@ import {
     GridDensity,
     GridFilterModel,
     GridPaginationModel,
+    GridSlotProps,
     GridSortModel,
     GridToolbarColumnsButton,
     GridToolbarContainer,
     GridToolbarDensitySelector,
     GridToolbarExport,
     GridToolbarFilterButton,
+    GridToolbarProps,
+    GridToolbarQuickFilter,
+    ToolbarPropsOverrides,
 } from '@mui/x-data-grid-pro';
 import { KeyboardArrowDown, KeyboardArrowUp, RestartAlt, Save } from '@mui/icons-material';
 import { useGridApiContext, useGridRootProps, GridInitialState } from '@mui/x-data-grid-pro';
@@ -19,14 +23,14 @@ import { useAtom, useAtomValue, WritableAtom } from 'jotai';
 import { atomWithStorage } from 'jotai/vanilla/utils';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface ICustomDataGridToolbarProps {
+export type ICustomDataGridToolbarProps = GridSlotProps['toolbar'] & {
     dataGridIdentifier: string;
     withAutoSaveTableState?: boolean;
     withManualSaveTableState?: boolean;
     defaultHiddenColumns?: GridColumnVisibilityModel;
     dataGridDensity: WritableAtom<GridDensity, any, void>;
     alwaysEnableResetButton?: boolean;
-}
+};
 
 export interface IDataGridControl {
     totalRows?: number;
@@ -151,14 +155,17 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         <Stack alignItems={'start'} direction={'row'} justifyContent={'space-between'}>
             <Stack width={'100%'} alignItems={'start'}>
                 <Stack width={'100%'} alignItems={'center'} direction={'row'} justifyContent={'space-between'}>
-                    <Button
-                        className={cx(classes.filterOptionButton)}
-                        endIcon={isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-                        onClick={() => setIsOpen(!isOpen)}
-                        variant='text'
-                    >
-                        {isOpen ? 'Hide' : 'Show'} table utilities
-                    </Button>
+                    <Stack spacing={2} direction={'row'}>
+                        <Button
+                            className={cx(classes.filterOptionButton)}
+                            endIcon={isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+                            onClick={() => setIsOpen(!isOpen)}
+                            variant='text'
+                        >
+                            {isOpen ? 'Hide' : 'Show'} table utilities
+                        </Button>
+                        {props.showQuickFilter && <GridToolbarQuickFilter />}
+                    </Stack>
                     <Stack direction={'row'}>
                         <Button
                             aria-label={'Reset table controls'}
@@ -178,16 +185,17 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                 </Stack>
                 <Collapse in={isOpen} timeout='auto' unmountOnExit>
                     <GridToolbarContainer>
-                        <GridToolbarColumnsButton />
-                        <GridToolbarFilterButton />
-                        <GridToolbarDensitySelector slotProps={{ tooltip: { title: 'Change density' } }} />
-                        <Box sx={{ flexGrow: 1 }} />
-                        <GridToolbarExport
-                            slotProps={{
-                                tooltip: { title: 'Export data' },
-                                button: { variant: 'outlined' },
-                            }}
-                        />
+                        <Stack spacing={3.3} direction={'row'}>
+                            <GridToolbarColumnsButton />
+                            <GridToolbarFilterButton />
+                            <GridToolbarDensitySelector slotProps={{ tooltip: { title: 'Change density' } }} />
+                            <GridToolbarExport
+                                slotProps={{
+                                    tooltip: { title: 'Export data' },
+                                    button: { variant: 'outlined' },
+                                }}
+                            />
+                        </Stack>
                     </GridToolbarContainer>
                 </Collapse>
             </Stack>

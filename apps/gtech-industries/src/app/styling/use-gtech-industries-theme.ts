@@ -214,10 +214,11 @@ function useGtechIndustriesTheme(mode: PaletteMode): ThemeOptions {
                         toolbar: CustomDataGridToolbar as GridSlotsComponent['toolbar'],
                     },
                     slotProps: {
+                        toolbar: {
+                            showQuickFilter: true,
+                            quickFilterProps: { debounceMs: 500 },
+                        },
                         pagination: {
-                            /*
-                            rowsPerPageOptions: [15, 25, 50, 100],
-*/
                             rowsPerPage: 15,
                         },
                         baseButton: { variant: 'text' },

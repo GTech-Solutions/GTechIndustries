@@ -6,16 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries-e2e/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries-e2e/project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.preset.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.preset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/custom-theme-type.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-theme-variant.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nx.json" beforeDir="false" afterPath="$PROJECT_DIR$/nx.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +99,7 @@
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled">
+  <component name="RunManager" selected="Nx.gtech-industries:serve">
     <configuration name="App.should have a greeting as the title" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
