@@ -103,7 +103,7 @@ export class StaticS3Website extends cdk.Stack {
 
         // Deploy site contents to S3 bucket
         new s3deploy.BucketDeployment(this, `${application}-UI-Deploy-With-Invalidation`, {
-            sources: [s3deploy.Source.asset('../../../dist/apps/gtech-industries/')],
+            sources: [s3deploy.Source.asset(builtSourcePath)],
             destinationBucket: siteBucket,
             distribution,
             cacheControl: [s3deploy.CacheControl.noCache()],

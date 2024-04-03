@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/lib.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website/static-s3-website.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/static-s3-website/static-s3-website.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,14 @@
     "Jest.CustomDataGridToolbar.resets state on Reset button click.executor": "Run",
     "Jest.CustomDataGridToolbar.saves the state to local storage on button click.executor": "Run",
     "Jest.CustomDataGridToolbar.toggles collapse on button click.executor": "Run",
+    "Jest.GithubAccessRoleStack.creates an iam role.executor": "Run",
+    "Jest.GithubAccessRoleStack.creates the GithubDeployRole.executor": "Run",
+    "Jest.GithubAccessRoleStack.creates the identity provider.executor": "Run",
+    "Jest.GithubAccessRoleStack.executor": "Run",
     "Jest.SQS Queue Created.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates the GithubDeployRole.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates the S3 bucket for hosting the site.executor": "Run",
+    "Jest.StaticS3WebsiteStack.executor": "Run",
     "Jest.creates an iam role.executor": "Run",
     "Nx.gtech-industries:build.executor": "Run",
     "Nx.gtech-industries:serve.executor": "Run",
@@ -99,66 +106,68 @@
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.GithubAccessRoleStack">
-    <configuration name="CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.StaticS3WebsiteStack.creates the S3 bucket for hosting the site">
+    <configuration name="GithubAccessRoleStack.creates the GithubDeployRole" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" />
       <test-names>
-        <test-name value="CustomDataGridToolbar" />
-        <test-name value="on destruction of the datagrid the state is saved to local storage when auto save is enabled" />
+        <test-name value="GithubAccessRoleStack" />
+        <test-name value="creates the GithubDeployRole" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="CustomDataGridToolbar.resets state on Reset button click" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="GithubAccessRoleStack.creates the identity provider" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" />
       <test-names>
-        <test-name value="CustomDataGridToolbar" />
-        <test-name value="resets state on Reset button click" />
+        <test-name value="GithubAccessRoleStack" />
+        <test-name value="creates the identity provider" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="GithubAccessRoleStack" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="StaticS3WebsiteStack" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
       <test-names>
-        <test-name value="GithubAccessRoleStack" />
+        <test-name value="StaticS3WebsiteStack" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="SQS Queue Created" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="StaticS3WebsiteStack.creates the GithubDeployRole" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/lib.test.ts" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
       <test-names>
-        <test-name value="SQS Queue Created" />
+        <test-name value="StaticS3WebsiteStack" />
+        <test-name value="creates the GithubDeployRole" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="creates an iam role" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="StaticS3WebsiteStack.creates the S3 bucket for hosting the site" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/github-access-role.test.ts" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
       <test-names>
-        <test-name value="creates an iam role" />
+        <test-name value="StaticS3WebsiteStack" />
+        <test-name value="creates the S3 bucket for hosting the site" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -180,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.GithubAccessRoleStack" />
-        <item itemvalue="Jest.creates an iam role" />
-        <item itemvalue="Jest.SQS Queue Created" />
-        <item itemvalue="Jest.CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled" />
-        <item itemvalue="Jest.CustomDataGridToolbar.resets state on Reset button click" />
+        <item itemvalue="Jest.StaticS3WebsiteStack.creates the S3 bucket for hosting the site" />
+        <item itemvalue="Jest.StaticS3WebsiteStack.creates the GithubDeployRole" />
+        <item itemvalue="Jest.StaticS3WebsiteStack" />
+        <item itemvalue="Jest.GithubAccessRoleStack.creates the identity provider" />
+        <item itemvalue="Jest.GithubAccessRoleStack.creates the GithubDeployRole" />
       </list>
     </recent_temporary>
   </component>

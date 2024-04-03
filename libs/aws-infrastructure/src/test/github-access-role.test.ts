@@ -1,10 +1,13 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
 import { GithubAccessRole } from '../iam-roles/github-access-role';
+import { Construct } from 'constructs';
+
+let app: Construct;
 
 describe('GithubAccessRoleStack', () => {
-    it('creates an iam role', () => {
-        const app = new cdk.App({
+    beforeEach(() => {
+        app = new cdk.App({
             context: {
                 environment: 'test',
                 application: 'test',
@@ -12,11 +15,27 @@ describe('GithubAccessRoleStack', () => {
                 githubRepo: 'test',
             },
         });
-        // WHEN
+    });
+
+    it('creates the GithubDeployRole', () => {
+        // Arrange
         const stack = new GithubAccessRole(app, 'GithubAccessRoleStack', {});
-        // THEN
+
+        // Act
         const template = Template.fromStack(stack, {});
 
-        template.hasResource('AWS::IAM::Role', {});
+        // Assert
+        template.hasResourceProperties('AWS::IAM::Role', { RoleName: 'GithubDeployRole' });
+    });
+
+    it('creates the identity provider', () => {
+        // Arrange
+        const stack = new GithubAccessRole(app, 'GithubAccessRoleStack', {});
+
+        // Act
+        const template = Template.fromStack(stack, {});
+
+        //Assert
+        template.hasResource('Custom::AWSCDKOpenIdConnectProvider', {});
     });
 });
