@@ -45,6 +45,7 @@ export const defaultDataGridControl: IDataGridControl = {
 };
 
 const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => {
+    console.log('abbie', props);
     const { classes, cx } = useStyles(props);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [isDirty, setIsDirty] = useState<boolean>(false);
