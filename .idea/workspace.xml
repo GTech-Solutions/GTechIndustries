@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gtech-direct-s3-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gtech-direct-s3-deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries-e2e/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries-e2e/project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.preset.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.preset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/project.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nx.json" beforeDir="false" afterPath="$PROJECT_DIR$/nx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +49,9 @@
     "Jest.App.should have a greeting as the title.executor": "Run",
     "Jest.App.should render successfully.executor": "Run",
     "Jest.CustomDataGridToolbar.executor": "Run",
+    "Jest.CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled.executor": "Run",
     "Jest.CustomDataGridToolbar.renders without crashing.executor": "Run",
+    "Jest.CustomDataGridToolbar.resets state on Reset button click.executor": "Run",
     "Jest.CustomDataGridToolbar.saves the state to local storage on button click.executor": "Run",
     "Jest.CustomDataGridToolbar.toggles collapse on button click.executor": "Run",
     "Nx.gtech-industries:build.executor": "Run",
@@ -57,7 +67,7 @@
     "nodejs.jest.jest_package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/jest",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier",
-    "settings.editor.selected.configurable": "fileTemplates",
+    "settings.editor.selected.configurable": "inlay.hints",
     "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -94,7 +104,7 @@
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.CustomDataGridToolbar.saves the state to local storage on button click">
+  <component name="RunManager" selected="Jest.CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled">
     <configuration name="App.should have a greeting as the title" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -121,7 +131,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="CustomDataGridToolbar.renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$/libs/shared-components" />
@@ -130,7 +140,20 @@
       <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
       <test-names>
         <test-name value="CustomDataGridToolbar" />
-        <test-name value="renders without crashing" />
+        <test-name value="on destruction of the datagrid the state is saved to local storage when auto save is enabled" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="CustomDataGridToolbar.resets state on Reset button click" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-names>
+        <test-name value="CustomDataGridToolbar" />
+        <test-name value="resets state on Reset button click" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -144,19 +167,6 @@
       <test-names>
         <test-name value="CustomDataGridToolbar" />
         <test-name value="saves the state to local storage on button click" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="CustomDataGridToolbar.toggles collapse on button click" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
-      <test-names>
-        <test-name value="CustomDataGridToolbar" />
-        <test-name value="toggles collapse on button click" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -178,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled" />
+        <item itemvalue="Jest.CustomDataGridToolbar.resets state on Reset button click" />
         <item itemvalue="Jest.CustomDataGridToolbar.saves the state to local storage on button click" />
         <item itemvalue="Jest.App.should have a greeting as the title" />
         <item itemvalue="Jest.App.should render successfully" />
-        <item itemvalue="Jest.CustomDataGridToolbar.renders without crashing" />
-        <item itemvalue="Jest.CustomDataGridToolbar.toggles collapse on button click" />
       </list>
     </recent_temporary>
   </component>
@@ -209,6 +219,18 @@
           <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx</url>
           <line>47</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx</url>
+          <line>74</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx</url>
+          <line>118</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

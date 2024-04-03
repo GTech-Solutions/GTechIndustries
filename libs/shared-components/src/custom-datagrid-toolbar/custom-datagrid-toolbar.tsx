@@ -25,6 +25,7 @@ export interface ICustomDataGridToolbarProps {
     withManualSaveTableState?: boolean;
     defaultHiddenColumns?: GridColumnVisibilityModel;
     dataGridDensity: WritableAtom<GridDensity, any, void>;
+    alwaysEnableResetButton?: boolean;
 }
 
 export interface IDataGridControl {
@@ -45,7 +46,6 @@ export const defaultDataGridControl: IDataGridControl = {
 };
 
 const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => {
-    console.log('abbie', props);
     const { classes, cx } = useStyles(props);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [isDirty, setIsDirty] = useState<boolean>(false);
@@ -110,7 +110,6 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     const onSaveTableState = React.useCallback(() => {
         if (apiRef?.current?.exportState && localStorage) {
             const currentState = apiRef.current.exportState();
-            console.log(currentState);
             setInitialState(currentState);
         }
     }, []);
@@ -165,7 +164,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                             aria-label={'Reset table controls'}
                             startIcon={<RestartAlt />}
                             variant={'text'}
-                            disabled={!isDirty}
+                            disabled={!isDirty && !props.alwaysEnableResetButton}
                             onClick={onClickReset}
                         >
                             Reset

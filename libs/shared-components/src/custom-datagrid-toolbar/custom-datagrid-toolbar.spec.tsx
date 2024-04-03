@@ -1,8 +1,8 @@
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { CustomDataGridToolbar } from './custom-datagrid-toolbar';
-import { DataGridPro, GridColDef, GridDensity } from '@mui/x-data-grid-pro';
-import { GridSlotsComponent } from '@mui/x-data-grid';
+import { DataGridPro, GridColDef, GridDensity, GridFilterModel, GridInitialState, GridLogicOperator } from '@mui/x-data-grid-pro';
+import { GridSlotsComponent, GridState } from '@mui/x-data-grid';
 import userEvent from '@testing-library/user-event';
 import { GridSlotsComponentsProps } from '@mui/x-data-grid/models/gridSlotsComponentsProps';
 import { atomWithStorage } from 'jotai/vanilla/utils';
@@ -28,9 +28,10 @@ Object.defineProperty(window, 'localStorage', {
 //ToDo mock this?
 const testDensityAtom = atomWithStorage<GridDensity>(`$test-datagrid-density`, 'standard', undefined, { getOnInit: true });
 
-const renderDataGrid = (columns: GridColDef[], toolbarProps: GridSlotsComponentsProps['toolbar']) => {
+const renderDataGrid = (columns: GridColDef[], toolbarProps: GridSlotsComponentsProps['toolbar'], initialState?: GridInitialState) => {
     return render(
         <DataGridPro
+            initialState={initialState}
             columns={columns}
             slots={{ toolbar: CustomDataGridToolbar as GridSlotsComponent['toolbar'] }}
             slotProps={{ toolbar: toolbarProps }}
@@ -45,19 +46,25 @@ describe('CustomDataGridToolbar', () => {
     });
 
     it('renders without crashing', () => {
-        const columns: [] = []; // Define your columns array here
+        //Arrange
+        const columns: [] = [];
         const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom };
 
+        //Act
         renderDataGrid(columns, toolbarProps);
     });
 
-    it('toggles collapse on button click', () => {
+    it('toggles collapse of toolbar on button click', () => {
+        //Arrange
         const columns: [] = []; // Define your columns array here
         const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom };
 
+        //Act
         const { getByText } = renderDataGrid(columns, toolbarProps);
         const toggleButton = getByText(/Show table utilities/i);
         fireEvent.click(toggleButton);
+
+        //Assert
         expect(getByText(/Hide table utilities/i)).toBeTruthy();
     });
 
@@ -65,28 +72,71 @@ describe('CustomDataGridToolbar', () => {
     it('renders with the toolbar expanded when there are filters present', () => {});
 */
 
-    it('saves the state to local storage on button click', async () => {
+    it('saves the state to local storage on button click when using withManualSaveTableState', async () => {
+        //Arrange
+        const dataGridInitialStateWithFilters = getGridStateObject({
+            items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
+            logicOperator: GridLogicOperator.Or,
+            quickFilterValues: ['testing123'],
+            quickFilterLogicOperator: GridLogicOperator.Or,
+        });
+
         const columns: [] = []; // Define your columns array here
         const toolbarProps = { dataGridIdentifier: 'test', withManualSaveTableState: true, dataGridDensity: testDensityAtom };
 
-        renderDataGrid(columns, toolbarProps);
-        const button = screen.getByRole('button', { name: /Save table state/i });
+        //Act
+        renderDataGrid(columns, toolbarProps, dataGridInitialStateWithFilters);
 
+        const button = screen.getByRole('button', { name: /Save table state/i });
         await userEvent.click(button);
+
+        //Assert
         expect(mockSetItem).toHaveBeenCalledTimes(1);
-        //  expect(mockSetItem).toHaveBeenCalledWith('mydata', 'myvalue');
+        expect(mockSetItem).toHaveBeenCalledWith('dataGridState-test', JSON.stringify(dataGridInitialStateWithFilters));
     });
 
-    /*
-    it('on destruction of the datagrid the state is saved to local storage', () => {});
-*/
+    it('on destruction of the datagrid the state is saved to local storage when withAutoSaveTableState is enabled', () => {
+        //Arrange
+        const dataGridInitialStateWithFilters = getGridStateObject({
+            items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
+            logicOperator: GridLogicOperator.Or,
+            quickFilterValues: ['testing123'],
+            quickFilterLogicOperator: GridLogicOperator.Or,
+        });
 
-    /*    it('resets state on Reset button click', () => {
-        const { getByText } = render(<CustomDataGridToolbar dataGridIdentifier='test' />);
-        const resetButton = getByText(/Reset/i);
-        fireEvent.click(resetButton);
-        // Write your assertions for state reset here
-    });*/
+        const columns: [] = []; // Define your columns array here
+        const toolbarProps = { dataGridIdentifier: 'test', withAutoSaveTableState: true, dataGridDensity: testDensityAtom };
+
+        //Act
+        const { unmount } = renderDataGrid(columns, toolbarProps, dataGridInitialStateWithFilters);
+        unmount();
+
+        //Assert
+        expect(mockSetItem).toHaveBeenCalledTimes(1);
+        expect(mockSetItem).toHaveBeenCalledWith('dataGridState-test', JSON.stringify(dataGridInitialStateWithFilters));
+    });
+
+    it('resets state on Reset button click', async () => {
+        //Arrange
+        const dataGridInitialStateWithFilters = getGridStateObject({
+            items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
+            logicOperator: GridLogicOperator.Or,
+            quickFilterValues: ['testing123'],
+            quickFilterLogicOperator: GridLogicOperator.Or,
+        });
+
+        const columns: [] = []; // Define your columns array here
+        const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom, alwaysEnableResetButton: true };
+        renderDataGrid(columns, toolbarProps, dataGridInitialStateWithFilters);
+
+        //Act
+        const button = screen.getByRole('button', { name: /Reset/i });
+        await userEvent.click(button);
+
+        //Assert
+        expect(mockSetItem).toHaveBeenCalledTimes(1);
+        expect(mockSetItem).toHaveBeenCalledWith('dataGridState-test', JSON.stringify({}));
+    });
 
     // Add more tests covering other functionalities and scenarios
 });
@@ -95,3 +145,34 @@ describe('CustomDataGridToolbar', () => {
 export const useGridRootProps = jest.fn(() => ({}));
 
 export const useGridApiContext = jest.fn(() => ({ current: {} }));
+
+export const getGridStateObject = (filterModel?: GridFilterModel): GridInitialState => {
+    return {
+        pinnedColumns: {},
+        columns: {
+            columnVisibilityModel: {},
+            orderedFields: [],
+        },
+        preferencePanel: {
+            open: false,
+        },
+        filter: {
+            filterModel: filterModel ?? {
+                items: [],
+                logicOperator: GridLogicOperator.And,
+                quickFilterValues: [],
+                quickFilterLogicOperator: GridLogicOperator.And,
+            },
+        },
+        sorting: {
+            sortModel: [],
+        },
+        pagination: {
+            paginationModel: {
+                page: 0,
+                pageSize: 100,
+            },
+            rowCount: 0,
+        },
+    };
+};
