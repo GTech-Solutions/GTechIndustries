@@ -14,7 +14,7 @@ permissions:
   contents: read
 
 jobs:
-  deploy_gtech_industries_s3:
+  deploy_gtech_direct_s3:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     environment:
@@ -91,7 +91,7 @@ jobs:
         run: npx nx run gtech-industries:build:production
 
       # ---- AWS CDK Deploy Infrastructure ----
-      - name: cdk synth GTechIndustriesUIStaticSiteStack
+      - name: cdk synth GTechIDirectUIStaticSiteStack
         uses: youyo/aws-cdk-github-actions@v2
         id: cdk-synth-stack
         env:
