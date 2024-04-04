@@ -7,6 +7,7 @@ import {
     GridColumnVisibilityModel,
     GridDensity,
     GridInitialState,
+    GridLogicOperator,
     GridPaginationModel,
     useGridApiRef,
 } from '@mui/x-data-grid-pro';
@@ -56,7 +57,15 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
             autosizeOnMount
             autosizeOptions={autosizeOptions}
             initialState={{
-                pagination: { paginationModel: { pageSize: paginationModel.pageSize, page: paginationModel.page } },
+                /* filter: {
+                    filterModel: {
+                        items: [{ field: 'desk', operator: 'contains', value: 'testing123' }],
+                        logicOperator: GridLogicOperator.Or,
+                        quickFilterValues: ['testing127'],
+                        quickFilterLogicOperator: GridLogicOperator.Or,
+                    },
+                },*/
+                pagination: { paginationModel: { page: paginationModel.page, pageSize: paginationModel.pageSize } },
             }}
             slotProps={{
                 toolbar: {

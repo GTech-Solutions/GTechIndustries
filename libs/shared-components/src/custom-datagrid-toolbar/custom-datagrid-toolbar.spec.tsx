@@ -1,14 +1,13 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { CustomDataGridToolbar } from './custom-datagrid-toolbar';
-import { DataGridPro, GridColDef, GridDensity, GridFilterModel, GridInitialState, GridLogicOperator } from '@mui/x-data-grid-pro';
+import { DataGridPro, GridColDef, GridDensity, GridFilterModel, GridInitialState, GridLogicOperator, useGridRootProps } from '@mui/x-data-grid-pro';
 import { GridSlotsComponent, GridState } from '@mui/x-data-grid';
 import userEvent from '@testing-library/user-event';
 import { GridSlotsComponentsProps } from '@mui/x-data-grid/models/gridSlotsComponentsProps';
 import { atomWithStorage } from 'jotai/vanilla/utils';
+import * as useGridRootPropsModule from '@mui/x-data-grid-pro'; // Import the module
 
-// Jest will automatically use the mocked version of useGridRootProps
-// Mocking useGridRootProps
 jest.mock('@mui/x-data-grid-pro', () => ({
     ...jest.requireActual('@mui/x-data-grid-pro'), // Use actual implementation for everything else
     useGridRootProps: jest.fn(() => ({})),
@@ -74,7 +73,7 @@ describe('CustomDataGridToolbar', () => {
 
     it('saves the state to local storage on button click when using withManualSaveTableState', async () => {
         //Arrange
-        const dataGridInitialStateWithFilters = getGridStateObject({
+        const dataGridInitialStateWithFilters = mockGridStateObject({
             items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
             logicOperator: GridLogicOperator.Or,
             quickFilterValues: ['testing123'],
@@ -97,7 +96,7 @@ describe('CustomDataGridToolbar', () => {
 
     it('on destruction of the datagrid the state is saved to local storage when withAutoSaveTableState is enabled', () => {
         //Arrange
-        const dataGridInitialStateWithFilters = getGridStateObject({
+        const dataGridInitialStateWithFilters = mockGridStateObject({
             items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
             logicOperator: GridLogicOperator.Or,
             quickFilterValues: ['testing123'],
@@ -117,17 +116,18 @@ describe('CustomDataGridToolbar', () => {
     });
 
     it('resets state on Reset button click', async () => {
-        //Arrange
-        const dataGridInitialStateWithFilters = getGridStateObject({
+        // Arrange
+        const mockInitialState = mockGridStateObject({
             items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
-            logicOperator: GridLogicOperator.Or,
+            logicOperator: 'or' as any,
             quickFilterValues: ['testing123'],
-            quickFilterLogicOperator: GridLogicOperator.Or,
+            quickFilterLogicOperator: 'or' as any,
         });
 
+        const useGridRootPropsSpy = jest.spyOn(useGridRootPropsModule, 'useGridRootProps').mockReturnValue({ initialState: mockInitialState } as any);
         const columns: [] = []; // Define your columns array here
-        const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom, alwaysEnableResetButton: true };
-        renderDataGrid(columns, toolbarProps, dataGridInitialStateWithFilters);
+        const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom, withManualSaveTableState: true };
+        renderDataGrid(columns, toolbarProps);
 
         //Act
         const button = screen.getByRole('button', { name: /Reset/i });
@@ -136,17 +136,16 @@ describe('CustomDataGridToolbar', () => {
         //Assert
         expect(mockSetItem).toHaveBeenCalledTimes(1);
         expect(mockSetItem).toHaveBeenCalledWith('dataGridState-test', JSON.stringify({}));
+
+        // After the test, restore the original implementation
+        useGridRootPropsSpy.mockRestore();
     });
 
     // Add more tests covering other functionalities and scenarios
 });
 
 //Mocks
-export const useGridRootProps = jest.fn(() => ({}));
-
-export const useGridApiContext = jest.fn(() => ({ current: {} }));
-
-export const getGridStateObject = (filterModel?: GridFilterModel): GridInitialState => {
+export const mockGridStateObject = (filterModel?: GridFilterModel): GridInitialState => {
     return {
         pinnedColumns: {},
         columns: {

@@ -13,9 +13,7 @@ import {
     GridToolbarDensitySelector,
     GridToolbarExport,
     GridToolbarFilterButton,
-    GridToolbarProps,
     GridToolbarQuickFilter,
-    ToolbarPropsOverrides,
 } from '@mui/x-data-grid-pro';
 import { KeyboardArrowDown, KeyboardArrowUp, RestartAlt, Save } from '@mui/icons-material';
 import { useGridApiContext, useGridRootProps, GridInitialState } from '@mui/x-data-grid-pro';
@@ -29,7 +27,6 @@ export type ICustomDataGridToolbarProps = GridSlotProps['toolbar'] & {
     withManualSaveTableState?: boolean;
     defaultHiddenColumns?: GridColumnVisibilityModel;
     dataGridDensity: WritableAtom<GridDensity, any, void>;
-    alwaysEnableResetButton?: boolean;
 };
 
 export interface IDataGridControl {
@@ -86,30 +83,37 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
 
     useEffect(() => {
         if (initialState !== undefined) {
-            //turn initial state into defaultDataGridControl
-            const initialStateAsDefault = {
-                paginationModel: initialState?.pagination?.paginationModel ?? defaultDataGridControl.paginationModel,
-                filterModel: initialState?.filter?.filterModel ?? defaultDataGridControl.filterModel,
-                columnModel:
-                    initialState?.columns?.columnVisibilityModel ?? props.defaultHiddenColumns
-                        ? props.defaultHiddenColumns
-                        : defaultDataGridControl.columnModel,
-                density: initialState?.density ?? defaultDataGridControl.density,
-                sortModel: initialState?.sorting?.sortModel ?? defaultDataGridControl.sortModel,
-            };
+            const isInitialStateEqualToDefault = checkIfStateIsDirty(initialState);
+            const isRootPropsInitialStateEqualToDefault = checkIfStateIsDirty(rootProps.initialState ?? {});
 
-            //check if initial state is equal to defaultDataGridControl with props.defaultHiddenColumns as columnModel
-            const isInitialStateEqualToDefault =
-                JSON.stringify(initialStateAsDefault) ===
-                JSON.stringify({
-                    ...defaultDataGridControl,
-                    columnModel: props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel,
-                });
-
-            !isInitialStateEqualToDefault && setIsOpen(true);
-            setIsDirty(!isInitialStateEqualToDefault);
+            (!isInitialStateEqualToDefault || !isRootPropsInitialStateEqualToDefault) && setIsOpen(true);
+            setIsDirty(!isInitialStateEqualToDefault || !isRootPropsInitialStateEqualToDefault);
         }
-    }, [initialState, props.defaultHiddenColumns]);
+    }, [initialState, rootProps.initialState, props.defaultHiddenColumns]);
+
+    const checkIfStateIsDirty = (stateToCheck: GridInitialState) => {
+        //turn initial state into defaultDataGridControl
+        const initialStateAsDefault = {
+            paginationModel: stateToCheck?.pagination?.paginationModel ?? defaultDataGridControl.paginationModel,
+            filterModel: stateToCheck?.filter?.filterModel ?? defaultDataGridControl.filterModel,
+            columnModel:
+                stateToCheck?.columns?.columnVisibilityModel ?? props.defaultHiddenColumns
+                    ? props.defaultHiddenColumns
+                    : defaultDataGridControl.columnModel,
+            density: stateToCheck?.density ?? defaultDataGridControl.density,
+            sortModel: stateToCheck?.sorting?.sortModel ?? defaultDataGridControl.sortModel,
+        };
+
+        //check if initial state is equal to defaultDataGridControl with props.defaultHiddenColumns as columnModel
+        const isInitialStateEqualToDefault =
+            JSON.stringify(initialStateAsDefault) ===
+            JSON.stringify({
+                ...defaultDataGridControl,
+                columnModel: props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel,
+            });
+
+        return isInitialStateEqualToDefault;
+    };
 
     const onSaveTableState = React.useCallback(() => {
         if (apiRef?.current?.exportState && localStorage) {
@@ -170,7 +174,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                             aria-label={'Reset table controls'}
                             startIcon={<RestartAlt />}
                             variant={'text'}
-                            disabled={!isDirty && !props.alwaysEnableResetButton}
+                            disabled={!isDirty}
                             onClick={onClickReset}
                         >
                             Reset
@@ -183,19 +187,17 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                     </Stack>
                 </Stack>
                 <Collapse in={isOpen} timeout='auto' unmountOnExit>
-                    <GridToolbarContainer>
-                        <Stack spacing={3.3} direction={'row'}>
-                            <GridToolbarColumnsButton />
-                            <GridToolbarFilterButton />
-                            <GridToolbarDensitySelector slotProps={{ tooltip: { title: 'Change density' } }} />
-                            <GridToolbarExport
-                                slotProps={{
-                                    tooltip: { title: 'Export data' },
-                                    button: { variant: 'outlined' },
-                                }}
-                            />
-                        </Stack>
-                    </GridToolbarContainer>
+                    <Stack spacing={3.3} direction={'row'}>
+                        <GridToolbarColumnsButton />
+                        <GridToolbarFilterButton />
+                        <GridToolbarDensitySelector slotProps={{ tooltip: { title: 'Change density' } }} />
+                        <GridToolbarExport
+                            slotProps={{
+                                tooltip: { title: 'Export data' },
+                                button: { variant: 'outlined' },
+                            }}
+                        />
+                    </Stack>
                 </Collapse>
             </Stack>
         </Stack>

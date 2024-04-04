@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/percentage-bar/percentage-bar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jest.preset.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.preset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,32 @@
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.StaticS3WebsiteStack">
+  <component name="RunManager" selected="Jest.CustomDataGridToolbar">
+    <configuration name="CustomDataGridToolbar" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-names>
+        <test-name value="CustomDataGridToolbar" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="CustomDataGridToolbar.resets state on Reset button click" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-names>
+        <test-name value="CustomDataGridToolbar" />
+        <test-name value="resets state on Reset button click" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="StaticS3WebsiteStack" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -153,32 +177,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="StaticS3WebsiteStack.creates the cloudfront distribution" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
-      <test-names>
-        <test-name value="StaticS3WebsiteStack" />
-        <test-name value="creates the cloudfront distribution" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="StaticS3WebsiteStack.modifies the resource policy for the hosting bucket" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
-      <test-names>
-        <test-name value="StaticS3WebsiteStack" />
-        <test-name value="modifies the resource policy for the hosting bucket" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="gtech-industries:build" type="NxRunConfigurationType">
       <option name="nx-projects" value="gtech-industries" />
       <option name="nx-targets" value="build" />
@@ -197,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.CustomDataGridToolbar" />
+        <item itemvalue="Jest.CustomDataGridToolbar.resets state on Reset button click" />
         <item itemvalue="Jest.StaticS3WebsiteStack" />
         <item itemvalue="Jest.StaticS3WebsiteStack.creates an s3 bucket deploy with invalidation" />
         <item itemvalue="Jest.StaticS3WebsiteStack.adds an A record to route 53" />
-        <item itemvalue="Jest.StaticS3WebsiteStack.creates the cloudfront distribution" />
-        <item itemvalue="Jest.StaticS3WebsiteStack.modifies the resource policy for the hosting bucket" />
       </list>
     </recent_temporary>
   </component>
@@ -225,21 +223,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid/custom-data-grid.tsx</url>
-          <line>47</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx</url>
-          <line>74</line>
+          <line>73</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx</url>
-          <line>118</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx</url>
@@ -252,6 +239,12 @@
           <line>68</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx</url>
+          <line>40</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
