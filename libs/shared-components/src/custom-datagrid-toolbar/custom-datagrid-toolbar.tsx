@@ -143,7 +143,6 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         apiRef.current.setFilterModel(defaultDataGridControl.filterModel);
         apiRef.current.setSortModel(defaultDataGridControl.sortModel);
         apiRef.current.setPaginationModel(defaultDataGridControl.paginationModel);
-        apiRef.current.setDensity('standard');
         apiRef.current.setColumnVisibilityModel(props.defaultHiddenColumns ? props.defaultHiddenColumns : defaultDataGridControl.columnModel);
 
         setTimeout(() => {

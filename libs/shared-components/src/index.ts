@@ -4,3 +4,4 @@ export * from './atoms/atoms';
 export * from './custom-datagrid/custom-data-grid';
 export * from './custom-datagrid-toolbar/custom-datagrid-toolbar';
 export * from './utilities/data-grid-identifiers';
+export * from './percentage-bar/percentage-bar';
