@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import { CustomDataGrid, dataGridIdentifiers } from '@gtech/shared-components';
-import { useDemoData } from '@mui/x-data-grid-generator';
+import {
+    randomColor,
+    randomEmail,
+    randomId,
+    randomName,
+    randomRating,
+    randomTraderName,
+    randomUrl,
+    randomUserName,
+    useDemoData,
+} from '@mui/x-data-grid-generator';
 import { GridColDef, GridRenderCellParams } from '@mui/x-data-grid-pro';
 import { Avatar, Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -11,12 +21,26 @@ export interface IManualSaveDataGridControlllerProps {}
 
 const ManualSaveDataGridController: React.FC<IManualSaveDataGridControlllerProps> = (props) => {
     const { classes, cx } = useStyles(props);
+    const [isLoading, setIsLoading] = React.useState(true);
+    const [data, setData] = React.useState<any[]>([]);
 
-    const { data, loading } = useDemoData({
-        dataSet: 'Employee',
-        rowLength: 5000,
-        maxColumns: 6,
-    });
+    useEffect(() => {
+        const rows = [];
+
+        for (let i = 0; i < 5000; i++) {
+            rows.push({
+                id: randomId(),
+                avatar: randomColor(),
+                name: randomTraderName(),
+                website: randomUrl(),
+                rating: randomRating(),
+                email: randomEmail(),
+            });
+        }
+
+        setData(rows);
+        setIsLoading(false);
+    }, []);
 
     const columns: GridColDef<any>[] = [
         {
@@ -95,8 +119,8 @@ const ManualSaveDataGridController: React.FC<IManualSaveDataGridControlllerProps
             defaultHiddenColumns={{ id: false }}
             dataGridIdentifier={dataGridIdentifiers.dataGridManualSave}
             columns={columns}
-            rows={data.rows}
-            loading={loading}
+            rows={data}
+            loading={isLoading}
             withManualSaveTableState
         />
     );
@@ -104,7 +128,7 @@ const ManualSaveDataGridController: React.FC<IManualSaveDataGridControlllerProps
 
 const useStyles = makeStyles<IManualSaveDataGridControlllerProps>()((theme, props) => ({
     linkTextColor: {
-        color: 'black',
+        color: theme.palette.mode === 'light' ? 'black' : '#FFF',
     },
 }));
 

@@ -33,6 +33,7 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
     return (
         <>
             <Menu
+                role={'menu'}
                 id='basic-menu'
                 anchorEl={anchorEl}
                 open={open}

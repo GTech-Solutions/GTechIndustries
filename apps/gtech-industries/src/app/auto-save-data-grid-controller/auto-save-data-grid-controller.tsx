@@ -93,7 +93,7 @@ const AutoSaveDataGridController: React.FC<IAutoSaveDataGridControllerProps> = (
 
 const useStyles = makeStyles<IAutoSaveDataGridControllerProps>()((theme, props) => ({
     email: {
-        color: 'black',
+        color: theme.palette.mode === 'light' ? 'black' : '#FFF',
     },
 }));
 

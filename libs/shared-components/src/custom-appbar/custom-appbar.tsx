@@ -45,7 +45,9 @@ const CustomAppbar: React.FC<ICustomAppbarProps> = (props) => {
                 <Toolbar {...props.toolbarProps} className={cx(classes.toolBar)} variant='regular'>
                     <Box className={cx(classes.imageBox)}>
                         <Logo className={cx(classes.logoStyle)} />
-                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>{props.menuItems}</Box>
+                        <Box role={'menu'} sx={{ display: { xs: 'none', md: 'flex' } }}>
+                            {props.menuItems}
+                        </Box>
                     </Box>
                     <Box
                         sx={{
@@ -70,7 +72,7 @@ const CustomAppbar: React.FC<ICustomAppbarProps> = (props) => {
                                 <Box className={cx(classes.drawerColorModeToggle)}>
                                     <ToggleColorMode mode={mode} toggleColorMode={onChangeColorMode} />
                                 </Box>
-                                {props.menuItems}
+                                <Box role={'menu'}>{props.menuItems}</Box>
                             </Box>
                         </Drawer>
                     </Box>
