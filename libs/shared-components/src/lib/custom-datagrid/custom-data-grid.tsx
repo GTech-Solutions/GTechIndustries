@@ -57,31 +57,23 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
             autosizeOnMount
             autosizeOptions={autosizeOptions}
             initialState={{
-                /* filter: {
-                    filterModel: {
-                        items: [{ field: 'desk', operator: 'contains', value: 'testing123' }],
-                        logicOperator: GridLogicOperator.Or,
-                        quickFilterValues: ['testing127'],
-                        quickFilterLogicOperator: GridLogicOperator.Or,
-                    },
-                },*/
                 pagination: { paginationModel: { page: paginationModel.page, pageSize: paginationModel.pageSize } },
             }}
             slotProps={{
                 toolbar: {
-                    ...props.slotProps?.toolbar,
                     dataGridIdentifier: props.dataGridIdentifier,
                     withAutoSaveTableState: props.withAutoSaveTableState,
                     withManualSaveTableState: props.withManualSaveTableState,
                     defaultHiddenColumns: props.defaultHiddenColumns,
                     dataGridDensity: dataGridDensity,
+                    ...props.slotProps?.toolbar,
                 },
                 pagination: {
-                    ...props.slotProps?.pagination,
                     showFirstButton: true,
                     showLastButton: true,
                     page: paginationModel?.page,
                     rowsPerPage: paginationModel?.pageSize,
+                    ...props.slotProps?.pagination,
                 },
             }}
             pagination

@@ -102,7 +102,7 @@ jobs:
         env:
           STACK_NAME: StaticS3WebsiteStack
         with:
-          working_dir: ./libs/aws-infrastructure/src
+          working_dir: ./libs/aws-infrastructure/src/lib
           cdk_subcommand: 'synth --exclusively -c domainName=mui.gtechdirect.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect -c hostedZoneId=${{vars.S3_HOSTED_ZONE_ID}} -c builtSourcePath=../../../dist/apps/gtech-industries/'
           cdk_stack: StaticS3WebsiteStack
           debug_log: true
@@ -113,7 +113,7 @@ jobs:
         env:
           STACK_NAME: StaticS3WebsiteStack
         with:
-          working_dir: ./libs/aws-infrastructure/src
+          working_dir: ./libs/aws-infrastructure/src/lib
           cdk_subcommand: 'deploy --exclusively --require-approval never -c domainName=mui.gtechdirect.com -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect -c hostedZoneId=${{vars.S3_HOSTED_ZONE_ID}} -c builtSourcePath=../../../dist/apps/gtech-industries/'
           cdk_stack: StaticS3WebsiteStack
           debug_log: true
