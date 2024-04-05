@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { CustomDataGridToolbar } from './custom-datagrid-toolbar';
 import { DataGridPro, GridColDef, GridDensity, GridFilterModel, GridInitialState, GridLogicOperator, useGridRootProps } from '@mui/x-data-grid-pro';
 import { GridSlotsComponent, GridState } from '@mui/x-data-grid';
@@ -67,9 +67,27 @@ describe('CustomDataGridToolbar', () => {
         expect(getByText(/Hide table utilities/i)).toBeTruthy();
     });
 
-    /*
-    it('renders with the toolbar expanded when there are filters present', () => {});
-*/
+    it('renders with the toolbar expanded when there are filters present', () => {
+        //Arrange
+        const mockInitialState = mockGridStateObject({
+            items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
+            logicOperator: 'or' as any,
+            quickFilterValues: ['testing123'],
+            quickFilterLogicOperator: 'or' as any,
+        });
+
+        const useGridRootPropsSpy = jest.spyOn(useGridRootPropsModule, 'useGridRootProps').mockReturnValue({ initialState: mockInitialState } as any);
+
+        const columns: [] = []; // Define your columns array here
+        const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom };
+
+        //Act
+        const { getByText } = renderDataGrid(columns, toolbarProps);
+
+        //Assert
+        expect(getByText(/Hide table utilities/i)).toBeTruthy();
+        useGridRootPropsSpy.mockRestore();
+    });
 
     it('saves the state to local storage on button click when using withManualSaveTableState', async () => {
         //Arrange
@@ -133,15 +151,19 @@ describe('CustomDataGridToolbar', () => {
         const button = screen.getByRole('button', { name: /Reset/i });
         await userEvent.click(button);
 
+        //wait for 250ms for reset to complete
+        await act(async () => {
+            await new Promise((resolve) => setTimeout(resolve, 250));
+        });
+
         //Assert
         expect(mockSetItem).toHaveBeenCalledTimes(1);
         expect(mockSetItem).toHaveBeenCalledWith('dataGridState-test', JSON.stringify({}));
+        expect(button).toHaveProperty('disabled', true);
 
-        // After the test, restore the original implementation
+        // Cleanup
         useGridRootPropsSpy.mockRestore();
     });
-
-    // Add more tests covering other functionalities and scenarios
 });
 
 //Mocks
