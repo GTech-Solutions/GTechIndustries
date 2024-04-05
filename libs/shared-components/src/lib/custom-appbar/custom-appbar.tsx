@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { makeStyles } from 'tss-react/mui';
-import { AppBar, Box, Button, Container, Drawer, Toolbar, ToolbarProps } from '@mui/material';
+import { AppBar, Box, Button, Container, Divider, Drawer, Toolbar, ToolbarProps } from '@mui/material';
 import { AppBarProps } from '@mui/material/AppBar/AppBar';
 import { ContainerProps } from '@mui/material/Container/Container';
 import { ToggleColorMode } from '../toggle-color-mode/toggle-color-mode';
@@ -13,7 +13,8 @@ export interface ICustomAppbarProps {
     appbarProps?: AppBarProps;
     containerProps?: ContainerProps;
     toolbarProps?: ToolbarProps;
-    menuItems?: React.ReactNode[];
+    mainMenuItems?: React.ReactNode[];
+    subMenuItems?: React.ReactNode[];
     logo: React.ElementType;
     isDrawerOpen: boolean;
     setShowDrawer: (value: boolean) => void;
@@ -46,7 +47,7 @@ const CustomAppbar: React.FC<ICustomAppbarProps> = (props) => {
                     <Box className={cx(classes.imageBox)}>
                         <Logo className={cx(classes.logoStyle)} />
                         <Box role={'menu'} sx={{ display: { xs: 'none', md: 'flex' } }}>
-                            {props.menuItems}
+                            {props.mainMenuItems}
                         </Box>
                     </Box>
                     <Box
@@ -56,6 +57,7 @@ const CustomAppbar: React.FC<ICustomAppbarProps> = (props) => {
                         className={cx(classes.colorModeToggle)}
                     >
                         <ToggleColorMode mode={mode} toggleColorMode={onChangeColorMode} />
+                        {props.subMenuItems}
                     </Box>
                     <Box sx={{ display: { sm: '', md: 'none' } }}>
                         <Button
@@ -72,7 +74,9 @@ const CustomAppbar: React.FC<ICustomAppbarProps> = (props) => {
                                 <Box className={cx(classes.drawerColorModeToggle)}>
                                     <ToggleColorMode mode={mode} toggleColorMode={onChangeColorMode} />
                                 </Box>
-                                <Box role={'menu'}>{props.menuItems}</Box>
+                                <Box role={'menu'}>{props.mainMenuItems}</Box>
+                                <Divider />
+                                <Box role={'menu'}>{props.subMenuItems}</Box>
                             </Box>
                         </Drawer>
                     </Box>
@@ -133,6 +137,7 @@ const useStyles = makeStyles<ICustomAppbarProps>()((theme, props) => ({
         px: 0,
     },
     logoStyle: {
+        fill: theme.palette.primary.main,
         marginLeft: 10,
         width: '50px',
         height: 'auto',

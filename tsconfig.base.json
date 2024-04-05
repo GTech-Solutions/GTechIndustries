@@ -3,7 +3,7 @@
     "compilerOptions": {
         "esModuleInterop": true,
         "types": ["node"],
-        "typeRoots": ["node_modules/@types"],
+        "typeRoots": ["./types","node_modules/@types"],
         "rootDir": ".",
         "sourceMap": true,
         "declaration": false,
@@ -22,5 +22,6 @@
             "@gtech/shared-components": ["libs/shared-components/src/index.ts"]
         }
     },
+
     "exclude": ["node_modules", "tmp"]
 }

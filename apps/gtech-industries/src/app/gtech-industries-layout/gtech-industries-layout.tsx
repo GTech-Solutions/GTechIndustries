@@ -1,7 +1,9 @@
 import React from 'react';
 import { CustomAppbar } from '@gtech/shared-components';
-import { alpha, Box, Container, Menu, MenuItem, Typography } from '@mui/material';
+import { alpha, Avatar, Box, Button, Container, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
 import { GTechLogo } from '../images/svgs';
+import { Jeep } from '../images/svgs';
+
 import { useNavigate } from 'react-router-dom';
 import { routeUrls } from '../routes/routeUrls';
 import { makeStyles } from 'tss-react/mui';
@@ -48,9 +50,9 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
             <CustomAppbar
                 isDrawerOpen={isMenuDrawerOpen}
                 setShowDrawer={setIsMenuDrawerOpen}
-                logo={GTechLogo}
+                logo={Jeep}
                 appbarProps={{ position: 'fixed' }}
-                menuItems={[
+                mainMenuItems={[
                     <MenuItem key={routeUrls.dataGridAutoSave} onClick={(event) => handleClick(event)}>
                         <Typography variant='body2' color='text.primary'>
                             DataGrid
@@ -61,6 +63,11 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
                             TreeView
                         </Typography>
                     </MenuItem>,
+                ]}
+                subMenuItems={[
+                    <Tooltip title={'About me'}>
+                        <Avatar component={'a'} href={routeUrls.resume} alt='Michael Gilge' src='/assets/mgilge.jpg' />
+                    </Tooltip>,
                 ]}
             />
             <Box sx={{ bgcolor: 'background.default' }}>
