@@ -111,28 +111,7 @@ describe('CustomDataGridToolbar', () => {
         expect(mockSetItem).toHaveBeenCalledWith('dataGridState-test', JSON.stringify(dataGridInitialStateWithFilters));
     });
 
-    it('renders with the toolbar expanded when there are filters present', () => {
-        //Arrange
-        const mockInitialState = mockGridStateObject({
-            items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
-            logicOperator: 'or' as any,
-            quickFilterValues: ['testing123'],
-            quickFilterLogicOperator: 'or' as any,
-        });
-
-        const useGridRootPropsSpy = jest.spyOn(useGridRootPropsModule, 'useGridRootProps').mockReturnValue({ initialState: mockInitialState } as any);
-
-        const columns: [] = []; // Define your columns array here
-        const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom };
-
-        //Act
-        const { getByText } = renderDataGrid(columns, toolbarProps);
-
-        //Assert
-        expect(getByText(/Hide table utilities/i)).toBeTruthy();
-        useGridRootPropsSpy.mockReset();
-    });
-
+    //ToDo figure out difference between spy and mock and why this breaks the mock up top
     it('resets state on Reset button click', async () => {
         // Arrange
         const mockInitialState = mockGridStateObject({
@@ -162,6 +141,28 @@ describe('CustomDataGridToolbar', () => {
         expect(button).toHaveProperty('disabled', true);
 
         // Cleanup
+        useGridRootPropsSpy.mockReset();
+    });
+
+    it('renders with the toolbar expanded when there are filters present', () => {
+        //Arrange
+        const mockInitialState = mockGridStateObject({
+            items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
+            logicOperator: 'or' as any,
+            quickFilterValues: ['testing123'],
+            quickFilterLogicOperator: 'or' as any,
+        });
+
+        const useGridRootPropsSpy = jest.spyOn(useGridRootPropsModule, 'useGridRootProps').mockReturnValue({ initialState: mockInitialState } as any);
+
+        const columns: [] = []; // Define your columns array here
+        const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom };
+
+        //Act
+        const { getByText } = renderDataGrid(columns, toolbarProps);
+
+        //Assert
+        expect(getByText(/Hide table utilities/i)).toBeTruthy();
         useGridRootPropsSpy.mockReset();
     });
 });
