@@ -28,7 +28,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                         type: 'text',
                         title: 'Career Profile',
                         description: '',
-                        content: `I enjoy working with and mentoring people on all aspects of software engineering especially front end and CICD pipelines. Bringing a history of more than 10 years' involvement in technology -- from support to principal software architect -- I've learned how to absorb information quickly and how to convey that information to audiences at various skill levels.  My former background as an automotive technician gives me a lot of experience with problem solving and thinking outside the box that I enjoy being able to share with others.`,
+                        content: `I find joy in working alongside and guiding individuals through various aspects of software engineering, with a special interest in front-end development and CICD pipelines. With more than 10 years of experience across different roles in technology, from support to principal software architect, I've cultivated the skill to quickly comprehend and effectively communicate complex ideas to individuals of varying proficiencies. Drawing from my background as an automotive technician, I bring a wealth of problem-solving expertise and a knack for thinking outside the box, qualities that I am eager to share with others.`,
                         icon: 'usertie',
                     },
                     {
