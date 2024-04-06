@@ -42,7 +42,8 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 description:
                                     '* Lead the delivery of cloud and software architecture services for our FinOps SaaS platform, fostering cross-functional collaboration and ensuring delivery excellence. \n' +
                                     '* Provide hands-on guidance, mentorship, and training to development teams, enhancing technical expertise and promoting a culture of continuous learning. \n' +
-                                    '* Collaborate with stakeholders across departments to ensure alignment of architectural decisions with organizational goals, driving product evolution and enhancing customer satisfaction.',
+                                    '* Collaborate with stakeholders across departments to ensure alignment of architectural decisions with organizational goals, driving product evolution and enhancing customer satisfaction.' +
+                                    '* Spearheaded the migration of our legacy monolithic application to a modern, cloud-native microservices architecture, leveraging various AWS services and enabling improved scalability, reliability, and performance.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2023.8 - Present',
