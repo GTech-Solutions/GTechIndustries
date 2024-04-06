@@ -98,12 +98,6 @@ const useStyles = makeStyles<ICustomAppbarProps>()((theme, props) => ({
         backgroundColor: 'background.paper',
         flexGrow: 1,
     },
-    drawerColorModeToggle: {
-        display: 'flex',
-        flexDirection: 'row',
-
-        flexGrow: 1,
-    },
     colorModeToggle: {
         gap: 0.5,
         alignItems: 'center',
