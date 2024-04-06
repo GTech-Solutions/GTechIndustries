@@ -77,20 +77,28 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                             {
                                 title: 'Software Engineer',
                                 company: 'RiskLens',
-                                description: "I'm working as a lead developer yeeeey!But wooo",
+                                description:
+                                    '* Played a pivotal role in the creation of the GEN 3 application from inception, leveraging expertise in Typescript, .NET Core, React, and GraphQL to enable businesses to quantify risk by running FAIR ontology-based simulations, thereby providing calculations of potential magnitude and frequency of loss. \n' +
+                                    '* Developed a custom D3 charting library tailored specifically for the GEN 3 application, enhancing data visualization capabilities and enabling stakeholders to effectively analyze risk data and scenarios. \n' +
+                                    '* Engineered a custom Apollo client to seamlessly handle GraphQL queries and mutations within the GEN 3 application, ensuring efficient data fetching and manipulation to support complex risk assessment workflows. \n' +
+                                    '* Helped design and implement a custom .NET Core middleware solution to manage user authentication and authorization processes for the GEN 3 application, enhancing security measures and ensuring access control for sensitive risk-related data and functionalities. \n',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2019.5 - 2019.9',
-                                descriptionTags: ['Javascript', 'React', 'MUI', 'AWS'],
+                                descriptionTags: ['Typescript', '.NET Core', 'Apollo', 'GraphQL', 'D3'],
                             },
                             {
                                 title: 'Junior Software Engineer',
                                 company: 'RiskLens',
-                                description: "I'm working as a lead developer yeeeey!But wooo",
+                                description:
+                                    '* Developed and maintained the RiskLens application, a web-based platform that enables organizations to quantify and manage cybersecurity risk using the FAIR ontology. \n' +
+                                    '* Collaborated with a cross-functional team of developers, product managers, and UX designers to deliver new features and enhancements, ensuring alignment with customer requirements and business objectives. \n' +
+                                    '* Conducted code reviews and provided feedback to peers on best practices, code quality, and performance optimization, fostering a culture of continuous improvement and knowledge sharing within the engineering team. \n' +
+                                    '* Participated in Agile ceremonies, including sprint planning, daily stand-ups, and retrospectives, to ensure timely delivery of high-quality software and alignment with project timelines and milestones. \n',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2018.2 - 2019.5',
-                                descriptionTags: ['Javascript', 'React', 'MUI', 'AWS'],
+                                descriptionTags: ['Typescript', 'React', 'MUI', 'Jest', 'Enzyme'],
                             },
                         ],
                     },
