@@ -41,7 +41,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 description:
                                     '* Lead the delivery of cloud and software architecture services for our FinOps SaaS platform, fostering cross-functional collaboration and ensuring delivery excellence. \n' +
                                     '* Provide hands-on guidance, mentorship, and training to development teams, enhancing technical expertise and promoting a culture of continuous learning. \n' +
-                                    '* Collaborate with stakeholders across departments to ensure alignment of architectural decisions with organizational goals, driving product evolution and enhancing customer satisfactio',
+                                    '* Collaborate with stakeholders across departments to ensure alignment of architectural decisions with organizational goals, driving product evolution and enhancing customer satisfaction.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2023.8 - Present',
@@ -50,11 +50,16 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                             {
                                 title: 'Engineering Team Lead',
                                 company: 'Vega',
-                                description: "I'm working as a lead developer yeeeey!But wooo",
+                                description:
+                                    '* Implemented NX Monorepo methodology, optimizing code organization and facilitating seamless code sharing across multiple projects, resulting in enhanced collaboration, code reusability, and significant reduction in development time.\n' +
+                                    '* Spearheaded the adoption of ReactQuery and Recoil, improving data fetching and state management, and enhancing the overall performance and user experience of our applications.\n' +
+                                    '* Helped lead the development of a new cloud-native, serverless platform for our FinOps SaaS product, leveraging AWS CDK, Lambda, and Step Functions, and enabling rapid deployment and scalability of new features. \n' +
+                                    "* Actively participated in the recruitment and hiring process for engineering roles, conducting technical interviews and assessing candidates' proficiency in React and Material-UI.\n" +
+                                    '* Provided ongoing technical guidance and mentorship to junior developers, fostering their growth and development within the organization.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2022.10 - 2023.8',
-                                descriptionTags: ['Javascript', 'React', 'MUI', 'AWS'],
+                                descriptionTags: ['NX', 'ReactQuery', 'Recoil', 'Axios'],
                             },
                             {
                                 title: 'Senior Software Engineer',
@@ -67,7 +72,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2019.10 - 2022.10',
-                                descriptionTags: ['Javascript', 'React', 'MUI', 'AWS'],
+                                descriptionTags: ['Typescript', 'React', 'MUI', '.NET', 'CDK'],
                             },
                             {
                                 title: 'Software Engineer',
