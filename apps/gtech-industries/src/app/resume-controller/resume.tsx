@@ -39,7 +39,9 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 title: 'Principle Architect',
                                 company: 'Vega',
                                 description:
-                                    'Support cross-functional teams by delivering cloud and software architecture services with an emphasis on delivery of our FinOps Saas platform. Provide guidance, mentorship, training, documentation, and cloud expertise on an as-needed basis. Collaborate with stakeholders in all departments to ensure our platform delivers on their needs.',
+                                    '* Lead the delivery of cloud and software architecture services for our FinOps SaaS platform, fostering cross-functional collaboration and ensuring delivery excellence. \n' +
+                                    '* Provide hands-on guidance, mentorship, and training to development teams, enhancing technical expertise and promoting a culture of continuous learning. \n' +
+                                    '* Collaborate with stakeholders across departments to ensure alignment of architectural decisions with organizational goals, driving product evolution and enhancing customer satisfactio',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2023.8 - Present',
@@ -57,7 +59,11 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                             {
                                 title: 'Senior Software Engineer',
                                 company: 'Vega',
-                                description: "I'm working as a lead developer yeeeey!But wooo",
+                                description:
+                                    '* Architected scalable features for new and existing projects, integrating sustainable, interchangeable software solutions across systems through successful presentation and deployment.\n' +
+                                    '* Created ubiquitous language between developers and product team by applying domain-driven design principles to new and existing code bases, translating business logic, and implementing clean, maintainable code.\n' +
+                                    '* Built REST API from conceptualization using .Net Core, ServiceStack, AWS Lambda, and AWS Step functions maintaining a completely serverless architechture.\n' +
+                                    '* Built complete standalone Secure Work Remote solution utilizing a React MUI front end with a .Net Core back end running in lambda.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2019.10 - 2022.10',
@@ -116,7 +122,8 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                             },
                             {
                                 title: 'FinOps Certified Practitioner',
-                                authorityMeta: 'https://www.credly.com/badges/a07f13b0-3f69-4243-93c3-b47a2ba770e4/linked_in_profile',
+                                authority: 'Linux Foundation',
+                                authorityWebSite: 'https://www.credly.com/badges/a07f13b0-3f69-4243-93c3-b47a2ba770e4/linked_in_profile',
                             },
                         ],
                     },
