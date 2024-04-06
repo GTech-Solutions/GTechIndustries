@@ -27,6 +27,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                     {
                         type: 'text',
                         title: 'Career Profile',
+                        description: '',
                         content: `I enjoy working with and mentoring people on all aspects of software engineering especially front end and CICD pipelines. Bringing a history of more than 10 years' involvement in technology -- from support to principal software architect -- I've learned how to absorb information quickly and how to convey that information to audiences at various skill levels.  My former background as an automotive technician gives me a lot of experience with problem solving and thinking outside the box that I enjoy being able to share with others.`,
                         icon: 'usertie',
                     },
@@ -59,7 +60,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2022.10 - 2023.8',
-                                descriptionTags: ['NX', 'ReactQuery', 'Recoil', 'Axios'],
+                                descriptionTags: ['NX', 'ReactQuery', 'Recoil', 'Axios', 'TSS'],
                             },
                             {
                                 title: 'Senior Software Engineer',
@@ -111,12 +112,14 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                             {
                                 title: 'Computer Science (Bachelor)',
                                 authority: 'Eastern Washington University',
+                                description: 'Concentration in Software Engineering',
                                 authorityWebSite: 'https://www.ewu.edu/',
                                 rightSide: '2014 - 2018',
                             },
                             {
                                 title: 'Automotive Technology (Associate)',
                                 authority: 'Lewis Clark State College',
+                                description: 'ASE Certified',
                                 authorityWebSite: 'https://lcsc.edu',
                                 rightSide: '2004 - 2006',
                             },
@@ -131,11 +134,13 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                             {
                                 title: 're:Invent 2019',
                                 authority: 'AWS',
+                                description: '',
                                 authorityWebSite: 'https://reinvent.awsevents.com/',
                             },
                             {
                                 title: 'FinOps Certified Practitioner',
                                 authority: 'Linux Foundation',
+                                description: '',
                                 authorityWebSite: 'https://www.credly.com/badges/a07f13b0-3f69-4243-93c3-b47a2ba770e4/linked_in_profile',
                             },
                         ],
@@ -143,6 +148,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                     {
                         type: 'tag-list',
                         title: 'Hobbies & Interests',
+                        description: '',
                         icon: 'cubes',
                         items: ['Photography', 'Jeeps', 'Camping', 'Hiking', 'Fishing'],
                     },
@@ -155,6 +161,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
 
 const useStyles = makeStyles<IResumeProps>()((theme, props) => ({
     resume: {
+        backgroundColor: theme.palette.background.default,
         minWidth: '100vw',
         overflow: 'scroll',
         '& .EIrz6a_hero.EIrz6a_is-primary': {
@@ -177,6 +184,13 @@ const useStyles = makeStyles<IResumeProps>()((theme, props) => ({
         },
         '& .EIrz6a_title': {
             color: theme.palette.text.primary,
+        },
+        '& .EIrz6a_tag:not(body)': {
+            borderRadius: 99,
+            background: theme.palette.secondary.main,
+        },
+        '& .SPgITW_sectionIcon': {
+            background: theme.palette.primary.main,
         },
     },
 }));

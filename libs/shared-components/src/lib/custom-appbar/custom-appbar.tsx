@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { makeStyles } from 'tss-react/mui';
-import { AppBar, Box, Button, Container, Divider, Drawer, Toolbar, ToolbarProps } from '@mui/material';
+import { AppBar, Box, Button, Container, Divider, Drawer, Stack, Toolbar, ToolbarProps } from '@mui/material';
 import { AppBarProps } from '@mui/material/AppBar/AppBar';
 import { ContainerProps } from '@mui/material/Container/Container';
 import { ToggleColorMode } from '../toggle-color-mode/toggle-color-mode';
@@ -71,12 +71,11 @@ const CustomAppbar: React.FC<ICustomAppbarProps> = (props) => {
                         </Button>
                         <Drawer anchor='right' open={props.isDrawerOpen} onClose={() => props.setShowDrawer(false)}>
                             <Box className={cx(classes.drawerContainerBox)}>
-                                <Box className={cx(classes.drawerColorModeToggle)}>
+                                <Stack direction={'row'} justifyContent={'flex-end'}>
                                     <ToggleColorMode mode={mode} toggleColorMode={onChangeColorMode} />
-                                </Box>
+                                    <Box role={'menu'}>{props.subMenuItems}</Box>
+                                </Stack>
                                 <Box role={'menu'}>{props.mainMenuItems}</Box>
-                                <Divider />
-                                <Box role={'menu'}>{props.subMenuItems}</Box>
                             </Box>
                         </Drawer>
                     </Box>
@@ -101,8 +100,8 @@ const useStyles = makeStyles<ICustomAppbarProps>()((theme, props) => ({
     },
     drawerColorModeToggle: {
         display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'end',
+        flexDirection: 'row',
+
         flexGrow: 1,
     },
     colorModeToggle: {
