@@ -70,7 +70,6 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                     '* Developed and maintained multiple applications for our FinOps SaaS platform, leveraging .Net Core, React, Material-UI, and TypeScript to deliver intuitive user interfaces and seamless user experiences. \n' +
                                     '* Created a custom theme provider for Material-UI, enabling dynamic theming and customization of our applications to align with customer branding requirements. \n' +
                                     '* Collaborated with UX designers to create wireframes and mockups for new features, ensuring alignment with user requirements and design best practices. \n' +
-                                    '* Implemented automated testing using Jest and React Testing Library, enhancing code quality and reducing the occurrence of bugs and regressions in our applications. \n' +
                                     '* Developed a custom CDK construct library for AWS, enabling the rapid deployment of cloud resources and infrastructure for our SaaS platform as well as other internal projects.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
