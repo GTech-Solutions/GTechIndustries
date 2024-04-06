@@ -67,14 +67,15 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 title: 'Senior Software Engineer',
                                 company: 'Vega',
                                 description:
-                                    '* Architected scalable features for new and existing projects, integrating sustainable, interchangeable software solutions across systems through successful presentation and deployment.\n' +
-                                    '* Created ubiquitous language between developers and product team by applying domain-driven design principles to new and existing code bases, translating business logic, and implementing clean, maintainable code.\n' +
-                                    '* Built REST API from conceptualization using .Net Core, ServiceStack, AWS Lambda, and AWS Step functions maintaining a completely serverless architechture.\n' +
-                                    '* Built complete standalone Secure Work Remote solution utilizing a React MUI front end with a .Net Core back end running in lambda.',
+                                    '* Developed and maintained multiple applications for our FinOps SaaS platform, leveraging .Net Core, React, Material-UI, and TypeScript to deliver intuitive user interfaces and seamless user experiences. \n' +
+                                    '* Created a custom theme provider for Material-UI, enabling dynamic theming and customization of our applications to align with customer branding requirements. \n' +
+                                    '* Collaborated with UX designers to create wireframes and mockups for new features, ensuring alignment with user requirements and design best practices. \n' +
+                                    '* Implemented automated testing using Jest and React Testing Library, enhancing code quality and reducing the occurrence of bugs and regressions in our applications. \n' +
+                                    '* Developed a custom CDK construct library for AWS, enabling the rapid deployment of cloud resources and infrastructure for our SaaS platform as well as other internal projects.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2019.10 - 2022.10',
-                                descriptionTags: ['Typescript', 'React', 'MUI', '.NET', 'CDK'],
+                                descriptionTags: ['Typescript', 'React', 'MUI', '.NET Core', 'CDK'],
                             },
                             {
                                 title: 'Software Engineer',
@@ -84,7 +85,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                     '* Helped to develop a custom D3 charting library tailored specifically for the GEN 3 application, advancing data visualization capabilities and enabling stakeholders to effectively analyze risk data and scenarios. \n' +
                                     '* Engineered a custom Apollo client to seamlessly handle GraphQL queries and mutations within the GEN 3 application, ensuring efficient data fetching and manipulation to support complex risk assessment workflows. \n' +
                                     '* Helped design and implement a custom .NET Core middleware solution to manage user authentication and authorization processes for the GEN 3 application, enhancing security measures and ensuring access control for sensitive risk-related data and functionalities. \n',
-                                companyWebSite: 'https://www.vegacloud.io',
+                                companyWebSite: 'https://www.risklens.com',
                                 companyMeta: '',
                                 datesBetween: '2019.5 - 2019.9',
                                 descriptionTags: ['Typescript', '.NET Core', 'Apollo', 'GraphQL', 'D3'],
@@ -97,10 +98,10 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                     '* Collaborated with a cross-functional team of developers, product managers, and UX designers to deliver new features and enhancements, ensuring alignment with customer requirements and business objectives. \n' +
                                     '* Conducted code reviews and provided feedback to peers on best practices, code quality, and performance optimization, fostering a culture of continuous improvement and knowledge sharing within the engineering team. \n' +
                                     '* Participated in Agile ceremonies, including sprint planning, daily stand-ups, and retrospectives, to ensure timely delivery of high-quality software and alignment with project timelines and milestones. \n',
-                                companyWebSite: 'https://www.vegacloud.io',
+                                companyWebSite: 'https://www.risklens.com',
                                 companyMeta: '',
                                 datesBetween: '2018.2 - 2019.5',
-                                descriptionTags: ['Typescript', 'React', 'MUI', 'Jest', 'Enzyme'],
+                                descriptionTags: ['Typescript', 'React', 'MUI', 'Jest', 'Enzyme', '.NET Core'],
                             },
                         ],
                     },
