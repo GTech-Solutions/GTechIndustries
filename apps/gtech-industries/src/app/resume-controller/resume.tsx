@@ -80,7 +80,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 company: 'RiskLens',
                                 description:
                                     '* Played a pivotal role in the creation of the GEN 3 application from inception, leveraging expertise in Typescript, .NET Core, React, and GraphQL to enable businesses to quantify risk by running FAIR ontology-based simulations, thereby providing calculations of potential magnitude and frequency of loss. \n' +
-                                    '* Developed a custom D3 charting library tailored specifically for the GEN 3 application, enhancing data visualization capabilities and enabling stakeholders to effectively analyze risk data and scenarios. \n' +
+                                    '* Helped to develop a custom D3 charting library tailored specifically for the GEN 3 application, advancing data visualization capabilities and enabling stakeholders to effectively analyze risk data and scenarios. \n' +
                                     '* Engineered a custom Apollo client to seamlessly handle GraphQL queries and mutations within the GEN 3 application, ensuring efficient data fetching and manipulation to support complex risk assessment workflows. \n' +
                                     '* Helped design and implement a custom .NET Core middleware solution to manage user authentication and authorization processes for the GEN 3 application, enhancing security measures and ensuring access control for sensitive risk-related data and functionalities. \n',
                                 companyWebSite: 'https://www.vegacloud.io',
