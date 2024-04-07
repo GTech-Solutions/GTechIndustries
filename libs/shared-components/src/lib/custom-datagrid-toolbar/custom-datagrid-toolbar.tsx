@@ -131,7 +131,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
         if (props.withAutoSaveTableState) {
             //  apiRef.current.restoreState(initialState);
 
-            // handle refresh and navigating away/refreshing
+            // handle refresh and navigating away/refreshing use visibilitychange to support mobile
             window.addEventListener('visibilitychange', onSaveTableState);
 
             return () => {
