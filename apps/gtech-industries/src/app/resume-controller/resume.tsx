@@ -54,27 +54,27 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 company: 'Vega',
                                 description:
                                     '* Implemented NX Monorepo methodology, optimizing code organization and facilitating seamless code sharing across multiple projects, resulting in enhanced collaboration, code reusability, and significant reduction in development time.\n' +
-                                    '* Spearheaded the adoption of ReactQuery and Recoil, improving data fetching and state management, and enhancing the overall performance and user experience of our applications.\n' +
+                                    '* Led the adoption of ReactQuery and Recoil, improving data fetching and state management, and enhancing the overall performance and user experience of our applications.\n' +
                                     '* Helped lead the development of a new cloud-native, serverless platform for our FinOps SaaS product, leveraging AWS CDK, Lambda, and Step Functions, and enabling rapid deployment and scalability of new features. \n' +
                                     "* Actively participated in the recruitment and hiring process for engineering roles, conducting technical interviews and assessing candidates' proficiency in React and Material-UI.\n" +
                                     '* Provided ongoing technical guidance and mentorship to junior developers, fostering their growth and development within the organization.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2022.10 - 2023.8',
-                                descriptionTags: ['NX', 'ReactQuery', 'Recoil', 'Axios', 'TSS'],
+                                descriptionTags: ['NX', 'ReactQuery', 'Recoil', 'Axios', 'TSS', 'Actions'],
                             },
                             {
                                 title: 'Senior Software Engineer',
                                 company: 'Vega',
                                 description:
-                                    '* Developed and maintained multiple applications for our FinOps SaaS platform, leveraging .Net Core, React, Material-UI, and TypeScript to deliver intuitive user interfaces and seamless user experiences. \n' +
+                                    '* Developed and maintained applications for FinOps SaaS platform, utilizing .NET Core, React, Material-UI, and TypeScript to deliver intuitive user interfaces and seamless experiences. \n' +
                                     '* Created a custom theme provider for Material-UI, enabling dynamic theming and customization of our applications to align with customer branding requirements. \n' +
-                                    '* Collaborated with UX designers to create wireframes and mockups for new features, ensuring alignment with user requirements and design best practices. \n' +
-                                    '* Developed a custom CDK construct library for AWS, enabling the rapid deployment of cloud resources and infrastructure for our SaaS platform as well as other internal projects.',
+                                    '* Collaborated with UX designers to create wireframes and mockups for new features, ensuring alignment with user requirements. \n' +
+                                    '* Implemented a custom CDK construct library for AWS and custom CICD pipelines using AWS CodePipeline and CodeBuild, resulting in improved code quality and faster time-to-market.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
                                 datesBetween: '2019.10 - 2022.10',
-                                descriptionTags: ['Typescript', 'React', 'MUI', '.NET Core', 'CDK'],
+                                descriptionTags: ['Typescript', 'React', 'MUI', '.NET Core', 'CDK', 'CICD'],
                             },
                             {
                                 title: 'Software Engineer',
