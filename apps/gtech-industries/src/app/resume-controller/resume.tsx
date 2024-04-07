@@ -46,7 +46,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                     '* Spearheaded the migration of our legacy monolithic application to a modern, cloud-native microservices architecture, leveraging various AWS services and enabling improved scalability, reliability, and performance.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
-                                datesBetween: '2023.8 - Present',
+                                datesBetween: '2023.8 - 2024.4',
                                 descriptionTags: ['Terraform', 'CDK', 'CFT', 'AWS', 'Azure'],
                             },
                             {

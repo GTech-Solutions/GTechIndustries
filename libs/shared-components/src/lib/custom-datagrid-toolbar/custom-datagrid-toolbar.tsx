@@ -132,11 +132,11 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
             //  apiRef.current.restoreState(initialState);
 
             // handle refresh and navigating away/refreshing
-            window.addEventListener('beforeunload', onSaveTableState);
+            window.addEventListener('visibilitychange', onSaveTableState);
 
             return () => {
                 // in case of an SPA remove the event-listener
-                window.removeEventListener('beforeunload', onSaveTableState);
+                window.removeEventListener('visibilitychange', onSaveTableState);
                 onSaveTableState();
             };
         }
