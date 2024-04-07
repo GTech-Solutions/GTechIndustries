@@ -6,7 +6,9 @@ import { GridSlotsComponent, GridState } from '@mui/x-data-grid';
 import userEvent from '@testing-library/user-event';
 import { GridSlotsComponentsProps } from '@mui/x-data-grid/models/gridSlotsComponentsProps';
 import { atomWithStorage } from 'jotai/vanilla/utils';
-import * as useGridRootPropsModule from '@mui/x-data-grid-pro'; // Import the module
+import * as useGridRootPropsModule from '@mui/x-data-grid-pro';
+import SpyInstance = jest.SpyInstance;
+import { DataGridProProps } from '@mui/x-data-grid-pro/models/dataGridProProps'; // Import the module
 
 jest.mock('@mui/x-data-grid-pro', () => ({
     ...jest.requireActual('@mui/x-data-grid-pro'), // Use actual implementation for everything else
@@ -39,9 +41,16 @@ const renderDataGrid = (columns: GridColDef[], toolbarProps: GridSlotsComponents
 };
 
 describe('CustomDataGridToolbar', () => {
+    let useGridRootPropsSpy: SpyInstance<DataGridProProps>;
+
     beforeEach(() => {
         mockSetItem.mockClear();
         mockSetItem.mockClear();
+        useGridRootPropsSpy = jest.spyOn(useGridRootPropsModule, 'useGridRootProps').mockReturnValue({} as any);
+    });
+
+    afterEach(() => {
+        useGridRootPropsSpy.mockReset();
     });
 
     it('renders without crashing', () => {
@@ -65,6 +74,28 @@ describe('CustomDataGridToolbar', () => {
 
         //Assert
         expect(getByText(/Hide table utilities/i)).toBeTruthy();
+    });
+
+    it('renders with the toolbar expanded when there are filters present', () => {
+        //Arrange
+        const mockInitialState = mockGridStateObject({
+            items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
+            logicOperator: 'or' as any,
+            quickFilterValues: ['testing123'],
+            quickFilterLogicOperator: 'or' as any,
+        });
+
+        useGridRootPropsSpy = jest.spyOn(useGridRootPropsModule, 'useGridRootProps').mockReturnValue({ initialState: mockInitialState } as any);
+
+        const columns: [] = []; // Define your columns array here
+        const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom };
+
+        //Act
+        const { getByText } = renderDataGrid(columns, toolbarProps);
+
+        //Assert
+        expect(getByText(/Hide table utilities/i)).toBeTruthy();
+        useGridRootPropsSpy.mockReset();
     });
 
     it('saves the state to local storage on button click when using withManualSaveTableState', async () => {
@@ -111,7 +142,6 @@ describe('CustomDataGridToolbar', () => {
         expect(mockSetItem).toHaveBeenCalledWith('dataGridState-test', JSON.stringify(dataGridInitialStateWithFilters));
     });
 
-    //ToDo figure out difference between spy and mock and why this breaks the mock up top
     it('resets state on Reset button click', async () => {
         // Arrange
         const mockInitialState = mockGridStateObject({
@@ -121,7 +151,7 @@ describe('CustomDataGridToolbar', () => {
             quickFilterLogicOperator: 'or' as any,
         });
 
-        const useGridRootPropsSpy = jest.spyOn(useGridRootPropsModule, 'useGridRootProps').mockReturnValue({ initialState: mockInitialState } as any);
+        useGridRootPropsSpy = jest.spyOn(useGridRootPropsModule, 'useGridRootProps').mockReturnValue({ initialState: mockInitialState } as any);
         const columns: [] = []; // Define your columns array here
         const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom, withManualSaveTableState: true };
         renderDataGrid(columns, toolbarProps);
@@ -141,28 +171,6 @@ describe('CustomDataGridToolbar', () => {
         expect(button).toHaveProperty('disabled', true);
 
         // Cleanup
-        useGridRootPropsSpy.mockReset();
-    });
-
-    it('renders with the toolbar expanded when there are filters present', () => {
-        //Arrange
-        const mockInitialState = mockGridStateObject({
-            items: [{ field: 'test', operator: 'contains', value: 'testing123' }],
-            logicOperator: 'or' as any,
-            quickFilterValues: ['testing123'],
-            quickFilterLogicOperator: 'or' as any,
-        });
-
-        const useGridRootPropsSpy = jest.spyOn(useGridRootPropsModule, 'useGridRootProps').mockReturnValue({ initialState: mockInitialState } as any);
-
-        const columns: [] = []; // Define your columns array here
-        const toolbarProps = { dataGridIdentifier: 'test', dataGridDensity: testDensityAtom };
-
-        //Act
-        const { getByText } = renderDataGrid(columns, toolbarProps);
-
-        //Assert
-        expect(getByText(/Hide table utilities/i)).toBeTruthy();
         useGridRootPropsSpy.mockReset();
     });
 });
