@@ -41,8 +41,8 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 company: 'Vega',
                                 description:
                                     '* Lead the delivery of cloud and software architecture services for our FinOps SaaS platform, fostering cross-functional collaboration and ensuring delivery excellence. \n' +
-                                    '* Provide hands-on guidance, mentorship, and training to development teams, enhancing technical expertise and promoting a culture of continuous learning. \n' +
-                                    '* Collaborate with stakeholders across departments to ensure alignment of architectural decisions with organizational goals, driving product evolution and enhancing customer satisfaction. \n' +
+                                    '* Offered direct guidance, mentorship, and training to development teams, bolstering their technical skills and instilling a culture of continuous learning. \n' +
+                                    '* Collaborated with stakeholders across departments to ensure alignment of architectural decisions with organizational goals, driving product evolution and enhancing customer satisfaction. \n' +
                                     '* Spearheaded the migration of our legacy monolithic application to a modern, cloud-native microservices architecture, leveraging various AWS services and enabling improved scalability, reliability, and performance.',
                                 companyWebSite: 'https://www.vegacloud.io',
                                 companyMeta: '',
@@ -55,7 +55,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                                 description:
                                     '* Implemented NX Monorepo methodology, optimizing code organization and facilitating seamless code sharing across multiple projects, resulting in enhanced collaboration, code reusability, and significant reduction in development time.\n' +
                                     '* Led the adoption of ReactQuery and Recoil, improving data fetching and state management, and enhancing the overall performance and user experience of our applications.\n' +
-                                    '* Helped lead the development of a new cloud-native, serverless platform for our FinOps SaaS product, leveraging AWS CDK, Lambda, and Step Functions, and enabling rapid deployment and scalability of new features. \n' +
+                                    '* Helped lead the development of a new cloud-native, serverless platform for our FinOps SaaS product, leveraging AWS CDK, AppRunner, S3, Lambda and Api Gateway, and enabling rapid deployment and scalability of new features. \n' +
                                     "* Actively participated in the recruitment and hiring process for engineering roles, conducting technical interviews and assessing candidates' proficiency in React and Material-UI.\n" +
                                     '* Provided ongoing technical guidance and mentorship to junior developers, fostering their growth and development within the organization.',
                                 companyWebSite: 'https://www.vegacloud.io',
