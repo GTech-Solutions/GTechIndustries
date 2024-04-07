@@ -5,3 +5,5 @@ export * from './lib/custom-datagrid/custom-data-grid';
 export * from './lib/custom-datagrid-toolbar/custom-datagrid-toolbar';
 export * from './lib/utilities/data-grid-identifiers';
 export * from './lib/percentage-bar/percentage-bar';
+export * from './lib/blog-header/blog-header';
+export * from './lib/blog-posts/blog-posts';

@@ -3,7 +3,7 @@
     "compilerOptions": {
         "esModuleInterop": true,
         "types": ["node"],
-        "typeRoots": ["./types","node_modules/@types"],
+        "typeRoots": ["./types","types/types.d.ts","node_modules/@types"],
         "rootDir": ".",
         "sourceMap": true,
         "declaration": false,

@@ -3,4 +3,5 @@ export const routeUrls = {
     dataGridManualSave: 'datagridmanualsave',
     treeView: 'treeview',
     resume: 'resume',
+    blog: 'blog',
 };
