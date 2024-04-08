@@ -1,4 +1,4 @@
-# Creating a Custom Data Grid Toolbar with React Material-UI and TSS
+# Creating a Custom Data Grid Toolbar with React Material-UI and Jotai
 *Written by Michael Gilge*
 
 Data grids are essential components in web applications for displaying and managing large sets of data. However, providing users with the ability to customize and manage the state of these grids can be challenging. In this article, we'll explore how to create a custom data grid toolbar using React, Jotai, Material-UI (MUI), and TSS (Type-Safe Styling). Our custom toolbar will allow users to efficiently manage filters, sorting, and other settings while also providing options for saving and restoring the state of the data grid.
