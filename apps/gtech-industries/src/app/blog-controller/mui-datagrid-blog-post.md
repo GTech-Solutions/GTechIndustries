@@ -5,14 +5,14 @@ Data grids are essential components in web applications for displaying and manag
 
 ## Prerequisites
 
-Before we dive into building our custom data grid toolbar, let's ensure we have all the necessary tools and dependencies installed:
+Before we dive into building our custom toolbar, let's ensure we have all the necessary tools and dependencies installed:
 
 - **Node.js and npm**: Make sure you have Node.js and npm installed on your system. You can download and install them from the [official website](https://nodejs.org/).
 
-  - **React, Material-UI and Jotai**: Our custom toolbar will be built using React for the frontend, Jotai for state management and Material-UI for the UI components. Install React, Jotai, and Material-UI in your project using npm:
+  - **React, Material-UI, MUI-X-Data-Grid and Jotai**: Our custom toolbar will be built using React for the frontend, Jotai for state management and Material-UI for the UI components. Install React, Jotai, and Material-UI in your project using npm:
 
 ```bash
-npm install react jotai @mui/material @emotion/react @emotion/styled 
+npm install react jotai @mui/material  @mui/x-data-grid @emotion/react @emotion/styled
 ```
 
 - **TSS for Type-Safe Styling**: We'll use TSS for type-safe styling in our React components. Install TSS in your project using npm:
@@ -21,11 +21,11 @@ npm install react jotai @mui/material @emotion/react @emotion/styled
 npm install tss-react
 ```
 
-With these prerequisites in place, we're ready to start building our custom data grid toolbar.
+With these prerequisites in place, we're ready to start building our custom DataGrid toolbar.
 
 ## Setting Up the Component
 
-Let's start by defining the structure and functionality of our custom data grid toolbar component. We'll name it `CustomDataGridToolbar`.
+Let's start by defining the structure and functionality of our custom toolbar component. We'll name it `CustomDataGridToolbar`.
 
 ```javascript
 // Import necessary dependencies
@@ -51,7 +51,7 @@ import { useGridApiContext, useGridRootProps, GridInitialState } from '@mui/x-da
 import { useAtom, useAtomValue, WritableAtom } from 'jotai';
 import { atomWithStorage } from 'jotai/vanilla/utils';
 
-// Define props for the custom data grid toolbar
+// Define props for the custom data grid toolbar exte1nding the default grid slot props for the toolbar
 export type ICustomDataGridToolbarProps = GridSlotProps['toolbar'] & {
   dataGridIdentifier: string;
   withAutoSaveTableState?: boolean;
@@ -74,8 +74,8 @@ const useStyles = makeStyles<ICustomDataGridToolbarProps>()((theme, props) => ({
   },
 }));
 
-// Export the component and its styles
-export { CustomDataGridToolbar, useStyles };
+// Export the component
+export { CustomDataGridToolbar };
 
 // Integrate the custom toolbar into the theme options
 function useTheme(mode: PaletteMode): ThemeOptions {
@@ -96,7 +96,7 @@ function useTheme(mode: PaletteMode): ThemeOptions {
 }
 ```
 
-Our custom data grid toolbar component imports necessary dependencies from Material-UI and sets up the props interface to define the toolbar's behavior.  These props can be specified on the DataGrids slotprops to override this component on a DataGrid by DataGrid basis.  The component itself is plumbed into slots in the MUI theme for Datagrid component overrides.
+Our custom DataGrid toolbar component imports necessary dependencies from Material-UI and sets up the props interface to define the toolbar's behavior.  These props can be specified on the DataGrids slotprops to override this component on a DataGrid by DataGrid basis.  The component itself is plumbed into slots in the MUI theme for Datagrid component overrides.
 
 ## Component Logic
 
@@ -112,7 +112,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
     const apiRef = useGridApiContext();
     const LOCAL_STORAGE_KEY = `dataGridState-${props.dataGridIdentifier}`;
     
-    //Saving desnity in jotai atom and local storage
+    //Saving desnity in jotai atom and local storage this atom is defined in a parent component and passed down
     const density = useAtomValue(props.dataGridDensity);
     
     // Save the initial state of the data grid in local storage using Jotai
@@ -273,7 +273,7 @@ Check?.pagination?.paginationModel ?? defaultDataGridControl.paginationModel,
 };
 ```
 
-In this section, we've set up the logic of our custom data grid toolbar component. We've used various React hooks (`useState`, `useEffect`, `useMemo`, `useLayoutEffect`) to manage state, subscribe to events for detecting changes in state, and handle saving and restoring table state.  The most important of these is thr useLayoutEffect which sets up the actual saving of the table state.
+In this section, we've set up the logic of our custom data grid toolbar component. We've used various React hooks (`useState`, `useEffect`, `useMemo`, `useLayoutEffect`) to manage state, subscribe to events for detecting changes in state, and handle saving and restoring table state.  The most important of these is the useLayoutEffect which sets up the actual saving of the table state.
 
 ## Styling the Component
 
@@ -297,7 +297,7 @@ With the `makeStyles` function, we ensure type-safe styling and class re-usabili
 
 ## Conclusion
 
-In this article, we've explored how to create a custom data grid toolbar component using React, Material-UI, and TSS. We've covered the component's structure, logic for saving and restoring table state, and styling. With this component, you can provide users with a powerful and intuitive interface for managing data grid settings.
+In this article, we've explored how to create a custom data grid toolbar component using React, Material-UI, and TSS. We've covered the component's structure, logic for saving and restoring table state, and styling. With this component, you can provide users with a powerful and intuitive interface for managing DataGrid settings.
 
 Feel free to customize and expand upon this component to suit your specific needs and requirements in your React applications.
 
