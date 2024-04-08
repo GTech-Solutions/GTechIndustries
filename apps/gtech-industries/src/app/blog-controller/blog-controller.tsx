@@ -9,7 +9,6 @@ export interface IBlogControllerProps {}
 const BlogController: React.FC<IBlogControllerProps> = (props) => {
     const { classes, cx } = useStyles(props);
 
-    console.log(muiDatagridPost);
     return (
         <>
             {/*
