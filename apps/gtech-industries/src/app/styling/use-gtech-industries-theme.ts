@@ -209,7 +209,6 @@ function useGtechIndustriesTheme(mode: PaletteMode): ThemeOptions {
                 defaultProps: {
                     pageSizeOptions: [15, 25, 50, 100],
                     density: 'standard',
-
                     slots: {
                         toolbar: CustomDataGridToolbar as GridSlotsComponent['toolbar'],
                     },

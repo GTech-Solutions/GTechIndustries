@@ -12,7 +12,9 @@ const BlogController: React.FC<IBlogControllerProps> = (props) => {
     console.log(muiDatagridPost);
     return (
         <>
+            {/*
             <BlogHeader title={'Blog'} />
+*/}
             <BlogPosts title={'MUI DataGid custom toolbar.'} posts={[muiDatagridPost]} />
         </>
     );

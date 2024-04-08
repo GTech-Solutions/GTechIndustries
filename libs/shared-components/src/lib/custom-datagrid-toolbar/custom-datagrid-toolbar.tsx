@@ -160,7 +160,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
                 <Stack width={'100%'} alignItems={'center'} direction={'row'} justifyContent={'space-between'}>
                     <Stack spacing={2} direction={'row'}>
                         <Button
-                            className={cx(classes.filterOptionButton)}
+                            className={cx(classes.hideShowTableUtilities)}
                             endIcon={isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
                             onClick={() => setIsOpen(!isOpen)}
                             variant='text'
@@ -205,7 +205,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
 };
 
 const useStyles = makeStyles<ICustomDataGridToolbarProps>()((theme, props) => ({
-    filterOptionButton: {
+    hideShowTableUtilities: {
         color: theme.palette.text.primary,
         fontWeight: 'bold',
         textTransform: 'none',
