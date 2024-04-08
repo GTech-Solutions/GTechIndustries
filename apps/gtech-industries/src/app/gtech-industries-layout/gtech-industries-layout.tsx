@@ -53,6 +53,11 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
                 logo={Jeep}
                 appbarProps={{ position: 'fixed' }}
                 mainMenuItems={[
+                    <MenuItem key={routeUrls.blog} onClick={() => handleMenuItemClick(routeUrls.blog)}>
+                        <Typography variant='body2' color={'text.primary'}>
+                            Blog
+                        </Typography>
+                    </MenuItem>,
                     <MenuItem key={routeUrls.dataGridAutoSave} onClick={(event) => handleClick(event)}>
                         <Typography variant='body2' color='text.primary'>
                             DataGrid
