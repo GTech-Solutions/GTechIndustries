@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gtech-industries-s3-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gtech-industries-s3-deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/manual-save-data-grid-controller/manual-save-data-grid-controller.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/manual-save-data-grid-controller/manual-save-data-grid-controller.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ReactComponent" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,9 +26,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2eQt6mJVzaNQVh0m445OGFo0zrr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,15 +36,44 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Jest.App.executor": "Run",
+    "Jest.App.should have a greeting as the title.executor": "Run",
+    "Jest.App.should render successfully.executor": "Run",
+    "Jest.CustomDataGridToolbar.executor": "Run",
+    "Jest.CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled.executor": "Run",
+    "Jest.CustomDataGridToolbar.renders without crashing.executor": "Run",
+    "Jest.CustomDataGridToolbar.resets state on Reset button click.executor": "Run",
+    "Jest.CustomDataGridToolbar.saves the state to local storage on button click.executor": "Run",
+    "Jest.CustomDataGridToolbar.toggles collapse on button click.executor": "Run",
+    "Jest.GithubAccessRoleStack.creates an iam role.executor": "Run",
+    "Jest.GithubAccessRoleStack.creates the GithubDeployRole.executor": "Run",
+    "Jest.GithubAccessRoleStack.creates the identity provider.executor": "Run",
+    "Jest.GithubAccessRoleStack.executor": "Run",
+    "Jest.SQS Queue Created.executor": "Run",
+    "Jest.StaticS3WebsiteStack.adds an A record to route 53.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates an s3 bucket deploy with invalidation.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates certificate for the specified domain name.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates the GithubDeployRole.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates the S3 bucket for hosting the site.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates the cloudfront distribution.executor": "Run",
+    "Jest.StaticS3WebsiteStack.creates the cloudfront origin access identity.executor": "Run",
+    "Jest.StaticS3WebsiteStack.executor": "Run",
+    "Jest.StaticS3WebsiteStack.modifies the resource policy for the hosting bucket.executor": "Run",
+    "Jest.creates an iam role.executor": "Run",
+    "Nx.gtech-industries:build.executor": "Run",
     "Nx.gtech-industries:serve.executor": "Run",
+    "Nx.shared-components:build.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/.github",
+    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/jest",
     "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier",
+    "settings.editor.selected.configurable": "inlay.hints",
     "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -61,16 +98,90 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/styling" />
       <recent name="$PROJECT_DIR$/.github" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/.github/workflows" />
+      <recent name="$PROJECT_DIR$/libs/shared-components/src" />
+      <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/routes" />
+      <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/images" />
+      <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout" />
       <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src" />
-      <recent name="$PROJECT_DIR$/libs/aws-infrastructure/src/lib" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Nx.gtech-industries:serve">
+    <configuration name="CustomDataGridToolbar" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-names>
+        <test-name value="CustomDataGridToolbar" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="CustomDataGridToolbar.resets state on Reset button click" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
+      <test-names>
+        <test-name value="CustomDataGridToolbar" />
+        <test-name value="resets state on Reset button click" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="StaticS3WebsiteStack" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
+      <test-names>
+        <test-name value="StaticS3WebsiteStack" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="StaticS3WebsiteStack.adds an A record to route 53" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
+      <test-names>
+        <test-name value="StaticS3WebsiteStack" />
+        <test-name value="adds an A record to route 53" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="StaticS3WebsiteStack.creates an s3 bucket deploy with invalidation" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
+      <test-names>
+        <test-name value="StaticS3WebsiteStack" />
+        <test-name value="creates an s3 bucket deploy with invalidation" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="gtech-industries:build" type="NxRunConfigurationType">
+      <option name="nx-projects" value="gtech-industries" />
+      <option name="nx-targets" value="build" />
+      <option name="nx-target-configuration" value="" />
+      <envs />
+      <option name="arguments" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="gtech-industries:serve" type="NxRunConfigurationType">
       <option name="nx-projects" value="gtech-industries" />
       <option name="nx-targets" value="serve" />
@@ -79,6 +190,15 @@
       <option name="arguments" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.CustomDataGridToolbar" />
+        <item itemvalue="Jest.CustomDataGridToolbar.resets state on Reset button click" />
+        <item itemvalue="Jest.StaticS3WebsiteStack" />
+        <item itemvalue="Jest.StaticS3WebsiteStack.creates an s3 bucket deploy with invalidation" />
+        <item itemvalue="Jest.StaticS3WebsiteStack.adds an A record to route 53" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,11 +208,42 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711848459616</updated>
-      <workItem from="1711848463601" duration="2046000" />
+      <workItem from="1711848463601" duration="1824000" />
+      <workItem from="1711890472814" duration="70511000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx</url>
+          <line>73</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx</url>
+          <line>80</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts</url>
+          <line>68</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx</url>
+          <line>40</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
