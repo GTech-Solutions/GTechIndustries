@@ -1,6 +1,7 @@
-const { NxWebpackPlugin } = require('@nx/webpack');
-const { NxReactWebpackPlugin } = require('@nx/react');
+const { NxWebpackPlugin, composePlugins, withNx } = require('@nx/webpack');
+const { NxReactWebpackPlugin, withReact } = require('@nx/react');
 const { join } = require('path');
+const { merge } = require('webpack-merge');
 
 module.exports = {
     output: {
@@ -9,6 +10,14 @@ module.exports = {
     devServer: {
         port: 4200,
         historyApiFallback: true,
+    },
+    module: {
+        rules: [
+            {
+                test: /\.md$/,
+                use: 'raw-loader',
+            },
+        ],
     },
     plugins: [
         new NxWebpackPlugin({
