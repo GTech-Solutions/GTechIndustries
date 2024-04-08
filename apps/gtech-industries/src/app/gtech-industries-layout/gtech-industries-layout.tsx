@@ -70,12 +70,12 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
                     </MenuItem>,
                 ]}
                 subMenuItems={[
-                    <Tooltip title={'About me'}>
+                    <Tooltip key={routeUrls.resume} title={'About me'}>
                         <Avatar component={'a'} href={routeUrls.resume} alt='Michael Gilge' src='/assets/mgilge.jpg' />
                     </Tooltip>,
                 ]}
             />
-            <Box sx={{ bgcolor: 'background.default' }}>
+            <Box sx={{ bgcolor: 'background.default', height: '100%' }}>
                 <Box className={cx(classes.gradientBox)}>
                     <Container
                         maxWidth='xl'
@@ -85,7 +85,9 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
                             pb: { xs: 6, sm: 8 },
                         }}
                     >
-                        <div className={cx(classes.dataGridContainer)}>{props.children}</div>
+                        <div className={cx(classes.dataGridContainer)}>
+                            <div>{props.children}</div>
+                        </div>
                     </Container>
                 </Box>
             </Box>

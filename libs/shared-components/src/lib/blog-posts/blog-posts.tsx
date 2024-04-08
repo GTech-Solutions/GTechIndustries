@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from 'tss-react/mui';
-import { Divider, Grid, Typography } from '@mui/material';
+import { Divider, Grid, Stack, Typography } from '@mui/material';
 import { Markdown } from '../markdown/markdown';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -13,7 +13,7 @@ const BlogPosts: React.FC<IBlogPostsProps> = (props) => {
     const { classes, cx } = useStyles(props);
 
     return (
-        <Grid item xs={12} md={8} className={cx(classes.container)}>
+        <Stack spacing={1} className={cx(classes.container)}>
             <Typography variant='h6' gutterBottom>
                 {props.title}
             </Typography>
@@ -23,12 +23,15 @@ const BlogPosts: React.FC<IBlogPostsProps> = (props) => {
                     {post}
                 </Markdown>
             ))}
-        </Grid>
+        </Stack>
     );
 };
 
 const useStyles = makeStyles<IBlogPostsProps>()((theme, props) => ({
     container: {
+        marginLeft: '-1.5rem',
+        marginRight: '-1.5rem',
+        overflow: 'hidden',
         '& .markdown': {
             py: 3,
         },

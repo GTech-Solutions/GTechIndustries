@@ -1,4 +1,4 @@
-import { Box, Link, Typography } from '@mui/material';
+import { Box, Link, Typography, useTheme } from '@mui/material';
 import React, { PropsWithChildren } from 'react';
 import { makeStyles } from 'tss-react/mui';
 import ReactMarkdown from 'markdown-to-jsx';
@@ -13,8 +13,19 @@ function MarkdownListItem(props: any) {
     return <Box component='li' sx={{ mt: 1, typography: 'body1' }} {...props} />;
 }
 
+function MarkdownTyographyULItem(props: any) {
+    return (
+        <Typography
+            sx={{ marginTop: ' 1rem', marginBottom: '1rem', listStyle: 'none', '& strong': { color: 'text.primary' } }}
+            component={'div'}
+            {...props}
+        />
+    );
+}
+
 const Markdown: React.FC<IMarkdownProps> = (props) => {
     const { classes, cx } = useStyles(props);
+    const theme = useTheme();
 
     const options = {
         overrides: {
@@ -50,10 +61,19 @@ const Markdown: React.FC<IMarkdownProps> = (props) => {
             li: {
                 component: MarkdownListItem,
             },
+            ul: {
+                component: MarkdownTyographyULItem,
+            },
         },
     };
 
-    return <ReactMarkdown options={options} {...props} />;
+    return (
+        <ReactMarkdown
+            style={{ backgroundColor: theme.palette.background.default, paddingLeft: '1.5rem', paddingRight: '1.5rem' }}
+            options={options}
+            {...props}
+        />
+    );
 };
 
 const useStyles = makeStyles<IMarkdownProps>()((theme, props) => ({}));
