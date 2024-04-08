@@ -14,10 +14,12 @@ const BlogPosts: React.FC<IBlogPostsProps> = (props) => {
 
     return (
         <Stack spacing={1} className={cx(classes.container)}>
-            <Typography variant='h6' gutterBottom>
-                {props.title}
-            </Typography>
-            <Divider />
+            <Stack className={cx(classes.header)}>
+                <Typography variant='h6' gutterBottom>
+                    {props.title}
+                </Typography>
+                <Divider />
+            </Stack>
             {props.posts.map((post) => (
                 <Markdown className='markdown' key={post.substring(0, 40)}>
                     {post}
@@ -35,6 +37,10 @@ const useStyles = makeStyles<IBlogPostsProps>()((theme, props) => ({
         '& .markdown': {
             py: 3,
         },
+    },
+    header: {
+        paddingLeft: '1.5rem',
+        paddingRight: '1.5rem',
     },
 }));
 

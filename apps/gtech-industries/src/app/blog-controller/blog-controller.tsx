@@ -15,7 +15,7 @@ const BlogController: React.FC<IBlogControllerProps> = (props) => {
             {/*
             <BlogHeader title={'Blog'} />
 */}
-            <BlogPosts title={'MUI DataGid custom toolbar.'} posts={[muiDatagridPost]} />
+            <BlogPosts title={'MUI DataGrid custom toolbar'} posts={[muiDatagridPost]} />
         </>
     );
 };

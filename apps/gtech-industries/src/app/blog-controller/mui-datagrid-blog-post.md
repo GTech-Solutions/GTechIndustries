@@ -1,4 +1,4 @@
-# Creating a Custom Data Grid Toolbar with React Material-UI and Jotai
+# Creating a custom Data Grid Toolbar with React Material-UI and Jotai
 *Written by Michael Gilge*
 
 Data grids are essential components in web applications for displaying and managing large sets of data. However, providing users with the ability to customize and manage the state of these grids can be challenging. In this article, we'll explore how to create a custom data grid toolbar using React, Jotai, Material-UI (MUI), and TSS (Type-Safe Styling). Our custom toolbar will allow users to efficiently manage filters, sorting, and other settings while also providing options for saving and restoring the state of the data grid.
@@ -67,7 +67,7 @@ const CustomDataGridToolbar: React.FC<ICustomDataGridToolbarProps> = (props) => 
 
 // Define the styles for the component
 const useStyles = makeStyles<ICustomDataGridToolbarProps>()((theme, props) => ({
-  filterOptionButton: {
+  hideShowTableUtilities: {
     color: theme.palette.text.primary,
     fontWeight: 'bold',
     textTransform: 'none',
@@ -228,7 +228,7 @@ Check?.pagination?.paginationModel ?? defaultDataGridControl.paginationModel,
                 <Stack width={'100%'} alignItems={'center'} direction={'row'} justifyContent={'space-between'}>
                     <Stack spacing={2} direction={'row'}>
                         <Button
-                            className={cx(classes.filterOptionButton)}
+                            className={cx(classes.hideShowTableUtilities)}
                             endIcon={isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
                             onClick={() => setIsOpen(!isOpen)}
                             variant='text'
@@ -273,7 +273,7 @@ Check?.pagination?.paginationModel ?? defaultDataGridControl.paginationModel,
 };
 ```
 
-In this section, we've set up the logic of our custom data grid toolbar component. We've used various React hooks (`useState`, `useEffect`, `useMemo`, `useLayoutEffect`) to manage state, subscribe to events for detecting changes in state, and handle saving and restoring table state.  The most important of these is thr useLayoutEffect which sets up the actual saving of thr table state.
+In this section, we've set up the logic of our custom data grid toolbar component. We've used various React hooks (`useState`, `useEffect`, `useMemo`, `useLayoutEffect`) to manage state, subscribe to events for detecting changes in state, and handle saving and restoring table state.  The most important of these is thr useLayoutEffect which sets up the actual saving of the table state.
 
 ## Styling the Component
 
