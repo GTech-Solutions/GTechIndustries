@@ -85,9 +85,7 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
                             pb: { xs: 6, sm: 8 },
                         }}
                     >
-                        <div className={cx(classes.dataGridContainer)}>
-                            <div>{props.children}</div>
-                        </div>
+                        <div className={cx(classes.dataGridContainer)}>{props.children}</div>
                     </Container>
                 </Box>
             </Box>

@@ -1,6 +1,5 @@
-import React, { useEffect, useLayoutEffect, useMemo } from 'react';
+import React, { useLayoutEffect, useMemo } from 'react';
 import { makeStyles } from 'tss-react/mui';
-import { useDemoData } from '@mui/x-data-grid-generator';
 import {
     DataGridPro,
     DEFAULT_GRID_AUTOSIZE_OPTIONS,
@@ -81,12 +80,6 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
     );
 };
 
-const useStyles = makeStyles<ICustomDataGridProps>()((theme, props) => ({
-    dataGridContainer: {
-        width: '100%',
-        height: '100vh',
-        backgroundColor: '#fff',
-    },
-}));
+const useStyles = makeStyles<ICustomDataGridProps>()((theme, props) => ({}));
 
 export { CustomDataGrid };
