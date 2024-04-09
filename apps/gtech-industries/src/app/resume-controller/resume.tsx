@@ -151,7 +151,7 @@ const Resume = React.forwardRef<HTMLDivElement>((props: IResumeProps, ref) => {
                         title: 'Hobbies & Interests',
                         description: '',
                         icon: 'cubes',
-                        items: ['Photography', 'Jeeps', 'Camping', 'Hiking', 'Fishing'],
+                        items: ['Photography', 'Camping', 'Hiking', 'Fishing', 'Jeeps', 'Wrenching', 'Fabrication'],
                     },
                 ]}
                 branding={false} // or false to hide it.
