@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/manual-save-data-grid-controller/manual-save-data-grid-controller.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/manual-save-data-grid-controller/manual-save-data-grid-controller.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,70 +33,71 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Jest.App.executor": "Run",
-    "Jest.App.should have a greeting as the title.executor": "Run",
-    "Jest.App.should render successfully.executor": "Run",
-    "Jest.CustomDataGridToolbar.executor": "Run",
-    "Jest.CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled.executor": "Run",
-    "Jest.CustomDataGridToolbar.renders without crashing.executor": "Run",
-    "Jest.CustomDataGridToolbar.resets state on Reset button click.executor": "Run",
-    "Jest.CustomDataGridToolbar.saves the state to local storage on button click.executor": "Run",
-    "Jest.CustomDataGridToolbar.toggles collapse on button click.executor": "Run",
-    "Jest.GithubAccessRoleStack.creates an iam role.executor": "Run",
-    "Jest.GithubAccessRoleStack.creates the GithubDeployRole.executor": "Run",
-    "Jest.GithubAccessRoleStack.creates the identity provider.executor": "Run",
-    "Jest.GithubAccessRoleStack.executor": "Run",
-    "Jest.SQS Queue Created.executor": "Run",
-    "Jest.StaticS3WebsiteStack.adds an A record to route 53.executor": "Run",
-    "Jest.StaticS3WebsiteStack.creates an s3 bucket deploy with invalidation.executor": "Run",
-    "Jest.StaticS3WebsiteStack.creates certificate for the specified domain name.executor": "Run",
-    "Jest.StaticS3WebsiteStack.creates the GithubDeployRole.executor": "Run",
-    "Jest.StaticS3WebsiteStack.creates the S3 bucket for hosting the site.executor": "Run",
-    "Jest.StaticS3WebsiteStack.creates the cloudfront distribution.executor": "Run",
-    "Jest.StaticS3WebsiteStack.creates the cloudfront origin access identity.executor": "Run",
-    "Jest.StaticS3WebsiteStack.executor": "Run",
-    "Jest.StaticS3WebsiteStack.modifies the resource policy for the hosting bucket.executor": "Run",
-    "Jest.creates an iam role.executor": "Run",
-    "Nx.gtech-industries:build.executor": "Run",
-    "Nx.gtech-industries:serve.executor": "Run",
-    "Nx.shared-components:build.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Jest.App.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.App.should have a greeting as the title.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.App.should render successfully.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.on destruction of the datagrid the state is saved to local storage when auto save is enabled.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.renders without crashing.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.resets state on Reset button click.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.saves the state to local storage on button click.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.CustomDataGridToolbar.toggles collapse on button click.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.GithubAccessRoleStack.creates an iam role.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.GithubAccessRoleStack.creates the GithubDeployRole.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.GithubAccessRoleStack.creates the identity provider.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.GithubAccessRoleStack.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.SQS Queue Created.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.StaticS3WebsiteStack.adds an A record to route 53.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.StaticS3WebsiteStack.creates an s3 bucket deploy with invalidation.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.StaticS3WebsiteStack.creates certificate for the specified domain name.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.StaticS3WebsiteStack.creates the GithubDeployRole.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.StaticS3WebsiteStack.creates the S3 bucket for hosting the site.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.StaticS3WebsiteStack.creates the cloudfront distribution.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.StaticS3WebsiteStack.creates the cloudfront origin access identity.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.StaticS3WebsiteStack.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.StaticS3WebsiteStack.modifies the resource policy for the hosting bucket.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.creates an iam role.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.gtech-industries:build.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.gtech-industries:serve.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.shared-components:build.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "dev.nx.console.project_details_files": [
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/jest.config.ts",
-      "/Users/michaelgilge/Code/GTechIndustries/nx.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts"
+  &quot;keyToStringList&quot;: {
+    &quot;dev.nx.console.project_details_files&quot;: [
+      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/project.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/package.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/.eslintrc.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/jest.config.ts&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/nx.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json&quot;,
+      &quot;/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/gtech-industries/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/styling" />
       <recent name="$PROJECT_DIR$/.github" />
@@ -216,32 +216,45 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx</url>
           <line>73</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx</url>
           <line>80</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts</url>
           <line>68</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx</url>
           <line>40</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx</url>
+          <line>108</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,7 +2,9 @@
   "name": "@gtech/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "nx g @nx-dotnet/core:restore"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -31,6 +33,7 @@
     "@babel/core": "^7.24.3",
     "@babel/preset-react": "^7.24.1",
     "@emotion/babel-plugin": "11.11.0",
+    "@nx-dotnet/core": "^2.2.0",
     "@nx/cypress": "18.2.2",
     "@nx/eslint": "18.2.2",
     "@nx/eslint-plugin": "18.2.2",
