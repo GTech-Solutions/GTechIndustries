@@ -3,6 +3,7 @@ import * as cdk from 'aws-cdk-lib';
 import { StaticS3Website } from './static-s3-website/static-s3-website';
 import { GithubAccessRole } from './iam-roles/github-access-role';
 import { DynamoTables } from './dynamo-tables/dynamo-tables';
+import { AppRunner } from './app-runner/app-runner';
 
 //Found help separating the stacks in the following link: https://github.com/aws/aws-cdk/issues/11625
 const app = new cdk.App();
@@ -33,4 +34,27 @@ if (bundlingStacks.includes('DynamoTablesStack')) {
             region: process.env['AWS_PRIMARY_REGION'],
         },
     });
+}
+
+if (bundlingStacks.includes('GtechDirectApiStack')) {
+    new AppRunner(
+        app,
+        'GeminiReportingApi',
+        'reporting',
+        'Dockerfile',
+        '../../../../services/reporting/src/reporting',
+        {
+            port: '8080',
+            runtimeEnvironmentVariables: [],
+        },
+        {
+            ingressConfiguration: { isPubliclyAccessible: true },
+        },
+        {
+            env: {
+                account: process.env['AWS_ACCOUNT'],
+                region: process.env['AWS_PRIMARY_REGION'],
+            },
+        }
+    );
 }

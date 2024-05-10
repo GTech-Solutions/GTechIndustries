@@ -11,7 +11,7 @@ export class DynamoTables extends cdk.Stack {
     ) {
         super(scope, id, props);
 
-        //ToDo abstract tags to higher class
+        //ToDo abstract tags to higher class?
         const application = this.node.tryGetContext('application') as string;
         const environment = this.node.tryGetContext('environment') as string;
 
