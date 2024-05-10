@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/dynamo-tables-deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/dynamo-tables/dynamo-tables.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-direct-api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-direct-api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/gtech-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/gtech-stack.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
     "Nx.shared-components:build.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/src",
+    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/.github/workflows",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,6 +111,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/styling" />
@@ -221,7 +225,7 @@
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
       <workItem from="1711890472814" duration="70511000" />
-      <workItem from="1715357549107" duration="930000" />
+      <workItem from="1715357549107" duration="5941000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,97 @@
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/dynamo-tables-deploy.yml
+      - libs/aws-infrastructure/dynamo-tables/**
+    branches:
+      - develop
+ #     - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy_gtech_direct_s3:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref_name }}
+    env:
+      NODE_OPTIONS: --max-old-space-size=6144
+    permissions:
+      id-token: write
+      contents: read
+      actions: read
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
+
+      - name: Print github ref_name
+        run: echo github.ref_name
+
+      - name: Print expected rolearn
+        run: echo arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GithubDeployRole
+
+      - name: Queue
+        uses: ahmadnassri/action-workflow-queue@v1.1.4
+        with:
+          timeout: 3000000
+
+      - name: Branch Name
+        run: echo "branch=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Branch Name Case Transformation
+        id: branch
+        uses: ASzc/change-string-case-action@v6
+        with:
+          string: ${{ env.branch }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4.0.1
+        id: get-aws-creds
+        with:
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GithubDeployRole
+          role-session-name: GithubDeployGTechIndustriesUI
+          aws-region: us-west-2
+
+      # ---- Manage NPM Dependencies ----
+      - uses: actions/setup-node@v4.0.1
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: ./package-lock.json
+      - name: Install dependencies
+        id: npm-ci
+        run: npm ci
+
+      # ---- AWS CDK Deploy Infrastructure ----
+      - name: cdk synth GTechIDirectUIStaticSiteStack
+        uses: youyo/aws-cdk-github-actions@v2
+        id: cdk-synth-stack
+        env:
+          STACK_NAME: DynamoTablesStack
+        with:
+          working_dir: ./libs/aws-infrastructure/src/lib
+          cdk_subcommand: 'synth --exclusively -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect'
+          cdk_stack: DynamoTablesStack
+          debug_log: true
+
+      - name: cdk deploy StaticS3WebsiteStack
+        uses: youyo/aws-cdk-github-actions@v2
+        id: cdk-deploy-stack
+        env:
+          STACK_NAME: DynamoTablesStack
+        with:
+          working_dir: ./libs/aws-infrastructure/src/lib
+          cdk_subcommand: 'deploy --exclusively --require-approval never -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect'
+          cdk_stack: DynamoTablesStack
+          debug_log: true
+
