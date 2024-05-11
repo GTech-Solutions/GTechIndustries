@@ -71,7 +71,7 @@ jobs:
         with:
           working_dir: ./libs/aws-infrastructure/src/lib
           cdk_stack: GtechDirectApiStack
-          cdk_subcommand: "synth -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect"
+          cdk_subcommand: "synth --exclusively -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect"
 
       - name: cdk deploy
         uses: youyo/aws-cdk-github-actions@v2
@@ -79,4 +79,4 @@ jobs:
         with:
           working_dir: ./libs/aws-infrastructure/src/lib
           cdk_stack: GtechDirectApiStack
-          cdk_subcommand: "deploy -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect"
+          cdk_subcommand: "deploy --exclusively -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect"
