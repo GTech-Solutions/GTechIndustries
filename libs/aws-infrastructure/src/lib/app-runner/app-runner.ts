@@ -42,11 +42,11 @@ export class AppRunner extends cdk.Stack {
             subnets: ['subnet-04281291aef406753', 'subnet-092ca08385ee7bc01', 'subnet-0b0f8bc727811af9f', 'subnet-07429cc57e5ba1c5a'],
         });
 
-        const ecsAccessRoleArn = new aws_iam.Role(this, 'ecsFargateExecutionRole', {
+        const ecrAccessRoleArn = new aws_iam.Role(this, 'ecsFargateExecutionRole', {
             assumedBy: new aws_iam.ServicePrincipal('tasks.apprunner.amazonaws.com'),
         });
 
-        ecsAccessRoleArn.addToPolicy(
+        ecrAccessRoleArn.addToPolicy(
             new PolicyStatement({
                 effect: Effect.ALLOW,
                 resources: ['*'],
@@ -89,7 +89,7 @@ export class AppRunner extends cdk.Stack {
                     imageConfiguration: imageConfiguration,
                 },
                 authenticationConfiguration: {
-                    accessRoleArn: ecsAccessRoleArn.roleArn,
+                    accessRoleArn: ecrAccessRoleArn.roleArn,
                 },
             },
         });

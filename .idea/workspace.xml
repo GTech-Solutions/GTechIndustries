@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/app-runner/app-runner.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/app-runner/app-runner.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,9 +102,7 @@
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/Gtech.Apps.GtechDirectApi.csproj",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/Gtech.Apps.GtechDirectApi.Test.csproj",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.6bf6b3599a019d07fdfe31e978576e0c1fb38079a4037202001385f98d0057ac/Gtech.Apps.GtechDirectApi.csproj",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.6bf6b3599a019d07fdfe31e978576e0c1fb38079a4037202001385f98d0057ac/package.json"
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/package.json"
     ]
   }
 }]]></component>
@@ -223,7 +221,7 @@
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
       <workItem from="1711890472814" duration="70511000" />
-      <workItem from="1715357549107" duration="13350000" />
+      <workItem from="1715357549107" duration="13481000" />
     </task>
     <servers />
   </component>
