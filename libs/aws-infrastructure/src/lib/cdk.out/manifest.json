@@ -1,0 +1,165 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "GtechDirectApiStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "GtechDirectApiStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "GtechDirectApiStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "GtechDirectApiStack.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "application": "gtech",
+          "automation": "AWS CDK",
+          "classification": "Public",
+          "creator": "Mike G",
+          "environment": "dev"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/04569bac14bafc31373437eecc1fc26e74a95c6529c658fbc6ef42dff9310b0c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "GtechDirectApiStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "GtechDirectApiStack.assets"
+      ],
+      "metadata": {
+        "/GtechDirectApiStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "application",
+                "Value": "gtech"
+              },
+              {
+                "Key": "automation",
+                "Value": "AWS CDK"
+              },
+              {
+                "Key": "classification",
+                "Value": "Public"
+              },
+              {
+                "Key": "creator",
+                "Value": "Mike G"
+              },
+              {
+                "Key": "environment",
+                "Value": "dev"
+              }
+            ]
+          }
+        ],
+        "/GtechDirectApiStack/vpc-connector": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vpcconnector"
+          }
+        ],
+        "/GtechDirectApiStack/ecsFargateExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecsFargateExecutionRoleD3959D35"
+          }
+        ],
+        "/GtechDirectApiStack/ecsFargateExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecsFargateExecutionRoleDefaultPolicy79EC22EE"
+          }
+        ],
+        "/GtechDirectApiStack/ecsFargateTaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecsFargateTaskRole0F9BD709"
+          }
+        ],
+        "/GtechDirectApiStack/ecsFargateTaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ecsFargateTaskRoleDefaultPolicy796E58FF"
+          }
+        ],
+        "/GtechDirectApiStack/gtech-direct-api-app-runner": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "gtechdirectapiapprunner"
+          }
+        ],
+        "/GtechDirectApiStack/table-entry/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "tableentryE589A94B"
+          }
+        ],
+        "/GtechDirectApiStack/table-entry/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "tableentryCustomResourcePolicy50EC8B24"
+          }
+        ],
+        "/GtechDirectApiStack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+          }
+        ],
+        "/GtechDirectApiStack/AWS679f53fac002430cb0da5b7982bd2287/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd22872D164C4C"
+          }
+        ],
+        "/GtechDirectApiStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/GtechDirectApiStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/GtechDirectApiStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/GtechDirectApiStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "GtechDirectApiStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

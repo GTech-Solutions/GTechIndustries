@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gtech-direct-api-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gtech-direct-api-deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/app-runner/app-runner.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/app-runner/app-runner.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/gtech-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/gtech-stack.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +103,9 @@
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/Gtech.Apps.GtechDirectApi.csproj",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/Gtech.Apps.GtechDirectApi.Test.csproj",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/package.json"
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.1dae6ec9a1059fbf1ff1ded99fa54abf260e6fa43c539f04d9a617f9c7fb76b8/Gtech.Apps.GtechDirectApi.csproj",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.1dae6ec9a1059fbf1ff1ded99fa54abf260e6fa43c539f04d9a617f9c7fb76b8/package.json"
     ]
   }
 }]]></component>
@@ -221,7 +225,7 @@
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
       <workItem from="1711890472814" duration="70511000" />
-      <workItem from="1715357549107" duration="9840000" />
+      <workItem from="1715357549107" duration="10382000" />
     </task>
     <servers />
   </component>

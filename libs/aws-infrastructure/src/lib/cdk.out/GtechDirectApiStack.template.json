@@ -1,0 +1,729 @@
+{
+ "Resources": {
+  "vpcconnector": {
+   "Type": "AWS::AppRunner::VpcConnector",
+   "Properties": {
+    "Subnets": [
+     "subnet-04281291aef406753",
+     "subnet-092ca08385ee7bc01",
+     "subnet-0b0f8bc727811af9f",
+     "subnet-07429cc57e5ba1c5a"
+    ],
+    "Tags": [
+     {
+      "Key": "application",
+      "Value": "gtech"
+     },
+     {
+      "Key": "automation",
+      "Value": "AWS CDK"
+     },
+     {
+      "Key": "classification",
+      "Value": "Public"
+     },
+     {
+      "Key": "creator",
+      "Value": "Mike G"
+     },
+     {
+      "Key": "environment",
+      "Value": "dev"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/vpc-connector"
+   }
+  },
+  "ecsFargateExecutionRoleD3959D35": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "application",
+      "Value": "gtech"
+     },
+     {
+      "Key": "automation",
+      "Value": "AWS CDK"
+     },
+     {
+      "Key": "classification",
+      "Value": "Public"
+     },
+     {
+      "Key": "creator",
+      "Value": "Mike G"
+     },
+     {
+      "Key": "environment",
+      "Value": "dev"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/ecsFargateExecutionRole/Resource"
+   }
+  },
+  "ecsFargateExecutionRoleDefaultPolicy79EC22EE": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:GetAuthorizationToken",
+        "ecr:GetDownloadUrlForLayer",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "ssm:GetParameters"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "ecsFargateExecutionRoleDefaultPolicy79EC22EE",
+    "Roles": [
+     {
+      "Ref": "ecsFargateExecutionRoleD3959D35"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/ecsFargateExecutionRole/DefaultPolicy/Resource"
+   }
+  },
+  "ecsFargateTaskRole0F9BD709": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/AmazonEC2FullAccess"
+       ]
+      ]
+     },
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/AmazonECS_FullAccess"
+       ]
+      ]
+     },
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/CloudWatchFullAccess"
+       ]
+      ]
+     },
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/AmazonS3FullAccess"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "application",
+      "Value": "gtech"
+     },
+     {
+      "Key": "automation",
+      "Value": "AWS CDK"
+     },
+     {
+      "Key": "classification",
+      "Value": "Public"
+     },
+     {
+      "Key": "creator",
+      "Value": "Mike G"
+     },
+     {
+      "Key": "environment",
+      "Value": "dev"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/ecsFargateTaskRole/Resource"
+   }
+  },
+  "ecsFargateTaskRoleDefaultPolicy796E58FF": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "cloudwatch:*",
+        "dynamodb:*",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "ecsFargateTaskRoleDefaultPolicy796E58FF",
+    "Roles": [
+     {
+      "Ref": "ecsFargateTaskRole0F9BD709"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/ecsFargateTaskRole/DefaultPolicy/Resource"
+   }
+  },
+  "gtechdirectapiapprunner": {
+   "Type": "AWS::AppRunner::Service",
+   "Properties": {
+    "InstanceConfiguration": {
+     "InstanceRoleArn": {
+      "Fn::GetAtt": [
+       "ecsFargateTaskRole0F9BD709",
+       "Arn"
+      ]
+     }
+    },
+    "NetworkConfiguration": {
+     "EgressConfiguration": {
+      "EgressType": "VPC",
+      "VpcConnectorArn": {
+       "Fn::GetAtt": [
+        "vpcconnector",
+        "VpcConnectorArn"
+       ]
+      }
+     },
+     "IngressConfiguration": {
+      "IsPubliclyAccessible": true
+     }
+    },
+    "ServiceName": "gtech-gtechdirect-api",
+    "SourceConfiguration": {
+     "AuthenticationConfiguration": {
+      "AccessRoleArn": {
+       "Fn::GetAtt": [
+        "ecsFargateExecutionRoleD3959D35",
+        "Arn"
+       ]
+      }
+     },
+     "AutoDeploymentsEnabled": true,
+     "ImageRepository": {
+      "ImageConfiguration": {
+       "Port": "8080",
+       "RuntimeEnvironmentVariables": []
+      },
+      "ImageIdentifier": {
+       "Fn::Sub": "${AWS::AccountId}.dkr.ecr.${AWS::Region}.${AWS::URLSuffix}/cdk-hnb659fds-container-assets-${AWS::AccountId}-${AWS::Region}:1dae6ec9a1059fbf1ff1ded99fa54abf260e6fa43c539f04d9a617f9c7fb76b8"
+      },
+      "ImageRepositoryType": "ECR"
+     }
+    },
+    "Tags": [
+     {
+      "Key": "application",
+      "Value": "gtech"
+     },
+     {
+      "Key": "automation",
+      "Value": "AWS CDK"
+     },
+     {
+      "Key": "classification",
+      "Value": "Public"
+     },
+     {
+      "Key": "creator",
+      "Value": "Mike G"
+     },
+     {
+      "Key": "environment",
+      "Value": "dev"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/gtech-direct-api-app-runner"
+   }
+  },
+  "tableentryE589A94B": {
+   "Type": "Custom::AWS",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+      "Arn"
+     ]
+    },
+    "Create": {
+     "Fn::Join": [
+      "",
+      [
+       "{\"service\":\"DynamoDB\",\"action\":\"putItem\",\"parameters\":{\"TableName\":\"GTECH_DIRECT_API_LIST\",\"Item\":{\"API_ID\":{\"S\":\"gtechdirect\"},\"API_ENDPOINT\":{\"S\":\"",
+       {
+        "Fn::GetAtt": [
+         "gtechdirectapiapprunner",
+         "ServiceUrl"
+        ]
+       },
+       "\"}}},\"physicalResourceId\":{\"id\":\"GTECH_DIRECT_API_LIST_initialization\"}}"
+      ]
+     ]
+    },
+    "InstallLatestAwsSdk": false
+   },
+   "DependsOn": [
+    "tableentryCustomResourcePolicy50EC8B24"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/table-entry/Resource/Default"
+   }
+  },
+  "tableentryCustomResourcePolicy50EC8B24": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "dynamodb:PutItem",
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "tableentryCustomResourcePolicy50EC8B24",
+    "Roles": [
+     {
+      "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/table-entry/CustomResourcePolicy/Resource"
+   }
+  },
+  "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "application",
+      "Value": "gtech"
+     },
+     {
+      "Key": "automation",
+      "Value": "AWS CDK"
+     },
+     {
+      "Key": "classification",
+      "Value": "Public"
+     },
+     {
+      "Key": "creator",
+      "Value": "Mike G"
+     },
+     {
+      "Key": "environment",
+      "Value": "dev"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource"
+   }
+  },
+  "AWS679f53fac002430cb0da5b7982bd22872D164C4C": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+     },
+     "S3Key": "cb92a348b5b60bcbbe3888108f15e75877121eb402b4a74526927300fcc54975.zip"
+    },
+    "Handler": "index.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "application",
+      "Value": "gtech"
+     },
+     {
+      "Key": "automation",
+      "Value": "AWS CDK"
+     },
+     {
+      "Key": "classification",
+      "Value": "Public"
+     },
+     {
+      "Key": "creator",
+      "Value": "Mike G"
+     },
+     {
+      "Key": "environment",
+      "Value": "dev"
+     }
+    ],
+    "Timeout": 120
+   },
+   "DependsOn": [
+    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/AWS679f53fac002430cb0da5b7982bd2287/Resource",
+    "aws:asset:path": "asset.cb92a348b5b60bcbbe3888108f15e75877121eb402b4a74526927300fcc54975",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/12QQWvDMAyFf0vvirYuDHZdOwa7jRR2Da6jBTWJFSynpYT89ynJWsbAoPeeZPPJT7jNn/Fx4y6a+arJWj7ieEjON2BROZKPpVOlpPgmvqH40bmaXucErIcF9aKcJF53Tglc38chBIo47r/DV+/3Ys5bH8wfKJ7Z0wTsOhwLaWlOl/opLfvrbFc1Qeu6Y+UMhkPdUpLwPgSfWALchU3f9ASa30BXOs1xNxhxmsEmWEJbrLbnoCCVIXoCP2iSroy/3u5edL9k95H/1oD/aNuv4hUgSEV40ofz9gXnszkpc2bfkbgjLNb6A2yF9IxwAQAA"
+   },
+   "Metadata": {
+    "aws:cdk:path": "GtechDirectApiStack/CDKMetadata/Default"
+   },
+   "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Conditions": {
+  "CDKMetadataAvailable": {
+   "Fn::Or": [
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "af-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-northwest-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "il-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "sa-east-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-2"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

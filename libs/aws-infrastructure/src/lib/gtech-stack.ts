@@ -42,7 +42,7 @@ if (bundlingStacks.includes('GtechDirectApiStack')) {
         'GtechDirectApiStack',
         'gtechdirect',
         'Dockerfile',
-        '../../../../apps/gtech-direct-api',
+        '../../../../../apps/gtech-direct-api',
         {
             port: '8080',
             runtimeEnvironmentVariables: [],

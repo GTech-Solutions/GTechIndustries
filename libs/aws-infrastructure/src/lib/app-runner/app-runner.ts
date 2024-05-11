@@ -50,15 +50,7 @@ export class AppRunner extends cdk.Stack {
             new PolicyStatement({
                 effect: Effect.ALLOW,
                 resources: ['*'],
-                actions: [
-                    'ecr:GetAuthorizationToken',
-                    'ecr:BatchCheckLayerAvailability',
-                    'ecr:GetDownloadUrlForLayer',
-                    'ecr:BatchGetImage',
-                    'logs:CreateLogStream',
-                    'logs:PutLogEvents',
-                    'ssm:GetParameters',
-                ],
+                actions: ['ecr:*', 'logs:CreateLogStream', 'logs:PutLogEvents', 'ssm:GetParameters'],
             })
         );
 
