@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-direct-api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-direct-api/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-direct-api/Gtech.Apps.GtechDirectApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-direct-api/Gtech.Apps.GtechDirectApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.out/GtechDirectApiStack.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.out/GtechDirectApiStack.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.out/GtechDirectApiStack.template.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.out/GtechDirectApiStack.template.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.out/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.out/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.out/tree.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/cdk.out/tree.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,18 +103,8 @@
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/Gtech.Apps.GtechDirectApi.Test.csproj",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.1dae6ec9a1059fbf1ff1ded99fa54abf260e6fa43c539f04d9a617f9c7fb76b8/Gtech.Apps.GtechDirectApi.csproj",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.1dae6ec9a1059fbf1ff1ded99fa54abf260e6fa43c539f04d9a617f9c7fb76b8/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.2af94b444761b78e60d3b2744babcc9e3089205d87dbb78a18cc50408ffd3beb/Gtech.Apps.GtechDirectApi.csproj",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.2af94b444761b78e60d3b2744babcc9e3089205d87dbb78a18cc50408ffd3beb/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.6bf6b3599a019d07fdfe31e978576e0c1fb38079a4037202001385f98d0057ac/Gtech.Apps.GtechDirectApi.csproj",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.6bf6b3599a019d07fdfe31e978576e0c1fb38079a4037202001385f98d0057ac/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.ae64e8b5c69589bdd88ecf67809937546154c7e4b4ef8a45cc99e54f1da70ebe/Gtech.Apps.GtechDirectApi.csproj",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.ae64e8b5c69589bdd88ecf67809937546154c7e4b4ef8a45cc99e54f1da70ebe/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.ea2f9083188b941f6daba7cbf8380397770a49afde4117c8a55209f485d68f5b/Gtech.Apps.GtechDirectApi.csproj",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.ea2f9083188b941f6daba7cbf8380397770a49afde4117c8a55209f485d68f5b/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.f85b1103eb44ed45fd60f6cbd66c36ad32a91f03fa63e8190a157c36fd56c088/Gtech.Apps.GtechDirectApi.csproj",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.f85b1103eb44ed45fd60f6cbd66c36ad32a91f03fa63e8190a157c36fd56c088/package.json"
+      "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/src/lib/cdk.out/asset.6bf6b3599a019d07fdfe31e978576e0c1fb38079a4037202001385f98d0057ac/package.json"
     ]
   }
 }]]></component>
@@ -239,7 +223,7 @@
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
       <workItem from="1711890472814" duration="70511000" />
-      <workItem from="1715357549107" duration="12738000" />
+      <workItem from="1715357549107" duration="13350000" />
     </task>
     <servers />
   </component>

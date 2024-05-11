@@ -43,7 +43,7 @@ export class AppRunner extends cdk.Stack {
         });
 
         const ecsAccessRoleArn = new aws_iam.Role(this, 'ecsFargateExecutionRole', {
-            assumedBy: new aws_iam.ServicePrincipal('ecs-tasks.amazonaws.com'),
+            assumedBy: new aws_iam.ServicePrincipal('tasks.apprunner.amazonaws.com'),
         });
 
         ecsAccessRoleArn.addToPolicy(
@@ -55,7 +55,7 @@ export class AppRunner extends cdk.Stack {
         );
 
         const appRunnerRole = new aws_iam.Role(this, 'ecsFargateTaskRole', {
-            assumedBy: new aws_iam.ServicePrincipal('ecs-tasks.amazonaws.com'),
+            assumedBy: new aws_iam.ServicePrincipal('tasks.apprunner.amazonaws.com'),
             managedPolicies: [
                 aws_iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonEC2FullAccess'),
                 aws_iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonECS_FullAccess'),
