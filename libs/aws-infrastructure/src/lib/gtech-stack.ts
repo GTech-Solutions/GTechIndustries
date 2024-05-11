@@ -39,7 +39,7 @@ if (bundlingStacks.includes('DynamoTablesStack')) {
 if (bundlingStacks.includes('GtechDirectApiStack')) {
     new AppRunner(
         app,
-        'GTechDirectApi',
+        'GtechDirectApiStack',
         'gtechdirect',
         'Dockerfile',
         '../../../../apps/gtech-direct-api',

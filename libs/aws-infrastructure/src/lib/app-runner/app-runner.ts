@@ -1,12 +1,13 @@
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { DockerImageAsset } from 'aws-cdk-lib/aws-ecr-assets';
-import { IgnoreMode, Tags } from 'aws-cdk-lib';
+import { aws_iam, IgnoreMode, Tags } from 'aws-cdk-lib';
 import * as cdkawsapprunner from 'aws-cdk-lib/aws-apprunner';
 import * as path from 'path';
 import { CfnService } from 'aws-cdk-lib/aws-apprunner';
 import { AwsCustomResourcePolicy, PhysicalResourceId } from 'aws-cdk-lib/custom-resources';
 import ImageConfigurationProperty = CfnService.ImageConfigurationProperty;
+import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 
 export class AppRunner extends cdk.Stack {
     constructor(
@@ -21,8 +22,6 @@ export class AppRunner extends cdk.Stack {
     ) {
         super(scope, id, props);
 
-        const roleForAppRunner = this.node.tryGetContext('roleForAppRunner') as string;
-        const appRunnerECRAccessRole = this.node.tryGetContext('appRunnerECRAccessRole') as string;
         const application = this.node.tryGetContext('application') as string;
         const environment = this.node.tryGetContext('environment') as string;
 
@@ -43,6 +42,44 @@ export class AppRunner extends cdk.Stack {
             subnets: ['subnet-04281291aef406753', 'subnet-092ca08385ee7bc01', 'subnet-0b0f8bc727811af9f', 'subnet-07429cc57e5ba1c5a'],
         });
 
+        const ecsAccessRoleArn = new aws_iam.Role(this, 'ecsFargateExecutionRole', {
+            assumedBy: new aws_iam.ServicePrincipal('ecs-tasks.amazonaws.com'),
+        });
+
+        ecsAccessRoleArn.addToPolicy(
+            new PolicyStatement({
+                effect: Effect.ALLOW,
+                resources: ['*'],
+                actions: [
+                    'ecr:GetAuthorizationToken',
+                    'ecr:BatchCheckLayerAvailability',
+                    'ecr:GetDownloadUrlForLayer',
+                    'ecr:BatchGetImage',
+                    'logs:CreateLogStream',
+                    'logs:PutLogEvents',
+                    'ssm:GetParameters',
+                ],
+            })
+        );
+
+        const appRunnerRole = new aws_iam.Role(this, 'ecsFargateTaskRole', {
+            assumedBy: new aws_iam.ServicePrincipal('ecs-tasks.amazonaws.com'),
+            managedPolicies: [
+                aws_iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonEC2FullAccess'),
+                aws_iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonECS_FullAccess'),
+                aws_iam.ManagedPolicy.fromAwsManagedPolicyName('CloudWatchFullAccess'),
+                aws_iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonS3FullAccess'),
+            ],
+        });
+
+        appRunnerRole.addToPolicy(
+            new PolicyStatement({
+                effect: Effect.ALLOW,
+                resources: ['*'],
+                actions: ['logs:CreateLogStream', 'logs:PutLogEvents', 'cloudwatch:*', 'dynamodb:*'],
+            })
+        );
+
         const appRunnerService = new cdkawsapprunner.CfnService(this, 'gtech-direct-api-app-runner', {
             networkConfiguration: {
                 ...networkConfiguration,
@@ -50,7 +87,7 @@ export class AppRunner extends cdk.Stack {
             },
             serviceName: `gtech-${apiName}-api`,
             instanceConfiguration: {
-                instanceRoleArn: roleForAppRunner,
+                instanceRoleArn: appRunnerRole.roleArn,
             },
             sourceConfiguration: {
                 autoDeploymentsEnabled: true,
@@ -60,7 +97,7 @@ export class AppRunner extends cdk.Stack {
                     imageConfiguration: imageConfiguration,
                 },
                 authenticationConfiguration: {
-                    accessRoleArn: appRunnerECRAccessRole,
+                    accessRoleArn: ecsAccessRoleArn.roleArn,
                 },
             },
         });

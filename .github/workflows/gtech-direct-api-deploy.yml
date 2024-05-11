@@ -2,24 +2,24 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - .github/workflows/dynamo-tables-deploy.yml
-      - libs/aws-infrastructure/dynamo-tables/**
+      - .github/workflows/gtech-direct-api-deploy.yml
+      - apps/gtech-direct-api/**
+      - libs/aws-infrastructure/app-runner/**
+
     branches:
       - develop
- #     - main
+     #- main
 
 permissions:
   id-token: write
   contents: read
 
 jobs:
-  deploy_dyanmo_tables_cdk_stack:
+  deploy_gtech_direct_api_cdk_stack:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     environment:
       name: ${{ github.ref_name }}
-    env:
-      NODE_OPTIONS: --max-old-space-size=6144
     permissions:
       id-token: write
       contents: read
@@ -30,18 +30,10 @@ jobs:
         working-directory: ./
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4.1.1
-        with:
-          fetch-depth: 0
-
-      - name: Print github ref_name
-        run: echo github.ref_name
-
-      - name: Print expected rolearn
-        run: echo arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GithubDeployRole
+        uses: actions/checkout@v3.3.0
 
       - name: Queue
-        uses: ahmadnassri/action-workflow-queue@v1.1.4
+        uses: ahmadnassri/action-workflow-queue@v1.1.0
         with:
           timeout: 3000000
 
@@ -50,16 +42,16 @@ jobs:
 
       - name: Branch Name Case Transformation
         id: branch
-        uses: ASzc/change-string-case-action@v6
+        uses: ASzc/change-string-case-action@v5
         with:
           string: ${{ env.branch }}
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4.0.1
+        uses: aws-actions/configure-aws-credentials@v1-node16
         id: get-aws-creds
         with:
-          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GithubDeployRole
-          role-session-name: GithubDeployGTechIndustriesUI
+          role-to-assume: arn:aws:iam::${{ vars.AWS_ACCOUNT }}:role/GithubAccessRole
+          role-session-name: GithubDeploymentGTechDirectApi
           aws-region: us-west-2
 
       # ---- Manage NPM Dependencies ----
@@ -73,25 +65,19 @@ jobs:
         run: npm ci
 
       # ---- AWS CDK Deploy Infrastructure ----
-      - name: cdk synth GTechIDirectUIStaticSiteStack
+
+      - name: cdk synth
         uses: youyo/aws-cdk-github-actions@v2
         id: cdk-synth-stack
-        env:
-          STACK_NAME: DynamoTablesStack
         with:
           working_dir: ./libs/aws-infrastructure/src/lib
-          cdk_subcommand: 'synth --exclusively -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect'
-          cdk_stack: DynamoTablesStack
-          debug_log: true
+          cdk_stack: GtechDirectApiStack
+          cdk_subcommand: "synth -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect"
 
-      - name: cdk deploy StaticS3WebsiteStack
+      - name: cdk deploy
         uses: youyo/aws-cdk-github-actions@v2
         id: cdk-deploy-stack
-        env:
-          STACK_NAME: DynamoTablesStack
         with:
           working_dir: ./libs/aws-infrastructure/src/lib
-          cdk_subcommand: 'deploy --exclusively --require-approval never -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect'
-          cdk_stack: DynamoTablesStack
-          debug_log: true
-
+          cdk_stack: GtechDirectApiStack
+          cdk_subcommand: "deploy -c environment=${{vars.ENVIRONMENT_NAME}} -c application=mui.gtechdirect"
