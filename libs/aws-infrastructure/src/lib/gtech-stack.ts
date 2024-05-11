@@ -39,10 +39,10 @@ if (bundlingStacks.includes('DynamoTablesStack')) {
 if (bundlingStacks.includes('GtechDirectApiStack')) {
     new AppRunner(
         app,
-        'GeminiReportingApi',
-        'reporting',
+        'GTechDirectApi',
+        'gtechdirect',
         'Dockerfile',
-        '../../../../services/reporting/src/reporting',
+        '../../../../apps/gtech-direct-api',
         {
             port: '8080',
             runtimeEnvironmentVariables: [],

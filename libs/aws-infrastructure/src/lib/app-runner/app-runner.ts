@@ -38,12 +38,16 @@ export class AppRunner extends cdk.Stack {
             directory: path.join(__dirname, dockerFilePath),
         });
 
-        const t = new cdkawsapprunner.CfnVpcConnector(this, 'vpc-connector', {
-            subnets: [],
+        //ToDo pass in from github actions
+        const vpcConnector = new cdkawsapprunner.CfnVpcConnector(this, 'vpc-connector', {
+            subnets: ['subnet-04281291aef406753', 'subnet-092ca08385ee7bc01', 'subnet-0b0f8bc727811af9f', 'subnet-07429cc57e5ba1c5a'],
         });
 
         const appRunnerService = new cdkawsapprunner.CfnService(this, 'gtech-direct-api-app-runner', {
-            networkConfiguration: { ...networkConfiguration, egressConfiguration: { vpcConnectorArn: t.attrVpcConnectorArn, egressType: 'VPC' } },
+            networkConfiguration: {
+                ...networkConfiguration,
+                egressConfiguration: { vpcConnectorArn: vpcConnector.attrVpcConnectorArn, egressType: 'VPC' },
+            },
             serviceName: `gtech-${apiName}-api`,
             instanceConfiguration: {
                 instanceRoleArn: roleForAppRunner,

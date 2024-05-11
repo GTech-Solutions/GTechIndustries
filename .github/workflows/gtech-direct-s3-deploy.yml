@@ -77,7 +77,7 @@ jobs:
       # ---- Test GTech Industries ----
       - name: Run nx test on all projects
         id: nx-test
-        run: npx nx run-many --all --target=test --silent
+        run: npx nx run-many --all --target=test
 
       # ---- Build GTech Industries ----
       - uses: nrwl/nx-set-shas@v3
