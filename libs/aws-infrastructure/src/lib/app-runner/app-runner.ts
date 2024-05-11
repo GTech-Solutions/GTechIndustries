@@ -43,14 +43,23 @@ export class AppRunner extends cdk.Stack {
         });
 
         const ecrAccessRoleArn = new aws_iam.Role(this, 'ecsFargateExecutionRole', {
-            assumedBy: new aws_iam.ServicePrincipal('tasks.apprunner.amazonaws.com'),
+            assumedBy: new aws_iam.ServicePrincipal('build.apprunner.amazonaws.com'),
         });
 
         ecrAccessRoleArn.addToPolicy(
             new PolicyStatement({
                 effect: Effect.ALLOW,
                 resources: ['*'],
-                actions: ['ecr:*', 'logs:CreateLogStream', 'logs:PutLogEvents', 'ssm:GetParameters'],
+                actions: [
+                    'ecr:GetDownloadUrlForLayer',
+                    'ecr:BatchCheckLayerAvailability',
+                    'ecr:BatchGetImage',
+                    'ecr:DescribeImages',
+                    'ecr:GetAuthorizationToken',
+                    'logs:CreateLogStream',
+                    'logs:PutLogEvents',
+                    'ssm:GetParameters',
+                ],
             })
         );
 
