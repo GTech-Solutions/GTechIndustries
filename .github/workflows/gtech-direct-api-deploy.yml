@@ -4,7 +4,7 @@ on:
     paths:
       - .github/workflows/gtech-direct-api-deploy.yml
       - apps/gtech-direct-api/**
-      - libs/aws-infrastructure/app-runner/**
+      - libs/aws-infrastructure/src/lib/app-runner/**
 
     branches:
       - develop
