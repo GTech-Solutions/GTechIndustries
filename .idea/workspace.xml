@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/app-runner/app-runner.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/app-runner/app-runner.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routeUrls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routeUrls.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="ReactComponent" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -66,6 +71,7 @@
     "Nx.shared-components:build.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/.github/workflows",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -74,7 +80,7 @@
     "nodejs.jest.jest_package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/jest",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier",
-    "settings.editor.selected.configurable": "inlay.hints",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -84,7 +90,6 @@
       "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/.eslintrc.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/jest.config.ts",
-      "/Users/michaelgilge/Code/GTechIndustries/nx.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/shared-components/project.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/shared-components/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/shared-components/.eslintrc.json",
@@ -123,7 +128,7 @@
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.gtech-direct-api/Dockerfile">
+  <component name="RunManager" selected="Nx.gtech-industries:serve">
     <configuration name="CustomDataGridToolbar" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -191,7 +196,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="gtech-direct-api/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
@@ -212,6 +219,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -222,7 +236,13 @@
       <updated>1711848459616</updated>
       <workItem from="1711848463601" duration="1824000" />
       <workItem from="1711890472814" duration="70511000" />
-      <workItem from="1715357549107" duration="14110000" />
+      <workItem from="1715357549107" duration="14673000" />
+      <workItem from="1726501748409" duration="46000" />
+      <workItem from="1726501822890" duration="101000" />
+      <workItem from="1726501974132" duration="1859000" />
+      <workItem from="1726579892202" duration="10060000" />
+      <workItem from="1727801333623" duration="5673000" />
+      <workItem from="1728059284391" duration="38000" />
     </task>
     <servers />
   </component>
@@ -267,6 +287,10 @@
           <url>file://$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx</url>
           <line>108</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/apps/gtech-industries/src/main.tsx</url>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

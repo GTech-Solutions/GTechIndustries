@@ -7,8 +7,9 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     <StrictMode>
-        <BrowserRouter>
+        {/*   <BrowserRouter>
             <App />
-        </BrowserRouter>
+        </BrowserRouter>*/}
+        <div>hai</div>
     </StrictMode>
 );
