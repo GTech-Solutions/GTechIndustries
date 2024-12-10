@@ -34,7 +34,7 @@ export class StaticS3Website extends cdk.Stack {
             zoneName: domainName,
         });
 
-        // TLS certificate should probably write another stack and move away from DnsValidatedCertificate
+        // TLS certificate should probably write another stack and move away from DnsValidatedCertificate look up link certificate mentioned when publishing via cdk
         const certificate = new DnsValidatedCertificate(this, `${application}-cert`, {
             domainName: domainName,
             hostedZone: zone,
