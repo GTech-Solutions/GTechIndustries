@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/test/static-s3-website.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/test/static-s3-website.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +124,7 @@
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout" />
     </key>
   </component>
-  <component name="RunManager" selected="Nx.gtech-industries:serve">
+  <component name="RunManager" selected="Nx.gtech-industries:build">
     <configuration name="CustomDataGridToolbar" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -239,7 +239,7 @@
       <workItem from="1726579892202" duration="10060000" />
       <workItem from="1727801333623" duration="5673000" />
       <workItem from="1728059284391" duration="38000" />
-      <workItem from="1733848316977" duration="3823000" />
+      <workItem from="1733848316977" duration="4724000" />
     </task>
     <servers />
   </component>
