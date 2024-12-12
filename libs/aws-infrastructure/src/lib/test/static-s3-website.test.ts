@@ -26,10 +26,7 @@ describe('StaticS3WebsiteStack', () => {
         const template = Template.fromStack(stack, {});
 
         // Assert
-        template.hasResourceProperties('AWS::CertificateManager::Certificate', {
-            DomainName: 'test.com',
-            ValidationMethod: 'DNS',
-        });
+        template.hasResourceProperties('AWS::CloudFormation::CustomResource', { DomainName: 'test.com', Region: 'us-east-1', HostedZoneId: 'test' });
     });
 
     it('creates the cloudfront origin access identity', () => {

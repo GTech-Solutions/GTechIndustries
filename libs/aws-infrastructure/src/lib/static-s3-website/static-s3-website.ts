@@ -34,12 +34,11 @@ export class StaticS3Website extends cdk.Stack {
             zoneName: domainName,
         });
 
-        // TLS certificate should probably write another stack and move away from DnsValidatedCertificate look up link certificate mentioned when publishing via cdk
-        const certificate = new Certificate(this, `${application}-cert`, {
+        // Using DnsValidatedCertificate to avoid an entirely different stack to create a cert in us-east-1 need to revisit this as they improve cdk
+        const certificate = new DnsValidatedCertificate(this, `${application}-cert`, {
             domainName: domainName,
-            validation: CertificateValidation.fromDnsMultiZone({
-                domainName: zone,
-            }),
+            hostedZone: zone,
+            region: 'us-east-1',
         });
 
         const cloudfrontOAI = new cloudfront.OriginAccessIdentity(this, `${application}-S3-Cloudfront-OAI`, {
