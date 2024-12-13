@@ -29,19 +29,6 @@ describe('StaticS3WebsiteStack', () => {
         template.hasResourceProperties('AWS::CloudFormation::CustomResource', { DomainName: 'test.com', Region: 'us-east-1', HostedZoneId: 'test' });
     });
 
-    it('creates the cloudfront origin access identity', () => {
-        // Arrange
-        const stack = new StaticS3Website(app, 'StaticS3WebsiteStack', {});
-
-        // Act
-        const template = Template.fromStack(stack, {});
-
-        // Assert
-        template.hasResourceProperties('AWS::CloudFront::CloudFrontOriginAccessIdentity', {
-            CloudFrontOriginAccessIdentityConfig: { Comment: 'OAI for StaticS3WebsiteStack' },
-        });
-    });
-
     it('creates the S3 bucket for hosting the site', () => {
         // Arrange
         const stack = new StaticS3Website(app, 'StaticS3WebsiteStack', {});

@@ -197,7 +197,9 @@ export const mockGridStateObject = (filterModel?: GridFilterModel): GridInitialS
         sorting: {
             sortModel: [],
         },
+        density: 'standard',
         pagination: {
+            meta: {},
             paginationModel: {
                 page: 0,
                 pageSize: 100,
