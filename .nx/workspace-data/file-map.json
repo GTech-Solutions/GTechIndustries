@@ -146,72 +146,64 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "README.md",
-        "hash": "15504302910063696460"
-      },
-      {
-        "file": "types/react-cv/index.d.ts",
-        "hash": "1077359493193910339"
-      },
-      {
-        "file": ".github/workflows/dynamo-tables-deploy.yml",
-        "hash": "17797107439939049476"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "4934098906304722861"
-      },
-      {
-        "file": "types/@mui/index.d.ts",
-        "hash": "2363408758961587240"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "7150122132014433995"
-      },
-      {
-        "file": ".github/workflows/gtech-direct-api-deploy.yml",
-        "hash": "7561986687412894422"
-      },
-      {
-        "file": "package.json",
-        "hash": "10369329433092697002"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": "Directory.Build.targets",
-        "hash": "9005165865624102645"
+        "file": "jest.config.ts",
+        "hash": "6580851632923501742"
       },
       {
         "file": ".eslintrc.json",
         "hash": "1394466302103444673"
       },
       {
-        "file": "types/types.d.ts",
-        "hash": "13644778781036544063"
+        "file": "tsconfig.base.json",
+        "hash": "12508750095442415820"
       },
       {
-        "file": "nx.json",
-        "hash": "1072715719972351972"
+        "file": "types/react-cv/index.d.ts",
+        "hash": "1077359493193910339"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "9087265917720686688"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "1094603469163323313"
       },
       {
         "file": "package-lock.json",
         "hash": "2748854380590242542"
       },
       {
-        "file": ".svgrrc",
-        "hash": "14739206715941919846"
+        "file": "README.md",
+        "hash": "15504302910063696460"
       },
       {
-        "file": "jest.preset.js",
-        "hash": "14446286495986982650"
+        "file": "storybook-migration-summary.md",
+        "hash": "8754006662974873753"
+      },
+      {
+        "file": ".github/workflows/dynamo-tables-deploy.yml",
+        "hash": "17797107439939049476"
+      },
+      {
+        "file": "package.json",
+        "hash": "10369329433092697002"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "4934098906304722861"
+      },
+      {
+        "file": "types/types.d.ts",
+        "hash": "13644778781036544063"
+      },
+      {
+        "file": ".github/workflows/gtech-direct-api-deploy.yml",
+        "hash": "7561986687412894422"
       },
       {
         "file": "migrations.json",
@@ -222,8 +214,32 @@
         "hash": "11380184037138673491"
       },
       {
-        "file": "storybook-migration-summary.md",
-        "hash": "8754006662974873753"
+        "file": "nx.json",
+        "hash": "1072715719972351972"
+      },
+      {
+        "file": ".svgrrc",
+        "hash": "14739206715941919846"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "7150122132014433995"
+      },
+      {
+        "file": "types/@mui/index.d.ts",
+        "hash": "2363408758961587240"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "14446286495986982650"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "Directory.Build.targets",
+        "hash": "9005165865624102645"
       },
       {
         "file": ".gitignore",
@@ -236,22 +252,6 @@
       {
         "file": "Directory.Build.props",
         "hash": "11106101967569859271"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "6580851632923501742"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "9087265917720686688"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "1094603469163323313"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "12508750095442415820"
       }
     ],
     "projectFileMap": {
@@ -837,7 +837,7 @@
         },
         {
           "file": "libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts",
-          "hash": "11162968325504890997",
+          "hash": "4382527923761090378",
           "deps": [
             "npm:aws-cdk-lib",
             "npm:constructs"

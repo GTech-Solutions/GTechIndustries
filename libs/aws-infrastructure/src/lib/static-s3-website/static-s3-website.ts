@@ -46,7 +46,6 @@ export class StaticS3Website extends cdk.Stack {
             bucketName: domainName,
             publicReadAccess: false,
             blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
-            accessControl: s3.BucketAccessControl.PRIVATE,
         });
 
         // CloudFront distribution

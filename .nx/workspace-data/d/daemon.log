@@ -5024,3 +5024,53 @@ Failed to process project graph. Run "nx reset" to fix this. Please report the i
 [NX Daemon Server] - 2024-12-13T18:45:05.587Z - Sending EndRun request
 [NX Daemon Server] - 2024-12-13T18:45:05.828Z - Done sending EndRun request
 [NX Daemon Server] - 2024-12-13T18:45:13.358Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-12-13T19:27:55.602Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-12-13T19:28:33.516Z - [WATCHER]: libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts was modified
+[NX Daemon Server] - 2024-12-13T19:28:33.516Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-12-13T19:28:33.617Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-12-13T19:28:33.617Z - [REQUEST]: libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts
+[NX Daemon Server] - 2024-12-13T19:28:33.617Z - [REQUEST]: 
+[NX Daemon Server] - 2024-12-13T19:28:33.629Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.629Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.629Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.629Z - [REQUEST]: Responding to the client. handleGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.629Z - Done responding to the client handleGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.629Z - Handled GLOB. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.630Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.630Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.630Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.631Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.631Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.631Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.631Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.631Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.631Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.631Z - Time taken for 'hash changed files from watcher' 0.17545800004154444ms
+[NX Daemon Server] - 2024-12-13T19:28:33.632Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.632Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.632Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.632Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.632Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.632Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.633Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.633Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.633Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.634Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.634Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.634Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.638Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.639Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.639Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-12-13T19:28:33.639Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.639Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.639Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.640Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.640Z - Done responding to the client handleHashGlob
+[NX Daemon Server] - 2024-12-13T19:28:33.640Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2024-12-13T19:28:33.650Z - Time taken for 'build-project-configs' 27.249124999623746ms
+[NX Daemon Server] - 2024-12-13T19:28:33.653Z - Time taken for '@nx-dotnet/core:createDependencies' 5.341999999713153ms
+[NX Daemon Server] - 2024-12-13T19:28:33.653Z - Time taken for '@nx/storybook/plugin:createDependencies' 6.9375ms
+[NX Daemon Server] - 2024-12-13T19:28:33.679Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2024-12-13T19:28:33.679Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2024-12-13T19:28:33.679Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2024-12-13T19:28:33.679Z - Time taken for 'total execution time for createProjectGraph()' 28.7615419998765ms
