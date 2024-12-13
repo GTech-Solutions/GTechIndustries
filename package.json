@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/markdown-to-jsx": "^7.0.1",
     "aws-cdk-lib": "^2.173.0",
+    "constructs": "^10.4.2",
     "file-loader": "^6.2.0",
     "jotai": "^2.10.3",
     "markdown-to-jsx": "^7.7.1",

@@ -62,60 +62,20 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "types/types.d.ts",
-        "hash": "13644778781036544063"
-      },
-      {
-        "file": "nx.json",
-        "hash": "1072715719972351972"
-      },
-      {
         "file": "README.md",
         "hash": "15504302910063696460"
       },
       {
-        "file": ".gitignore",
-        "hash": "11093795358531291469"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "4934098906304722861"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "6580851632923501742"
-      },
-      {
-        "file": ".config/dotnet-tools.json",
-        "hash": "11380184037138673491"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "12508750095442415820"
-      },
-      {
-        "file": ".github/workflows/gtech-direct-s3-deploy.yml",
-        "hash": "14618498641531872408"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "15227271167248150401"
-      },
-      {
-        "file": ".svgrrc",
-        "hash": "14739206715941919846"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
+        "file": ".github/workflows/dynamo-tables-deploy.yml",
+        "hash": "17797107439939049476"
       },
       {
         "file": "package.json",
-        "hash": "3401000365099670878"
+        "hash": "409381046833683119"
       },
       {
-        "file": ".prettierrc",
-        "hash": "9087265917720686688"
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
       },
       {
         "file": ".prettierignore",
@@ -126,55 +86,199 @@
         "hash": "7561986687412894422"
       },
       {
-        "file": ".github/workflows/dynamo-tables-deploy.yml",
-        "hash": "17797107439939049476"
+        "file": "nx.json",
+        "hash": "1072715719972351972"
       },
       {
-        "file": "package-lock.json",
-        "hash": "8796812253775395747"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
+        "file": "types/types.d.ts",
+        "hash": "13644778781036544063"
       },
       {
         "file": "storybook-migration-summary.md",
         "hash": "8754006662974873753"
       },
       {
-        "file": "LICENSE",
-        "hash": "7150122132014433995"
+        "file": "migrations.json",
+        "hash": "15227271167248150401"
       },
       {
         "file": "Directory.Build.targets",
         "hash": "9005165865624102645"
       },
       {
-        "file": "types/mui/index.d.ts",
-        "hash": "4256316951797755607"
+        "file": "jest.preset.js",
+        "hash": "14446286495986982650"
       },
       {
-        "file": "types/@mui/index.d.ts",
-        "hash": "2363408758961587240"
-      },
-      {
-        "file": "Directory.Build.props",
-        "hash": "11106101967569859271"
+        "file": ".vscode/extensions.json",
+        "hash": "4934098906304722861"
       },
       {
         "file": "types/react-cv/index.d.ts",
         "hash": "1077359493193910339"
       },
       {
+        "file": "tsconfig.base.json",
+        "hash": "12508750095442415820"
+      },
+      {
+        "file": ".github/workflows/gtech-direct-s3-deploy.yml",
+        "hash": "14618498641531872408"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "6580851632923501742"
+      },
+      {
         "file": ".eslintrc.json",
         "hash": "1394466302103444673"
       },
       {
-        "file": "jest.preset.js",
-        "hash": "14446286495986982650"
+        "file": "package-lock.json",
+        "hash": "2341685915786776078"
+      },
+      {
+        "file": "Directory.Build.props",
+        "hash": "11106101967569859271"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "11093795358531291469"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "7150122132014433995"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": ".config/dotnet-tools.json",
+        "hash": "11380184037138673491"
+      },
+      {
+        "file": ".svgrrc",
+        "hash": "14739206715941919846"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "9087265917720686688"
+      },
+      {
+        "file": "types/@mui/index.d.ts",
+        "hash": "2363408758961587240"
       }
     ],
     "projectFileMap": {
+      "aws-infrastructure": [
+        {
+          "file": "libs/aws-infrastructure/.eslintrc.json",
+          "hash": "16896711999632553762"
+        },
+        {
+          "file": "libs/aws-infrastructure/README.md",
+          "hash": "1290408401352981534"
+        },
+        {
+          "file": "libs/aws-infrastructure/jest.config.ts",
+          "hash": "15955777229408212902"
+        },
+        {
+          "file": "libs/aws-infrastructure/package-lock.json",
+          "hash": "7573000548030362373"
+        },
+        {
+          "file": "libs/aws-infrastructure/package.json",
+          "hash": "11672674391337163109"
+        },
+        {
+          "file": "libs/aws-infrastructure/project.json",
+          "hash": "17096816090106390648"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/index.ts",
+          "hash": "3625764696678703673"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/.gitignore",
+          "hash": "969051664222860559"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/.npmignore",
+          "hash": "18043273588612545309"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/README.md",
+          "hash": "16893862972903585715"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/app-runner/app-runner.ts",
+          "hash": "13718679192663769477",
+          "deps": [
+            "npm:aws-cdk-lib"
+          ]
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/cdk.json",
+          "hash": "7685883042802614222"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/dynamo-tables/dynamo-tables.ts",
+          "hash": "7439280696723116690",
+          "deps": [
+            "npm:aws-cdk-lib"
+          ]
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/gtech-stack.ts",
+          "hash": "6971988387473878112",
+          "deps": [
+            "npm:aws-cdk-lib"
+          ]
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/iam-roles/github-access-role.ts",
+          "hash": "14730803170717215369",
+          "deps": [
+            "npm:aws-cdk-lib",
+            "npm:aws-cdk-github-oidc"
+          ]
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts",
+          "hash": "11162968325504890997",
+          "deps": [
+            "npm:aws-cdk-lib"
+          ]
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/test/github-access-role.test.ts",
+          "hash": "16318801479225618568",
+          "deps": [
+            "npm:aws-cdk-lib"
+          ]
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/test/static-s3-website.test.ts",
+          "hash": "11456197493424766541",
+          "deps": [
+            "npm:aws-cdk-lib"
+          ]
+        },
+        {
+          "file": "libs/aws-infrastructure/tsconfig.json",
+          "hash": "5840880287502376438"
+        },
+        {
+          "file": "libs/aws-infrastructure/tsconfig.lib.json",
+          "hash": "3632393694954060084"
+        },
+        {
+          "file": "libs/aws-infrastructure/tsconfig.spec.json",
+          "hash": "11550347367511341917"
+        }
+      ],
       "gtech-direct-api-test": [
         {
           "file": "apps/gtech-direct-api-test/Gtech.Apps.GtechDirectApi.Test.csproj",
@@ -190,6 +294,236 @@
         {
           "file": "apps/gtech-direct-api-test/Usings.cs",
           "hash": "17144179774649288678"
+        }
+      ],
+      "gtech-direct-api": [
+        {
+          "file": "apps/gtech-direct-api/.dockerignore",
+          "hash": "14430309839994622801"
+        },
+        {
+          "file": "apps/gtech-direct-api/.gitignore",
+          "hash": "12821096717990657955"
+        },
+        {
+          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/.gitignore",
+          "hash": "10808087689621629455"
+        },
+        {
+          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/aws.xml",
+          "hash": "8477969348252906549"
+        },
+        {
+          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/encodings.xml",
+          "hash": "3468816678880133736"
+        },
+        {
+          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/indexLayout.xml",
+          "hash": "10033923022341926609"
+        },
+        {
+          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/vcs.xml",
+          "hash": "427964275039610795"
+        },
+        {
+          "file": "apps/gtech-direct-api/Dockerfile",
+          "hash": "13290891803501506507"
+        },
+        {
+          "file": "apps/gtech-direct-api/Gtech.Apps.GtechDirectApi.csproj",
+          "hash": "11926326445998631856"
+        },
+        {
+          "file": "apps/gtech-direct-api/Program.cs",
+          "hash": "14225168648843457865"
+        },
+        {
+          "file": "apps/gtech-direct-api/Properties/launchSettings.json",
+          "hash": "5833012613113954156"
+        },
+        {
+          "file": "apps/gtech-direct-api/appsettings.Development.json",
+          "hash": "3339958947771738801"
+        },
+        {
+          "file": "apps/gtech-direct-api/appsettings.json",
+          "hash": "8794831988107864270"
+        }
+      ],
+      "gtech-industries": [
+        {
+          "file": "apps/gtech-industries/.babelrc",
+          "hash": "3309448101048490971"
+        },
+        {
+          "file": "apps/gtech-industries/.eslintrc.json",
+          "hash": "11012487992710232822"
+        },
+        {
+          "file": "apps/gtech-industries/README.md",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/gtech-industries/babel.config.ts",
+          "hash": "9125628932697203127"
+        },
+        {
+          "file": "apps/gtech-industries/jest.config.ts",
+          "hash": "12293582225318846631"
+        },
+        {
+          "file": "apps/gtech-industries/project.json",
+          "hash": "6239000638710856054"
+        },
+        {
+          "file": "apps/gtech-industries/src/app/app.spec.tsx",
+          "hash": "10280739171515919417",
+          "deps": [
+            "npm:@testing-library/react",
+            "npm:@mui/x-data-grid",
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/app/app.tsx",
+          "hash": "5089262428755302124",
+          "deps": [
+            "shared-components"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx",
+          "hash": "18144676334894387584",
+          "deps": [
+            "shared-components"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/app/blog-controller/blog-controller.tsx",
+          "hash": "3499666796177149771",
+          "deps": [
+            "shared-components"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/app/blog-controller/mui-datagrid-blog-post.md",
+          "hash": "804192454816094502"
+        },
+        {
+          "file": "apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx",
+          "hash": "3248442984906815964",
+          "deps": [
+            "shared-components"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/app/images/gtech-logo.svg",
+          "hash": "6271842762658361590"
+        },
+        {
+          "file": "apps/gtech-industries/src/app/images/jeep.svg",
+          "hash": "4169786415469590274"
+        },
+        {
+          "file": "apps/gtech-industries/src/app/images/svgs.tsx",
+          "hash": "3474936935334380511"
+        },
+        {
+          "file": "apps/gtech-industries/src/app/manual-save-data-grid-controller/manual-save-data-grid-controller.tsx",
+          "hash": "14857500524453404818",
+          "deps": [
+            "shared-components"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/app/resume-controller/resume-controller.tsx",
+          "hash": "8658906155947099520",
+          "deps": [
+            "npm:react",
+            "npm:tss-react",
+            "npm:react-cv",
+            "npm:react-to-print",
+            "npm:@mui/material",
+            "npm:@mui/icons-material"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/app/resume-controller/resume.tsx",
+          "hash": "3664030309744743070",
+          "deps": [
+            "npm:react",
+            "npm:tss-react",
+            "npm:react-cv"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/app/routes/routeUrls.ts",
+          "hash": "12884858998980190058"
+        },
+        {
+          "file": "apps/gtech-industries/src/app/routes/routes.tsx",
+          "hash": "558084912189975888",
+          "deps": [
+            "shared-components"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts",
+          "hash": "9714842710736085640",
+          "deps": [
+            "shared-components"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/gtech-industries/src/assets/mgilge.jpg",
+          "hash": "11024988850069069746"
+        },
+        {
+          "file": "apps/gtech-industries/src/favicon.ico",
+          "hash": "12298059002816553022"
+        },
+        {
+          "file": "apps/gtech-industries/src/index.html",
+          "hash": "15873082597080197594"
+        },
+        {
+          "file": "apps/gtech-industries/src/jeep.svg",
+          "hash": "4169786415469590274"
+        },
+        {
+          "file": "apps/gtech-industries/src/main.tsx",
+          "hash": "4339718665712977718",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/gtech-industries/tsconfig.app.json",
+          "hash": "12173666219395425292"
+        },
+        {
+          "file": "apps/gtech-industries/tsconfig.json",
+          "hash": "15529987419283619546"
+        },
+        {
+          "file": "apps/gtech-industries/tsconfig.spec.json",
+          "hash": "11378287594513225419"
+        },
+        {
+          "file": "apps/gtech-industries/webpack.config.js",
+          "hash": "17812162105752642047",
+          "deps": [
+            "npm:@nx/webpack",
+            "npm:@nx/react",
+            "npm:webpack-merge"
+          ]
         }
       ],
       "shared-components": [
@@ -456,344 +790,6 @@
         {
           "file": "apps/gtech-industries-e2e/tsconfig.json",
           "hash": "10740392072068377465"
-        }
-      ],
-      "gtech-industries": [
-        {
-          "file": "apps/gtech-industries/.babelrc",
-          "hash": "3309448101048490971"
-        },
-        {
-          "file": "apps/gtech-industries/.eslintrc.json",
-          "hash": "11012487992710232822"
-        },
-        {
-          "file": "apps/gtech-industries/README.md",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/gtech-industries/babel.config.ts",
-          "hash": "9125628932697203127"
-        },
-        {
-          "file": "apps/gtech-industries/jest.config.ts",
-          "hash": "12293582225318846631"
-        },
-        {
-          "file": "apps/gtech-industries/project.json",
-          "hash": "6239000638710856054"
-        },
-        {
-          "file": "apps/gtech-industries/src/app/app.spec.tsx",
-          "hash": "10280739171515919417",
-          "deps": [
-            "npm:@testing-library/react",
-            "npm:@mui/x-data-grid",
-            "npm:react",
-            "npm:react-router-dom"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/app/app.tsx",
-          "hash": "5089262428755302124",
-          "deps": [
-            "shared-components"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/app/auto-save-data-grid-controller/auto-save-data-grid-controller.tsx",
-          "hash": "18144676334894387584",
-          "deps": [
-            "shared-components"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/app/blog-controller/blog-controller.tsx",
-          "hash": "3499666796177149771",
-          "deps": [
-            "shared-components"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/app/blog-controller/mui-datagrid-blog-post.md",
-          "hash": "804192454816094502"
-        },
-        {
-          "file": "apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx",
-          "hash": "3248442984906815964",
-          "deps": [
-            "shared-components"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/app/images/gtech-logo.svg",
-          "hash": "6271842762658361590"
-        },
-        {
-          "file": "apps/gtech-industries/src/app/images/jeep.svg",
-          "hash": "4169786415469590274"
-        },
-        {
-          "file": "apps/gtech-industries/src/app/images/svgs.tsx",
-          "hash": "3474936935334380511"
-        },
-        {
-          "file": "apps/gtech-industries/src/app/manual-save-data-grid-controller/manual-save-data-grid-controller.tsx",
-          "hash": "14857500524453404818",
-          "deps": [
-            "shared-components"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/app/resume-controller/resume-controller.tsx",
-          "hash": "8658906155947099520",
-          "deps": [
-            "npm:react",
-            "npm:tss-react",
-            "npm:react-cv",
-            "npm:react-to-print",
-            "npm:@mui/material",
-            "npm:@mui/icons-material"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/app/resume-controller/resume.tsx",
-          "hash": "3664030309744743070",
-          "deps": [
-            "npm:react",
-            "npm:tss-react",
-            "npm:react-cv"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/app/routes/routeUrls.ts",
-          "hash": "12884858998980190058"
-        },
-        {
-          "file": "apps/gtech-industries/src/app/routes/routes.tsx",
-          "hash": "558084912189975888",
-          "deps": [
-            "shared-components"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts",
-          "hash": "9714842710736085640",
-          "deps": [
-            "shared-components"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/src/assets/.gitkeep",
-          "hash": "3244421341483603138"
-        },
-        {
-          "file": "apps/gtech-industries/src/assets/mgilge.jpg",
-          "hash": "11024988850069069746"
-        },
-        {
-          "file": "apps/gtech-industries/src/favicon.ico",
-          "hash": "12298059002816553022"
-        },
-        {
-          "file": "apps/gtech-industries/src/index.html",
-          "hash": "15873082597080197594"
-        },
-        {
-          "file": "apps/gtech-industries/src/jeep.svg",
-          "hash": "4169786415469590274"
-        },
-        {
-          "file": "apps/gtech-industries/src/main.tsx",
-          "hash": "4339718665712977718",
-          "deps": [
-            "npm:react",
-            "npm:react-dom",
-            "npm:react-router-dom"
-          ]
-        },
-        {
-          "file": "apps/gtech-industries/tsconfig.app.json",
-          "hash": "12173666219395425292"
-        },
-        {
-          "file": "apps/gtech-industries/tsconfig.json",
-          "hash": "15529987419283619546"
-        },
-        {
-          "file": "apps/gtech-industries/tsconfig.spec.json",
-          "hash": "11378287594513225419"
-        },
-        {
-          "file": "apps/gtech-industries/webpack.config.js",
-          "hash": "17812162105752642047",
-          "deps": [
-            "npm:@nx/webpack",
-            "npm:@nx/react",
-            "npm:webpack-merge"
-          ]
-        }
-      ],
-      "gtech-direct-api": [
-        {
-          "file": "apps/gtech-direct-api/.dockerignore",
-          "hash": "14430309839994622801"
-        },
-        {
-          "file": "apps/gtech-direct-api/.gitignore",
-          "hash": "12821096717990657955"
-        },
-        {
-          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/.gitignore",
-          "hash": "10808087689621629455"
-        },
-        {
-          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/aws.xml",
-          "hash": "8477969348252906549"
-        },
-        {
-          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/encodings.xml",
-          "hash": "3468816678880133736"
-        },
-        {
-          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/indexLayout.xml",
-          "hash": "10033923022341926609"
-        },
-        {
-          "file": "apps/gtech-direct-api/.idea/.idea.gtech-direct-api.dir/.idea/vcs.xml",
-          "hash": "427964275039610795"
-        },
-        {
-          "file": "apps/gtech-direct-api/Dockerfile",
-          "hash": "13290891803501506507"
-        },
-        {
-          "file": "apps/gtech-direct-api/Gtech.Apps.GtechDirectApi.csproj",
-          "hash": "11926326445998631856"
-        },
-        {
-          "file": "apps/gtech-direct-api/Program.cs",
-          "hash": "14225168648843457865"
-        },
-        {
-          "file": "apps/gtech-direct-api/Properties/launchSettings.json",
-          "hash": "5833012613113954156"
-        },
-        {
-          "file": "apps/gtech-direct-api/appsettings.Development.json",
-          "hash": "3339958947771738801"
-        },
-        {
-          "file": "apps/gtech-direct-api/appsettings.json",
-          "hash": "8794831988107864270"
-        }
-      ],
-      "aws-infrastructure": [
-        {
-          "file": "libs/aws-infrastructure/.eslintrc.json",
-          "hash": "16896711999632553762"
-        },
-        {
-          "file": "libs/aws-infrastructure/README.md",
-          "hash": "1290408401352981534"
-        },
-        {
-          "file": "libs/aws-infrastructure/jest.config.ts",
-          "hash": "15955777229408212902"
-        },
-        {
-          "file": "libs/aws-infrastructure/package-lock.json",
-          "hash": "7573000548030362373"
-        },
-        {
-          "file": "libs/aws-infrastructure/package.json",
-          "hash": "11672674391337163109"
-        },
-        {
-          "file": "libs/aws-infrastructure/project.json",
-          "hash": "17096816090106390648"
-        },
-        {
-          "file": "libs/aws-infrastructure/src/index.ts",
-          "hash": "3625764696678703673"
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/.gitignore",
-          "hash": "969051664222860559"
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/.npmignore",
-          "hash": "18043273588612545309"
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/README.md",
-          "hash": "16893862972903585715"
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/app-runner/app-runner.ts",
-          "hash": "13718679192663769477",
-          "deps": [
-            "npm:aws-cdk-lib"
-          ]
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/cdk.json",
-          "hash": "7685883042802614222"
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/dynamo-tables/dynamo-tables.ts",
-          "hash": "7439280696723116690",
-          "deps": [
-            "npm:aws-cdk-lib"
-          ]
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/gtech-stack.ts",
-          "hash": "6971988387473878112",
-          "deps": [
-            "npm:aws-cdk-lib"
-          ]
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/iam-roles/github-access-role.ts",
-          "hash": "14730803170717215369",
-          "deps": [
-            "npm:aws-cdk-lib",
-            "npm:aws-cdk-github-oidc"
-          ]
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts",
-          "hash": "15045480414303445121",
-          "deps": [
-            "npm:aws-cdk-lib"
-          ]
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/test/github-access-role.test.ts",
-          "hash": "16318801479225618568",
-          "deps": [
-            "npm:aws-cdk-lib"
-          ]
-        },
-        {
-          "file": "libs/aws-infrastructure/src/lib/test/static-s3-website.test.ts",
-          "hash": "11456197493424766541",
-          "deps": [
-            "npm:aws-cdk-lib"
-          ]
-        },
-        {
-          "file": "libs/aws-infrastructure/tsconfig.json",
-          "hash": "5840880287502376438"
-        },
-        {
-          "file": "libs/aws-infrastructure/tsconfig.lib.json",
-          "hash": "3632393694954060084"
-        },
-        {
-          "file": "libs/aws-infrastructure/tsconfig.spec.json",
-          "hash": "11550347367511341917"
         }
       ]
     }

@@ -41,10 +41,6 @@ export class StaticS3Website extends cdk.Stack {
             region: 'us-east-1',
         });
 
-        /*        const cloudfrontOAI = new cloudfront.OriginAccessIdentity(this, `${application}-S3-Cloudfront-OAI`, {
-            comment: `OAI for ${name}`,
-        });*/
-
         // Content bucket
         const siteBucket = new s3.Bucket(this, `${application}-S3-Site-Bucket`, {
             bucketName: domainName,
@@ -52,15 +48,6 @@ export class StaticS3Website extends cdk.Stack {
             blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
             accessControl: s3.BucketAccessControl.PRIVATE,
         });
-
-        // Grant access to cloudfront
-        /*        siteBucket.addToResourcePolicy(
-            new iam.PolicyStatement({
-                actions: ['s3:GetObject'],
-                resources: [siteBucket.arnForObjects('*')],
-                principals: [new iam.CanonicalUserPrincipal(cloudfrontOAI.cloudFrontOriginAccessIdentityS3CanonicalUserId)],
-            })
-        );*/
 
         // CloudFront distribution
         const distribution = new cloudfront.Distribution(this, `${application}-UI-Site-Distribution`, {
@@ -83,7 +70,7 @@ export class StaticS3Website extends cdk.Stack {
                 },
             ],
             defaultBehavior: {
-                origin: cloudfront_origins.S3Origin(siteBucket),
+                origin: cloudfront_origins.S3BucketOrigin.withOriginAccessControl(siteBucket),
                 compress: true,
                 allowedMethods: cloudfront.AllowedMethods.ALLOW_GET_HEAD_OPTIONS,
                 viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
