@@ -7,7 +7,7 @@
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/test/static-s3-website.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/test/static-s3-website.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +83,15 @@
   },
   "keyToStringList": {
     "dev.nx.console.project_details_files": [
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json",
+      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts",
       "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/project.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/aws-infrastructure/.eslintrc.json",
@@ -93,15 +102,6 @@
       "/Users/michaelgilge/Code/GTechIndustries/libs/shared-components/jest.config.ts",
       "/Users/michaelgilge/Code/GTechIndustries/libs/shared-components/.storybook/main.ts",
       "/Users/michaelgilge/Code/GTechIndustries/libs/shared-components/.storybook/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/webpack.config.js",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries/jest.config.ts",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/project.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/package.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/.eslintrc.json",
-      "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-industries-e2e/cypress.config.ts",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/Gtech.Apps.GtechDirectApi.csproj",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/Gtech.Apps.GtechDirectApi.Test.csproj",
@@ -240,7 +240,8 @@
       <workItem from="1726579892202" duration="10060000" />
       <workItem from="1727801333623" duration="5673000" />
       <workItem from="1728059284391" duration="38000" />
-      <workItem from="1733848316977" duration="5144000" />
+      <workItem from="1733848316977" duration="6350000" />
+      <workItem from="1734104248235" duration="823000" />
     </task>
     <servers />
   </component>
