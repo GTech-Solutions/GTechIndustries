@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/cypress-8161926102631362384.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/cypress-8161926102631362384.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/d/daemon.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/eslint-4393011795395336301.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/eslint-4393011795395336301.hash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/lockfile.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/lockfile.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/nx_files.nxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/parsed-lock-file.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/parsed-lock-file.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/storybook.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/storybook.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/webpack-17957109288680152952.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/webpack-17957109288680152952.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +82,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/michaelgilge/Code/GTechIndustries/node_modules/prettier",
     "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "/Users/michaelgilge/Code/GTechIndustries/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
