@@ -1,7 +1,7 @@
 import React from 'react';
 import { GtechIndustriesLayout } from '../gtech-industries-layout/gtech-industries-layout';
 import { CustomDataGrid, LayoutRoute, dataGridIdentifiers } from '@gtech/shared-components';
-import { Navigate, Route, Routes as RouterRoutes } from 'react-router-dom';
+import { Navigate, Route, Routes as RouterRoutes } from 'react-router';
 import { routeUrls } from './routeUrls';
 import { AutoSaveDataGridController } from '../auto-save-data-grid-controller/auto-save-data-grid-controller';
 import { ManualSaveDataGridController } from '../manual-save-data-grid-controller/manual-save-data-grid-controller';

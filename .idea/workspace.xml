@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/eslint-4393011795395336301.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/eslint-4393011795395336301.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/file-map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/jest-7930610538513362720.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/project-graph.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nx/workspace-data/webpack-17957109288680152952.hash" beforeDir="false" afterPath="$PROJECT_DIR$/.nx/workspace-data/webpack-17957109288680152952.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +134,7 @@
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Nx.gtech-industries:test">
+  <component name="RunManager" selected="Nx.gtech-industries:serve">
     <configuration name="CustomDataGridToolbar (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />

@@ -4,7 +4,7 @@ import { alpha, Avatar, Box, Button, Container, Menu, MenuItem, Tooltip, Typogra
 import { GTechLogo } from '../images/svgs';
 import { Jeep } from '../images/svgs';
 
-import { useNavigate } from 'react-router-dom';
+import { replace, useNavigate } from 'react-router';
 import { routeUrls } from '../routes/routeUrls';
 import { makeStyles } from 'tss-react/mui';
 
@@ -19,7 +19,7 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
     const open = Boolean(anchorEl);
 
     const handleMenuItemClick = (url: string) => {
-        navigate(url);
+        navigate(`../${url}`);
         setIsMenuDrawerOpen(false);
         handleClose();
     };

@@ -18390,6 +18390,11 @@
       },
       {
         "source": "gtech-industries",
+        "target": "npm:react-router",
+        "type": "static"
+      },
+      {
+        "source": "gtech-industries",
         "target": "npm:react-cv",
         "type": "static"
       },

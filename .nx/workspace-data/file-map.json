@@ -16,9 +16,9 @@
     "jotai": "^2.10.3",
     "markdown-to-jsx": "^7.7.1",
     "raw-loader": "^4.0.2",
-    "react": "18.3.1",
+    "react": "19.0.0",
     "react-cv": "^1.6.0",
-    "react-dom": "18.3.1",
+    "react-dom": "19.0.0",
     "react-router-dom": "^7.0.2",
     "react-to-print": "^3.0.2",
     "tslib": "^2.8.1",
@@ -29,17 +29,17 @@
     "@chromatic-com/storybook": "^3.2.2",
     "@emotion/babel-plugin": "11.13.5",
     "@nx-dotnet/core": "^2.4.5",
-    "@nx/cypress": "19.8.14",
-    "@nx/eslint": "19.8.14",
-    "@nx/eslint-plugin": "19.8.14",
-    "@nx/jest": "19.8.14",
-    "@nx/js": "19.8.14",
-    "@nx/react": "19.8.14",
-    "@nx/rollup": "19.8.14",
-    "@nx/storybook": "19.8.14",
-    "@nx/web": "19.8.14",
-    "@nx/webpack": "19.8.14",
-    "@nx/workspace": "19.8.14",
+    "@nx/cypress": "20.2.2",
+    "@nx/eslint": "20.2.2",
+    "@nx/eslint-plugin": "20.2.2",
+    "@nx/jest": "20.2.2",
+    "@nx/js": "20.2.2",
+    "@nx/react": "20.2.2",
+    "@nx/rollup": "20.2.2",
+    "@nx/storybook": "20.2.2",
+    "@nx/web": "20.2.2",
+    "@nx/webpack": "20.2.2",
+    "@nx/workspace": "20.2.2",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
     "@rollup/plugin-url": "8.0.2",
     "@storybook/addon-essentials": "8.4.7",
@@ -75,7 +75,7 @@
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "jest-environment-node": "^29.7.0",
-    "nx": "19.8.14",
+    "nx": "20.2.2",
     "prettier": "^3.4.2",
     "react-refresh": "^0.16.0",
     "storybook": "8.4.7",
@@ -146,6 +146,34 @@
   "fileMap": {
     "nonProjectFiles": [
       {
+        "file": "jest.preset.js",
+        "hash": "14446286495986982650"
+      },
+      {
+        "file": "types/react-cv/index.d.ts",
+        "hash": "1077359493193910339"
+      },
+      {
+        "file": ".github/workflows/dynamo-tables-deploy.yml",
+        "hash": "17797107439939049476"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "storybook-migration-summary.md",
+        "hash": "8754006662974873753"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "4934098906304722861"
+      },
+      {
+        "file": "Directory.Build.props",
+        "hash": "11106101967569859271"
+      },
+      {
         "file": "jest.config.ts",
         "hash": "6580851632923501742"
       },
@@ -158,100 +186,72 @@
         "hash": "12508750095442415820"
       },
       {
-        "file": "types/react-cv/index.d.ts",
-        "hash": "1077359493193910339"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "9087265917720686688"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "1094603469163323313"
-      },
-      {
         "file": "package-lock.json",
         "hash": "2748854380590242542"
-      },
-      {
-        "file": "README.md",
-        "hash": "15504302910063696460"
-      },
-      {
-        "file": "storybook-migration-summary.md",
-        "hash": "8754006662974873753"
-      },
-      {
-        "file": ".github/workflows/dynamo-tables-deploy.yml",
-        "hash": "17797107439939049476"
-      },
-      {
-        "file": "package.json",
-        "hash": "10369329433092697002"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "4934098906304722861"
-      },
-      {
-        "file": "types/types.d.ts",
-        "hash": "13644778781036544063"
-      },
-      {
-        "file": ".github/workflows/gtech-direct-api-deploy.yml",
-        "hash": "7561986687412894422"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "15227271167248150401"
-      },
-      {
-        "file": ".config/dotnet-tools.json",
-        "hash": "11380184037138673491"
-      },
-      {
-        "file": "nx.json",
-        "hash": "1072715719972351972"
-      },
-      {
-        "file": ".svgrrc",
-        "hash": "14739206715941919846"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "7150122132014433995"
       },
       {
         "file": "types/@mui/index.d.ts",
         "hash": "2363408758961587240"
       },
       {
-        "file": "jest.preset.js",
-        "hash": "14446286495986982650"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": "Directory.Build.targets",
-        "hash": "9005165865624102645"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "11093795358531291469"
+        "file": "README.md",
+        "hash": "15504302910063696460"
       },
       {
         "file": ".github/workflows/gtech-direct-s3-deploy.yml",
         "hash": "14618498641531872408"
       },
       {
-        "file": "Directory.Build.props",
-        "hash": "11106101967569859271"
+        "file": "Directory.Build.targets",
+        "hash": "9005165865624102645"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "7150122132014433995"
+      },
+      {
+        "file": "types/types.d.ts",
+        "hash": "13644778781036544063"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "1094603469163323313"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "11093795358531291469"
+      },
+      {
+        "file": ".config/dotnet-tools.json",
+        "hash": "11380184037138673491"
+      },
+      {
+        "file": ".github/workflows/gtech-direct-api-deploy.yml",
+        "hash": "7561986687412894422"
+      },
+      {
+        "file": "package.json",
+        "hash": "409381046833683119"
+      },
+      {
+        "file": ".svgrrc",
+        "hash": "14739206715941919846"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "15227271167248150401"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "9087265917720686688"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "nx.json",
+        "hash": "1072715719972351972"
       }
     ],
     "projectFileMap": {
@@ -626,12 +626,12 @@
         },
         {
           "file": "apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx",
-          "hash": "3248442984906815964",
+          "hash": "15869986822618535156",
           "deps": [
             "npm:react",
             "shared-components",
             "npm:@mui/material",
-            "npm:react-router-dom",
+            "npm:react-router",
             "npm:tss-react"
           ]
         },
@@ -687,11 +687,11 @@
         },
         {
           "file": "apps/gtech-industries/src/app/routes/routes.tsx",
-          "hash": "558084912189975888",
+          "hash": "10401097496091283567",
           "deps": [
             "npm:react",
             "shared-components",
-            "npm:react-router-dom"
+            "npm:react-router"
           ]
         },
         {
@@ -837,7 +837,7 @@
         },
         {
           "file": "libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts",
-          "hash": "4382527923761090378",
+          "hash": "17933780319717098192",
           "deps": [
             "npm:aws-cdk-lib",
             "npm:constructs"
