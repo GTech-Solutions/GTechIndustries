@@ -12,15 +12,15 @@ export interface IResumeControllerProps {}
 //https://github.com/sbayd/react-cv
 const ResumeController: React.FC<IResumeControllerProps> = (props) => {
     const { classes, cx } = useStyles(props);
-    const componentRef = useRef<any>();
+    const componentRef = useRef<any>(null);
     const handlePrint = useReactToPrint({
-        content: () => componentRef.current ?? null,
+        contentRef: componentRef.current ?? null,
     });
 
     return (
         <Stack spacing={0} direction='column' justifyContent='flex-start' alignItems='center'>
             <Stack spacing={0} direction='row' justifyContent='center' alignItems='center'>
-                <Button startIcon={<Print />} className={cx(classes.printButton)} variant={'text'} onClick={handlePrint}>
+                <Button startIcon={<Print />} className={cx(classes.printButton)} variant={'text'} onClick={() => handlePrint()}>
                     Print
                 </Button>
                 <Button startIcon={<Email />} className={cx(classes.printButton)} variant={'text'} href={`mailto:mgilge@gmail.com`}>
