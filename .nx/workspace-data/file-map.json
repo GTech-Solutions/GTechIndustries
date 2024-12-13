@@ -16,9 +16,9 @@
     "jotai": "^2.10.3",
     "markdown-to-jsx": "^7.7.1",
     "raw-loader": "^4.0.2",
-    "react": "19.0.0",
+    "react": "18.3.1",
     "react-cv": "^1.6.0",
-    "react-dom": "19.0.0",
+    "react-dom": "18.3.1",
     "react-router-dom": "^7.0.2",
     "react-to-print": "^3.0.2",
     "tslib": "^2.8.1",
@@ -227,11 +227,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "3613237980835906625"
+        "hash": "2748854380590242542"
       },
       {
         "file": "package.json",
-        "hash": "2277542156643771166"
+        "hash": "10369329433092697002"
       },
       {
         "file": "storybook-migration-summary.md",
@@ -255,90 +255,138 @@
       }
     ],
     "projectFileMap": {
-      "aws-infrastructure": [
+      "shared-components": [
         {
-          "file": "libs/aws-infrastructure/.eslintrc.json",
-          "hash": "16896711999632553762"
+          "file": "libs/shared-components/.babelrc",
+          "hash": "2946678488919325452"
         },
         {
-          "file": "libs/aws-infrastructure/README.md",
-          "hash": "1290408401352981534"
+          "file": "libs/shared-components/.eslintrc.json",
+          "hash": "8586479834660874146"
         },
         {
-          "file": "libs/aws-infrastructure/jest.config.ts",
-          "hash": "15955777229408212902"
+          "file": "libs/shared-components/.gitignore",
+          "hash": "11544067078793768163"
         },
         {
-          "file": "libs/aws-infrastructure/package-lock.json",
-          "hash": "7573000548030362373"
+          "file": "libs/shared-components/.storybook/main.ts",
+          "hash": "1267944906042901486"
         },
         {
-          "file": "libs/aws-infrastructure/package.json",
-          "hash": "11672674391337163109"
+          "file": "libs/shared-components/.storybook/preview.ts",
+          "hash": "16880672095192379121"
         },
         {
-          "file": "libs/aws-infrastructure/project.json",
-          "hash": "17096816090106390648"
+          "file": "libs/shared-components/README.md",
+          "hash": "11099004119676569397"
         },
         {
-          "file": "libs/aws-infrastructure/src/index.ts",
-          "hash": "3625764696678703673"
+          "file": "libs/shared-components/jest.config.ts",
+          "hash": "9198035306857274198"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/.gitignore",
-          "hash": "969051664222860559"
+          "file": "libs/shared-components/package.json",
+          "hash": "9848725711830557209"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/.npmignore",
-          "hash": "18043273588612545309"
+          "file": "libs/shared-components/project.json",
+          "hash": "8131813859251203109"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/README.md",
-          "hash": "16893862972903585715"
+          "file": "libs/shared-components/src/index.ts",
+          "hash": "10816571173753816470"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/app-runner/app-runner.ts",
-          "hash": "13718679192663769477"
+          "file": "libs/shared-components/src/lib/atoms/atoms.ts",
+          "hash": "424379922118068630"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/cdk.json",
-          "hash": "7685883042802614222"
+          "file": "libs/shared-components/src/lib/blog-header/blog-header.tsx",
+          "hash": "17185441030710041368"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/dynamo-tables/dynamo-tables.ts",
-          "hash": "7439280696723116690"
+          "file": "libs/shared-components/src/lib/blog-posts/blog-posts.tsx",
+          "hash": "11194792820107279584"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/gtech-stack.ts",
-          "hash": "6971988387473878112"
+          "file": "libs/shared-components/src/lib/custom-appbar/custom-appbar--CustomAppbar.stories.tsx",
+          "hash": "4706321278117776041"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/iam-roles/github-access-role.ts",
-          "hash": "14730803170717215369"
+          "file": "libs/shared-components/src/lib/custom-appbar/custom-appbar.tsx",
+          "hash": "11814514219229190511"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts",
-          "hash": "17933780319717098192"
+          "file": "libs/shared-components/src/lib/custom-datagrid-toolbar/custom-datagrid-toolbar--CustomDataGridToolbar.stories.tsx",
+          "hash": "816402713417939638"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/test/github-access-role.test.ts",
-          "hash": "16318801479225618568"
+          "file": "libs/shared-components/src/lib/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx",
+          "hash": "6698254643425990837"
         },
         {
-          "file": "libs/aws-infrastructure/src/lib/test/static-s3-website.test.ts",
-          "hash": "6521112026532037095"
+          "file": "libs/shared-components/src/lib/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx",
+          "hash": "1338367029087467313"
         },
         {
-          "file": "libs/aws-infrastructure/tsconfig.json",
-          "hash": "5840880287502376438"
+          "file": "libs/shared-components/src/lib/custom-datagrid/custom-data-grid--CustomDataGrid.stories.tsx",
+          "hash": "8569997136478904577"
         },
         {
-          "file": "libs/aws-infrastructure/tsconfig.lib.json",
-          "hash": "3632393694954060084"
+          "file": "libs/shared-components/src/lib/custom-datagrid/custom-data-grid.tsx",
+          "hash": "7129127266314650171"
         },
         {
-          "file": "libs/aws-infrastructure/tsconfig.spec.json",
-          "hash": "11550347367511341917"
+          "file": "libs/shared-components/src/lib/layout-route/layout-route--LayoutRoute.stories.tsx",
+          "hash": "12636531661100794446"
+        },
+        {
+          "file": "libs/shared-components/src/lib/layout-route/layout-route.tsx",
+          "hash": "13967295622742620160"
+        },
+        {
+          "file": "libs/shared-components/src/lib/markdown/markdown.tsx",
+          "hash": "2057741115370426100"
+        },
+        {
+          "file": "libs/shared-components/src/lib/percentage-bar/percentage-bar--PercentageBar.stories.tsx",
+          "hash": "6820012532207380384"
+        },
+        {
+          "file": "libs/shared-components/src/lib/percentage-bar/percentage-bar--renderDataGridPercentageBar.stories.tsx",
+          "hash": "3658926224892579954"
+        },
+        {
+          "file": "libs/shared-components/src/lib/percentage-bar/percentage-bar.tsx",
+          "hash": "9574673032959632785"
+        },
+        {
+          "file": "libs/shared-components/src/lib/toggle-color-mode/toggle-color-mode--ToggleColorMode.stories.tsx",
+          "hash": "6618674805161408280"
+        },
+        {
+          "file": "libs/shared-components/src/lib/toggle-color-mode/toggle-color-mode.tsx",
+          "hash": "3005102664808018520"
+        },
+        {
+          "file": "libs/shared-components/src/lib/utilities/data-grid-identifiers.ts",
+          "hash": "15317696649934764684"
+        },
+        {
+          "file": "libs/shared-components/tsconfig.json",
+          "hash": "17955260260065278496"
+        },
+        {
+          "file": "libs/shared-components/tsconfig.lib.json",
+          "hash": "8899118937795019462"
+        },
+        {
+          "file": "libs/shared-components/tsconfig.spec.json",
+          "hash": "6514620907549802163"
+        },
+        {
+          "file": "libs/shared-components/tsconfig.storybook.json",
+          "hash": "8695397996425870870"
         }
       ],
       "gtech-industries": [
@@ -546,6 +594,92 @@
           "hash": "8794831988107864270"
         }
       ],
+      "aws-infrastructure": [
+        {
+          "file": "libs/aws-infrastructure/.eslintrc.json",
+          "hash": "16896711999632553762"
+        },
+        {
+          "file": "libs/aws-infrastructure/README.md",
+          "hash": "1290408401352981534"
+        },
+        {
+          "file": "libs/aws-infrastructure/jest.config.ts",
+          "hash": "15955777229408212902"
+        },
+        {
+          "file": "libs/aws-infrastructure/package-lock.json",
+          "hash": "7573000548030362373"
+        },
+        {
+          "file": "libs/aws-infrastructure/package.json",
+          "hash": "11672674391337163109"
+        },
+        {
+          "file": "libs/aws-infrastructure/project.json",
+          "hash": "17096816090106390648"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/index.ts",
+          "hash": "3625764696678703673"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/.gitignore",
+          "hash": "969051664222860559"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/.npmignore",
+          "hash": "18043273588612545309"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/README.md",
+          "hash": "16893862972903585715"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/app-runner/app-runner.ts",
+          "hash": "13718679192663769477"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/cdk.json",
+          "hash": "7685883042802614222"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/dynamo-tables/dynamo-tables.ts",
+          "hash": "7439280696723116690"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/gtech-stack.ts",
+          "hash": "6971988387473878112"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/iam-roles/github-access-role.ts",
+          "hash": "14730803170717215369"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/static-s3-website/static-s3-website.ts",
+          "hash": "17933780319717098192"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/test/github-access-role.test.ts",
+          "hash": "16318801479225618568"
+        },
+        {
+          "file": "libs/aws-infrastructure/src/lib/test/static-s3-website.test.ts",
+          "hash": "6521112026532037095"
+        },
+        {
+          "file": "libs/aws-infrastructure/tsconfig.json",
+          "hash": "5840880287502376438"
+        },
+        {
+          "file": "libs/aws-infrastructure/tsconfig.lib.json",
+          "hash": "3632393694954060084"
+        },
+        {
+          "file": "libs/aws-infrastructure/tsconfig.spec.json",
+          "hash": "11550347367511341917"
+        }
+      ],
       "gtech-industries-e2e": [
         {
           "file": "apps/gtech-industries-e2e/.eslintrc.json",
@@ -599,140 +733,6 @@
         {
           "file": "apps/gtech-direct-api-test/Usings.cs",
           "hash": "17144179774649288678"
-        }
-      ],
-      "shared-components": [
-        {
-          "file": "libs/shared-components/.babelrc",
-          "hash": "2946678488919325452"
-        },
-        {
-          "file": "libs/shared-components/.eslintrc.json",
-          "hash": "8586479834660874146"
-        },
-        {
-          "file": "libs/shared-components/.gitignore",
-          "hash": "11544067078793768163"
-        },
-        {
-          "file": "libs/shared-components/.storybook/main.ts",
-          "hash": "1267944906042901486"
-        },
-        {
-          "file": "libs/shared-components/.storybook/preview.ts",
-          "hash": "16880672095192379121"
-        },
-        {
-          "file": "libs/shared-components/README.md",
-          "hash": "11099004119676569397"
-        },
-        {
-          "file": "libs/shared-components/jest.config.ts",
-          "hash": "9198035306857274198"
-        },
-        {
-          "file": "libs/shared-components/package.json",
-          "hash": "9848725711830557209"
-        },
-        {
-          "file": "libs/shared-components/project.json",
-          "hash": "8131813859251203109"
-        },
-        {
-          "file": "libs/shared-components/src/index.ts",
-          "hash": "10816571173753816470"
-        },
-        {
-          "file": "libs/shared-components/src/lib/atoms/atoms.ts",
-          "hash": "424379922118068630"
-        },
-        {
-          "file": "libs/shared-components/src/lib/blog-header/blog-header.tsx",
-          "hash": "17185441030710041368"
-        },
-        {
-          "file": "libs/shared-components/src/lib/blog-posts/blog-posts.tsx",
-          "hash": "11194792820107279584"
-        },
-        {
-          "file": "libs/shared-components/src/lib/custom-appbar/custom-appbar--CustomAppbar.stories.tsx",
-          "hash": "4706321278117776041"
-        },
-        {
-          "file": "libs/shared-components/src/lib/custom-appbar/custom-appbar.tsx",
-          "hash": "11814514219229190511"
-        },
-        {
-          "file": "libs/shared-components/src/lib/custom-datagrid-toolbar/custom-datagrid-toolbar--CustomDataGridToolbar.stories.tsx",
-          "hash": "816402713417939638"
-        },
-        {
-          "file": "libs/shared-components/src/lib/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx",
-          "hash": "6698254643425990837"
-        },
-        {
-          "file": "libs/shared-components/src/lib/custom-datagrid-toolbar/custom-datagrid-toolbar.tsx",
-          "hash": "1338367029087467313"
-        },
-        {
-          "file": "libs/shared-components/src/lib/custom-datagrid/custom-data-grid--CustomDataGrid.stories.tsx",
-          "hash": "8569997136478904577"
-        },
-        {
-          "file": "libs/shared-components/src/lib/custom-datagrid/custom-data-grid.tsx",
-          "hash": "7129127266314650171"
-        },
-        {
-          "file": "libs/shared-components/src/lib/layout-route/layout-route--LayoutRoute.stories.tsx",
-          "hash": "12636531661100794446"
-        },
-        {
-          "file": "libs/shared-components/src/lib/layout-route/layout-route.tsx",
-          "hash": "13967295622742620160"
-        },
-        {
-          "file": "libs/shared-components/src/lib/markdown/markdown.tsx",
-          "hash": "2057741115370426100"
-        },
-        {
-          "file": "libs/shared-components/src/lib/percentage-bar/percentage-bar--PercentageBar.stories.tsx",
-          "hash": "6820012532207380384"
-        },
-        {
-          "file": "libs/shared-components/src/lib/percentage-bar/percentage-bar--renderDataGridPercentageBar.stories.tsx",
-          "hash": "3658926224892579954"
-        },
-        {
-          "file": "libs/shared-components/src/lib/percentage-bar/percentage-bar.tsx",
-          "hash": "9574673032959632785"
-        },
-        {
-          "file": "libs/shared-components/src/lib/toggle-color-mode/toggle-color-mode--ToggleColorMode.stories.tsx",
-          "hash": "6618674805161408280"
-        },
-        {
-          "file": "libs/shared-components/src/lib/toggle-color-mode/toggle-color-mode.tsx",
-          "hash": "3005102664808018520"
-        },
-        {
-          "file": "libs/shared-components/src/lib/utilities/data-grid-identifiers.ts",
-          "hash": "15317696649934764684"
-        },
-        {
-          "file": "libs/shared-components/tsconfig.json",
-          "hash": "17955260260065278496"
-        },
-        {
-          "file": "libs/shared-components/tsconfig.lib.json",
-          "hash": "8899118937795019462"
-        },
-        {
-          "file": "libs/shared-components/tsconfig.spec.json",
-          "hash": "6514620907549802163"
-        },
-        {
-          "file": "libs/shared-components/tsconfig.storybook.json",
-          "hash": "8695397996425870870"
         }
       ]
     }

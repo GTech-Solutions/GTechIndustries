@@ -2048,33 +2048,6 @@
         "hash": "sha512-xmXt/GW0hAPbzNTrxYuVo43Adrtjue4DeVrsoIIEeJdGaPNNeNf+DHMlJKOBdlHmCnFUoe9R/0mLM9zUp5bKWw=="
       }
     },
-    "npm:react@18.3.1": {
-      "type": "npm",
-      "name": "npm:react@18.3.1",
-      "data": {
-        "version": "18.3.1",
-        "packageName": "react",
-        "hash": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ=="
-      }
-    },
-    "npm:react": {
-      "type": "npm",
-      "name": "npm:react",
-      "data": {
-        "version": "19.0.0",
-        "packageName": "react",
-        "hash": "sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ=="
-      }
-    },
-    "npm:react-confetti@6.1.0": {
-      "type": "npm",
-      "name": "npm:react-confetti@6.1.0",
-      "data": {
-        "version": "6.1.0",
-        "packageName": "react-confetti",
-        "hash": "sha512-7Ypx4vz0+g8ECVxr88W9zhcQpbeujJAVqL14ZnXJ3I23mOI9/oBVTQ3dkJhUmB0D6XOtCZEM6N0Gm9PMngkORw=="
-      }
-    },
     "npm:@colors/colors": {
       "type": "npm",
       "name": "npm:@colors/colors",
@@ -5169,42 +5142,6 @@
         "version": "8.4.7",
         "packageName": "@storybook/addon-docs",
         "hash": "sha512-NwWaiTDT5puCBSUOVuf6ME7Zsbwz7Y79WF5tMZBx/sLQ60vpmJVQsap6NSjvK1Ravhc21EsIXqemAcBjAWu80w=="
-      }
-    },
-    "npm:react-dom@18.3.1": {
-      "type": "npm",
-      "name": "npm:react-dom@18.3.1",
-      "data": {
-        "version": "18.3.1",
-        "packageName": "react-dom",
-        "hash": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw=="
-      }
-    },
-    "npm:react-dom": {
-      "type": "npm",
-      "name": "npm:react-dom",
-      "data": {
-        "version": "19.0.0",
-        "packageName": "react-dom",
-        "hash": "sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ=="
-      }
-    },
-    "npm:scheduler@0.23.2": {
-      "type": "npm",
-      "name": "npm:scheduler@0.23.2",
-      "data": {
-        "version": "0.23.2",
-        "packageName": "scheduler",
-        "hash": "sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ=="
-      }
-    },
-    "npm:scheduler": {
-      "type": "npm",
-      "name": "npm:scheduler",
-      "data": {
-        "version": "0.25.0",
-        "packageName": "scheduler",
-        "hash": "sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA=="
       }
     },
     "npm:@storybook/addon-essentials": {
@@ -16052,6 +15989,24 @@
         "hash": "sha512-ZnScIV3ag9A4wPX/ZayxL/jZH+euYb6FcUinPcgiQW0+UBtEv0O6Q3lGd3cqJ+GHH+rksEv3Pj99oxJ3u3VIKA=="
       }
     },
+    "npm:react": {
+      "type": "npm",
+      "name": "npm:react",
+      "data": {
+        "version": "18.3.1",
+        "packageName": "react",
+        "hash": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ=="
+      }
+    },
+    "npm:react-confetti": {
+      "type": "npm",
+      "name": "npm:react-confetti",
+      "data": {
+        "version": "6.1.0",
+        "packageName": "react-confetti",
+        "hash": "sha512-7Ypx4vz0+g8ECVxr88W9zhcQpbeujJAVqL14ZnXJ3I23mOI9/oBVTQ3dkJhUmB0D6XOtCZEM6N0Gm9PMngkORw=="
+      }
+    },
     "npm:react-cv": {
       "type": "npm",
       "name": "npm:react-cv",
@@ -16077,6 +16032,15 @@
         "version": "2.2.2",
         "packageName": "react-docgen-typescript",
         "hash": "sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg=="
+      }
+    },
+    "npm:react-dom": {
+      "type": "npm",
+      "name": "npm:react-dom",
+      "data": {
+        "version": "18.3.1",
+        "packageName": "react-dom",
+        "hash": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw=="
       }
     },
     "npm:react-refresh": {
@@ -16599,6 +16563,15 @@
         "version": "1.4.1",
         "packageName": "sax",
         "hash": "sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg=="
+      }
+    },
+    "npm:scheduler": {
+      "type": "npm",
+      "name": "npm:scheduler",
+      "data": {
+        "version": "0.23.2",
+        "packageName": "scheduler",
+        "hash": "sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ=="
       }
     },
     "npm:secure-compare": {
@@ -20526,31 +20499,12 @@
       },
       {
         "source": "npm:@chromatic-com/storybook",
-        "target": "npm:react-confetti@6.1.0",
+        "target": "npm:react-confetti",
         "type": "static"
       },
       {
         "source": "npm:@chromatic-com/storybook",
         "target": "npm:strip-ansi",
-        "type": "static"
-      }
-    ],
-    "npm:react@18.3.1": [
-      {
-        "source": "npm:react@18.3.1",
-        "target": "npm:loose-envify",
-        "type": "static"
-      }
-    ],
-    "npm:react-confetti@6.1.0": [
-      {
-        "source": "npm:react-confetti@6.1.0",
-        "target": "npm:react@18.3.1",
-        "type": "static"
-      },
-      {
-        "source": "npm:react-confetti@6.1.0",
-        "target": "npm:tween-functions",
         "type": "static"
       }
     ],
@@ -24969,41 +24923,17 @@
       },
       {
         "source": "npm:@storybook/addon-docs",
-        "target": "npm:react@18.3.1",
+        "target": "npm:react",
         "type": "static"
       },
       {
         "source": "npm:@storybook/addon-docs",
-        "target": "npm:react-dom@18.3.1",
+        "target": "npm:react-dom",
         "type": "static"
       },
       {
         "source": "npm:@storybook/addon-docs",
         "target": "npm:ts-dedent",
-        "type": "static"
-      }
-    ],
-    "npm:react-dom@18.3.1": [
-      {
-        "source": "npm:react-dom@18.3.1",
-        "target": "npm:react@18.3.1",
-        "type": "static"
-      },
-      {
-        "source": "npm:react-dom@18.3.1",
-        "target": "npm:loose-envify",
-        "type": "static"
-      },
-      {
-        "source": "npm:react-dom@18.3.1",
-        "target": "npm:scheduler@0.23.2",
-        "type": "static"
-      }
-    ],
-    "npm:scheduler@0.23.2": [
-      {
-        "source": "npm:scheduler@0.23.2",
-        "target": "npm:loose-envify",
         "type": "static"
       }
     ],
@@ -38297,6 +38227,25 @@
         "type": "static"
       }
     ],
+    "npm:react": [
+      {
+        "source": "npm:react",
+        "target": "npm:loose-envify",
+        "type": "static"
+      }
+    ],
+    "npm:react-confetti": [
+      {
+        "source": "npm:react-confetti",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-confetti",
+        "target": "npm:tween-functions",
+        "type": "static"
+      }
+    ],
     "npm:react-cv": [
       {
         "source": "npm:react-cv",
@@ -38340,12 +38289,12 @@
       },
       {
         "source": "npm:react-cv",
-        "target": "npm:react@18.3.1",
+        "target": "npm:react",
         "type": "static"
       },
       {
         "source": "npm:react-cv",
-        "target": "npm:react-dom@18.3.1",
+        "target": "npm:react-dom",
         "type": "static"
       }
     ],
@@ -38426,6 +38375,11 @@
       {
         "source": "npm:react-dom",
         "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "npm:react-dom",
+        "target": "npm:loose-envify",
         "type": "static"
       },
       {
@@ -39946,6 +39900,13 @@
       {
         "source": "npm:saxes",
         "target": "npm:xmlchars",
+        "type": "static"
+      }
+    ],
+    "npm:scheduler": [
+      {
+        "source": "npm:scheduler",
+        "target": "npm:loose-envify",
         "type": "static"
       }
     ],
