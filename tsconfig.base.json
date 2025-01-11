@@ -19,6 +19,7 @@
         "baseUrl": ".",
         "paths": {
             "@gtech/aws-infrastructure": ["libs/aws-infrastructure/src/index.ts"],
+            "@gtech/cloud-gaze": ["libs/cloud-gaze/src/index.ts"],
             "@gtech/shared-components": ["libs/shared-components/src/index.ts"]
         }
     },
