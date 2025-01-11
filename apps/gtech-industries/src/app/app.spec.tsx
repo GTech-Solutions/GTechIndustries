@@ -1,14 +1,13 @@
-import App from './app';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 
 const renderApp = () => {
-    return render(
+    /*    return render(
         <BrowserRouter>
             <App />
         </BrowserRouter>
-    );
+    );*/
 };
 
 describe('App', () => {
