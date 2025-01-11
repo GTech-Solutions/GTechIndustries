@@ -4,6 +4,26 @@
     "sourceRoot": "libs/cloud-gaze/src",
     "projectType": "library",
     "tags": [],
-    "// targets": "to see all targets run: nx show project cloud-gaze --web",
-    "targets": {}
+    "targets": {
+      "build": {
+        "executor": "@nx/rollup:rollup",
+        "outputs": ["{options.outputPath}"],
+        "options": {
+          "outputPath": "dist/libs/cloud-gaze",
+          "tsConfig": "libs/cloud-gaze/tsconfig.lib.json",
+          "project": "libs/cloud-gaze/package.json",
+          "entryFile": "libs/cloud-gaze/src/index.ts",
+          "external": ["@gtech/shared-components","react", "react-dom", "react/jsx-runtime"],
+          "rollupConfig": "@nx/react/plugins/bundle-rollup",
+          "compiler": "babel",
+          "assets": [
+            {
+              "glob": "libs/cloud-gaze/README.md",
+              "input": ".",
+              "output": "."
+            }
+          ]
+        }
+      }
+    }
 }

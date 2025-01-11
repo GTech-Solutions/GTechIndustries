@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.spec.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.spec.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/rollup.config.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/tsconfig.lib.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/tsconfig.lib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +70,7 @@
     "Jest.StaticS3WebsiteStack.executor": "Run",
     "Jest.StaticS3WebsiteStack.modifies the resource policy for the hosting bucket.executor": "Run",
     "Jest.creates an iam role.executor": "Run",
+    "Nx.@gtech/cloud-gaze:build.executor": "Run",
     "Nx.cloud-gaze:build.executor": "Run",
     "Nx.gtech-industries:build.executor": "Run",
     "Nx.gtech-industries:serve.executor": "Run",
@@ -113,7 +117,6 @@
       "/Users/michaelgilge/Code/GTechIndustries/libs/cloud-gaze/project.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/cloud-gaze/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/libs/cloud-gaze/jest.config.ts",
-      "/Users/michaelgilge/Code/GTechIndustries/libs/cloud-gaze/rollup.config.cjs",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/Gtech.Apps.GtechDirectApi.csproj",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/Gtech.Apps.GtechDirectApi.Test.csproj",
@@ -137,7 +140,7 @@
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Nx.gtech-industries:serve">
+  <component name="RunManager" selected="Nx.cloud-gaze:build">
     <configuration name="CustomDataGridToolbar (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -162,29 +165,12 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="CustomDataGridToolbar.resets state on Reset button click" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/libs/shared-components" />
+    <configuration name="@gtech/cloud-gaze:build" type="NxRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="nx-projects" value="@gtech/cloud-gaze" />
+      <option name="nx-targets" value="build" />
+      <option name="nx-target-configuration" value="" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/libs/shared-components/src/custom-datagrid-toolbar/custom-datagrid-toolbar.spec.tsx" />
-      <test-names>
-        <test-name value="CustomDataGridToolbar" />
-        <test-name value="resets state on Reset button click" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="StaticS3WebsiteStack" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$/libs/aws-infrastructure" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/libs/aws-infrastructure/src/test/static-s3-website.test.ts" />
-      <test-names>
-        <test-name value="StaticS3WebsiteStack" />
-      </test-names>
+      <option name="arguments" value="" />
       <method v="2" />
     </configuration>
     <configuration name="cloud-gaze:build" type="NxRunConfigurationType">
@@ -219,6 +205,14 @@
       <option name="arguments" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="shared-components:build" type="NxRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="nx-projects" value="shared-components" />
+      <option name="nx-targets" value="build" />
+      <option name="nx-target-configuration" value="" />
+      <envs />
+      <option name="arguments" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
@@ -235,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Nx.shared-components:build" />
+        <item itemvalue="Nx.@gtech/cloud-gaze:build" />
         <item itemvalue="Jest.CustomDataGridToolbar (1)" />
         <item itemvalue="Docker.gtech-direct-api/Dockerfile" />
         <item itemvalue="Jest.CustomDataGridToolbar" />
-        <item itemvalue="Jest.CustomDataGridToolbar.resets state on Reset button click" />
-        <item itemvalue="Jest.StaticS3WebsiteStack" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +264,7 @@
       <workItem from="1733848316977" duration="6350000" />
       <workItem from="1734104248235" duration="3115000" />
       <workItem from="1734107367657" duration="553000" />
-      <workItem from="1736593858170" duration="20046000" />
+      <workItem from="1736593858170" duration="22912000" />
     </task>
     <servers />
   </component>
