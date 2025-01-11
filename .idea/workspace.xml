@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.spec.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/app.spec.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +270,7 @@
       <workItem from="1733848316977" duration="6350000" />
       <workItem from="1734104248235" duration="3115000" />
       <workItem from="1734107367657" duration="553000" />
-      <workItem from="1736593858170" duration="18839000" />
+      <workItem from="1736593858170" duration="20046000" />
     </task>
     <servers />
   </component>
