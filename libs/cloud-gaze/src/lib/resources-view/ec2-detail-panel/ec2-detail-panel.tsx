@@ -1,10 +1,18 @@
 import React from 'react';
 import { makeStyles } from 'tss-react/mui';
-import { DataGridPro, gridClasses, GridRowModel } from '@mui/x-data-grid-pro';
+import {
+    DataGridPro,
+    GridCellEditStopReasons,
+    gridClasses,
+    GridColDef,
+    GridRenderCellParams,
+    GridRenderEditCellParams,
+    GridRowModel,
+} from '@mui/x-data-grid-pro';
 import { randomArrayItem, randomCommodity, randomCountry, randomInt, randomPrice } from '@mui/x-data-grid-generator';
 import { DetailPanelDataCache } from '../resources-datagrid/detail-data-panel-cache';
-import { Button, IconButton, Paper, Stack, Typography } from '@mui/material';
-import { CustomDataGrid, dataGridIdentifiers, JsonDialog, useStickyHeaders } from '@gtech/shared-components';
+import { Button, Chip, IconButton, Paper, Stack, Typography } from '@mui/material';
+import { CustomDataGrid, dataGridIdentifiers, DatagridTagEditor, isKeyboardEvent, JsonDialog, useStickyHeaders } from '@gtech/shared-components';
 import { FilePresent } from '@mui/icons-material';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -22,9 +30,12 @@ async function getDetails(id: GridRowModel['id']) {
         id: `${id}-${index}`,
         name: randomCommodity(),
         region: randomArrayItem(['us-east-1', 'us-west-2', 'eu-west-1']),
-        tags: ['tag1', 'tag2', 'tag3'],
+        tags: [
+            { key: 'key', value: 'value' },
+            { key: 'key', value: 'value' },
+            { key: 'key', value: 'value' },
+        ],
         json: JSON.stringify({ key: 'value' }),
-        cost: randomPrice(),
     }));
 }
 
@@ -62,47 +73,55 @@ const Ec2DetailPanel: React.FC<IEc2DetailPanelProps> = (props) => {
         };
     }, [props.row.id, detailPanelDataCache]);
 
+    const columns: GridColDef[] = [
+        { field: 'id', headerName: 'ID' },
+        {
+            field: 'name',
+            headerName: 'Name',
+            type: 'string',
+        },
+        { field: 'region', headerName: 'Region', type: 'string' },
+        {
+            field: 'tags',
+            headerName: 'Tags',
+            type: 'custom',
+            editable: true,
+            renderCell: (params: GridRenderCellParams) =>
+                params.row.tags.map((tag: any, index: number) => (
+                    <Chip sx={{ marginLeft: index > 0 ? '.25rem' : 0 }} label={`${tag.key}:${tag.value}`} />
+                )),
+            renderEditCell: (params: GridRenderEditCellParams) => <DatagridTagEditor {...params} name={params.row.name} resourceId={params.row.id} />,
+        },
+        {
+            field: 'json',
+            headerName: 'JSON',
+            type: 'string',
+            renderCell: (params: GridRenderCellParams) => (
+                <Stack direction='row' alignItems='center'>
+                    <JsonDialog json={params.value} isOpen={isJsonDialogOpen} onClose={() => setIsJsonDialogOpen(false)} />
+                    <IconButton onClick={() => setIsJsonDialogOpen(true)}>
+                        <FilePresent />
+                    </IconButton>
+                </Stack>
+            ),
+        },
+    ];
+
     return (
         <div style={{ height: '100%', left: 0, display: 'flex', flexDirection: 'column', width: '100%' }} ref={containerRef}>
             <CustomDataGrid
                 dataGridIdentifier={dataGridIdentifiers.dataGridCloudGazeEc2}
                 loading={isLoading}
-                columns={[
-                    { field: 'id', headerName: 'ID' },
-                    {
-                        field: 'name',
-                        headerName: 'Name',
-                        type: 'string',
-                    },
-                    { field: 'region', headerName: 'Region', type: 'string' },
-                    {
-                        field: 'tags',
-                        headerName: 'Tags',
-                        type: 'string',
-                        valueGetter: (value, row) => row.tags.join(', '),
-                    },
-                    {
-                        field: 'json',
-                        headerName: 'JSON',
-                        type: 'string',
-                        renderCell: (params) => (
-                            <Stack direction='row' alignItems='center'>
-                                <JsonDialog json={params.value} isOpen={isJsonDialogOpen} onClose={() => setIsJsonDialogOpen(false)} />
-                                <IconButton onClick={() => setIsJsonDialogOpen(true)}>
-                                    <FilePresent />
-                                </IconButton>
-                                ,
-                            </Stack>
-                        ),
-                    },
-                    {
-                        field: 'cost',
-                        headerName: 'Cost',
-                        type: 'string',
-                        valueGetter: (value) => `$${value}`,
-                    },
-                ]}
+                columns={columns}
                 rows={ec2s}
+                onCellEditStop={(params, event) => {
+                    if (params.reason !== GridCellEditStopReasons.enterKeyDown) {
+                        return;
+                    }
+                    if (isKeyboardEvent(event) && !event.ctrlKey && !event.metaKey) {
+                        event.defaultMuiPrevented = true;
+                    }
+                }}
             />
         </div>
     );

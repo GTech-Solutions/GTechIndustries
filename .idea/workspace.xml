@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/lib/datagrid-tag-editor/datagrid-tag-editor.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/lib/utilities/utilities.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/rollup.config.cjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/tsconfig.lib.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/tsconfig.lib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/ec2-detail-panel/ec2-detail-panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/ec2-detail-panel/ec2-detail-panel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +143,7 @@
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Nx.cloud-gaze:build">
+  <component name="RunManager" selected="Nx.gtech-industries:serve">
     <configuration name="CustomDataGridToolbar (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -264,7 +267,7 @@
       <workItem from="1733848316977" duration="6350000" />
       <workItem from="1734104248235" duration="3115000" />
       <workItem from="1734107367657" duration="553000" />
-      <workItem from="1736593858170" duration="22912000" />
+      <workItem from="1736593858170" duration="35064000" />
     </task>
     <servers />
   </component>

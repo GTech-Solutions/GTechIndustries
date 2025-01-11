@@ -9,3 +9,5 @@ export * from './lib/blog-header/blog-header';
 export * from './lib/blog-posts/blog-posts';
 export * from './lib/json-dialog/json-dialog';
 export * from './lib/utilities/use-sticky-headers';
+export * from './lib/datagrid-tag-editor/datagrid-tag-editor';
+export * from './lib/utilities/utilities';

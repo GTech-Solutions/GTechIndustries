@@ -179,7 +179,6 @@ const ResourcesDatagrid: React.FC<IResourcesDatagridProps> = (props) => {
             headerName: 'Resources',
             flex: 1,
         },
-        { field: 'cost', headerName: 'Cost', flex: 1 },
     ];
 
     const rows = [
@@ -187,13 +186,11 @@ const ResourcesDatagrid: React.FC<IResourcesDatagridProps> = (props) => {
             id: 1,
             resourceType: 'EC2',
             resources: '10',
-            cost: '$100',
         },
         {
             id: 2,
             resourceType: 'RDS',
             resources: '5',
-            cost: '$50',
         },
     ];
 
@@ -224,7 +221,7 @@ const ResourcesDatagrid: React.FC<IResourcesDatagridProps> = (props) => {
             rows={rows}
             getDetailPanelContent={getDetailPanelContent}
             getDetailPanelHeight={({ row }) => 'auto'}
-            onDetailPanelExpandedRowIdsChange={handleDetailPanelExpansionChange}
+            onDetailPanelExpandedRowIdsChange={(ids, details) => handleDetailPanelExpansionChange(ids, details)}
         />
     );
 };
