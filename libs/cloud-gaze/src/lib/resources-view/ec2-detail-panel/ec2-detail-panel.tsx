@@ -110,6 +110,7 @@ const Ec2DetailPanel: React.FC<IEc2DetailPanelProps> = (props) => {
     return (
         <div style={{ height: '100%', left: 0, display: 'flex', flexDirection: 'column', width: '100%' }} ref={containerRef}>
             <CustomDataGrid
+                withAutoSaveTableState
                 dataGridIdentifier={dataGridIdentifiers.dataGridCloudGazeEc2}
                 loading={isLoading}
                 columns={columns}
