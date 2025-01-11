@@ -7,6 +7,7 @@ import { AutoSaveDataGridController } from '../auto-save-data-grid-controller/au
 import { ManualSaveDataGridController } from '../manual-save-data-grid-controller/manual-save-data-grid-controller';
 import { ResumeController } from '../resume-controller/resume-controller';
 import { BlogController } from '../blog-controller/blog-controller';
+import { ResourcesDatagrid } from '@gtech/cloud-gaze';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface IRoutesProps {}
@@ -18,6 +19,7 @@ const Routes: React.FC<IRoutesProps> = (props) => {
             <Route path={'*'} element={<LayoutRoute layoutComponent={GtechIndustriesLayout} />}>
                 <Route path={routeUrls.dataGridAutoSave} element={<AutoSaveDataGridController />} />
                 <Route path={routeUrls.dataGridManualSave} element={<ManualSaveDataGridController />} />
+                <Route path={routeUrls.cloudGaze} element={<ResourcesDatagrid />} />
                 <Route path={routeUrls.treeView} element={<div>TreeView</div>} />
                 <Route path={routeUrls.resume} element={<ResumeController />} />
                 <Route path={routeUrls.blog} element={<BlogController />} />

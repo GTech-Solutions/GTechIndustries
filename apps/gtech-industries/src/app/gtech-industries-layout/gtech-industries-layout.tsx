@@ -46,6 +46,7 @@ const GtechIndustriesLayout: React.FC<IGtechIndustriesLayoutProps> = (props) => 
             >
                 <MenuItem onClick={() => handleMenuItemClick(routeUrls.dataGridAutoSave)}>With auto save state</MenuItem>
                 <MenuItem onClick={() => handleMenuItemClick(routeUrls.dataGridManualSave)}>With manual save state</MenuItem>
+                <MenuItem onClick={() => handleMenuItemClick(routeUrls.cloudGaze)}>Cloud Gaze</MenuItem>
             </Menu>
             <CustomAppbar
                 isDrawerOpen={isMenuDrawerOpen}

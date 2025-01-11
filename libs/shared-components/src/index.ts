@@ -7,3 +7,5 @@ export * from './lib/utilities/data-grid-identifiers';
 export * from './lib/percentage-bar/percentage-bar';
 export * from './lib/blog-header/blog-header';
 export * from './lib/blog-posts/blog-posts';
+export * from './lib/json-dialog/json-dialog';
+export * from './lib/utilities/use-sticky-headers';

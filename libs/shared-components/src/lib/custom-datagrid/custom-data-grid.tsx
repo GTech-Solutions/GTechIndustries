@@ -13,6 +13,8 @@ import {
 import { DataGridProProps } from '@mui/x-data-grid-pro/models/dataGridProProps';
 import { useAtom } from 'jotai';
 import { atomWithStorage } from 'jotai/vanilla/utils';
+import { CustomDataGridToolbar } from '../custom-datagrid-toolbar/custom-datagrid-toolbar';
+import { GridSlotsComponent } from '@mui/x-data-grid';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ICustomDataGridProps extends DataGridProProps {
@@ -74,6 +76,9 @@ const CustomDataGrid: React.FC<ICustomDataGridProps> = (props) => {
                     rowsPerPage: paginationModel?.pageSize,
                     ...props.slotProps?.pagination,
                 },
+            }}
+            slots={{
+                toolbar: CustomDataGridToolbar as GridSlotsComponent['toolbar'],
             }}
             pagination
         />

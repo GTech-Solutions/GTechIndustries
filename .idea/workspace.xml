@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/ec2-detail-panel/ec2-detail-panel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/detail-data-panel-cache.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/lib/json-dialog/json-dialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routeUrls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routeUrls.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/cloud-gaze.spec.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/cloud-gaze.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/lib/custom-datagrid/custom-data-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/lib/custom-datagrid/custom-data-grid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/lib/utilities/data-grid-identifiers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/lib/utilities/data-grid-identifiers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="ReactComponent" />
         <option value="TypeScript File" />
+        <option value="ReactComponent" />
       </list>
     </option>
   </component>
@@ -27,6 +41,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -73,7 +90,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "develop",
-    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/.github/workflows",
+    "last_opened_file_path": "/Users/michaelgilge/Code/GTechIndustries/libs/cloud-gaze",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -107,6 +124,10 @@
       "/Users/michaelgilge/Code/GTechIndustries/libs/shared-components/jest.config.ts",
       "/Users/michaelgilge/Code/GTechIndustries/libs/shared-components/.storybook/main.ts",
       "/Users/michaelgilge/Code/GTechIndustries/libs/shared-components/.storybook/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/cloud-gaze/project.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/cloud-gaze/package.json",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/cloud-gaze/jest.config.ts",
+      "/Users/michaelgilge/Code/GTechIndustries/libs/cloud-gaze/rollup.config.cjs",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/Gtech.Apps.GtechDirectApi.csproj",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api/package.json",
       "/Users/michaelgilge/Code/GTechIndustries/apps/gtech-direct-api-test/Gtech.Apps.GtechDirectApi.Test.csproj",
@@ -116,11 +137,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs/cloud-gaze" />
       <recent name="$PROJECT_DIR$/.github/workflows" />
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps/gtech-industries/src/app/styling" />
-      <recent name="$PROJECT_DIR$/.github" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/gtech-industries" />
@@ -263,7 +284,7 @@
       <workItem from="1733848316977" duration="6350000" />
       <workItem from="1734104248235" duration="3115000" />
       <workItem from="1734107367657" duration="553000" />
-      <workItem from="1736593858170" duration="411000" />
+      <workItem from="1736593858170" duration="18402000" />
     </task>
     <servers />
   </component>
@@ -306,12 +327,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx</url>
-          <line>108</line>
+          <line>109</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/apps/gtech-industries/src/main.tsx</url>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.tsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
