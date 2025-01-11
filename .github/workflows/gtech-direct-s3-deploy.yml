@@ -72,7 +72,7 @@ jobs:
           cache-dependency-path: ./package-lock.json
       - name: Install dependencies
         id: npm-ci
-        run: npm ci
+        run: npm ci --force
 
       # ---- Test GTech Industries ----
       - name: Run nx test on all projects

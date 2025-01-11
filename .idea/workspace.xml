@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9d5fd28-2138-4699-a3f2-6097700bd211" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/ec2-detail-panel/ec2-detail-panel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/detail-data-panel-cache.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/shared-components/src/lib/json-dialog/json-dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/gtech-industries-layout/gtech-industries-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routeUrls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routeUrls.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/routes/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/gtech-industries/src/app/styling/use-gtech-industries-theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/cloud-gaze.spec.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/cloud-gaze.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/lib/custom-datagrid/custom-data-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/lib/custom-datagrid/custom-data-grid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/shared-components/src/lib/utilities/data-grid-identifiers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/shared-components/src/lib/utilities/data-grid-identifiers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/cloud-gaze/src/lib/resources-view/resources-datagrid/resources-datagrid.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +268,7 @@
       <workItem from="1733848316977" duration="6350000" />
       <workItem from="1734104248235" duration="3115000" />
       <workItem from="1734107367657" duration="553000" />
-      <workItem from="1736593858170" duration="18402000" />
+      <workItem from="1736593858170" duration="18839000" />
     </task>
     <servers />
   </component>

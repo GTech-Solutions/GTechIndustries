@@ -22,6 +22,7 @@ import { flushSync } from 'react-dom';
 export interface IResourcesDatagridProps {}
 const pinnedRowDetialHeight = 300;
 let numPinnedRowsExpanded = 0;
+
 function getDetailPanelContentCustom(params: GridRowModel) {
     switch (params.resourceType) {
         case 'EC2':
