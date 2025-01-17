@@ -9,6 +9,8 @@ import { AwsCustomResourcePolicy, PhysicalResourceId } from 'aws-cdk-lib/custom-
 import ImageConfigurationProperty = CfnService.ImageConfigurationProperty;
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { DockerImageCode, DockerImageFunction } from 'aws-cdk-lib/aws-lambda';
+import { HttpApi, HttpMethod } from 'aws-cdk-lib/aws-apigatewayv2';
+import { HttpLambdaIntegration } from 'aws-cdk-lib/aws-apigatewayv2-integrations';
 
 export class AppRunner extends cdk.Stack {
     constructor(
@@ -32,8 +34,26 @@ export class AppRunner extends cdk.Stack {
         Tags.of(scope).add('creator', 'Mike G');
         Tags.of(scope).add('automation', 'AWS CDK');
 
-        const myFunction = new DockerImageFunction(this, 'MyFunction', {
+        const csharpLambda = new DockerImageFunction(this, 'MyFunction', {
             code: DockerImageCode.fromImageAsset(path.join(__dirname, dockerFilePath)),
+        });
+
+        // Define the API Gateway HTTP API
+        const httpApi = new HttpApi(this, 'CsharpLambdaApi', {
+            description: 'HTTP API Gateway for C# Lambda',
+        });
+
+        // Add a route that proxies to the Lambda
+        httpApi.addRoutes({
+            path: '/{proxy+}', // Proxy all requests
+            methods: [HttpMethod.ANY], // Allow all HTTP methods
+            integration: new HttpLambdaIntegration('LambdaProxyIntegration', csharpLambda),
+        });
+
+        // Output the API Gateway URL
+        new cdk.CfnOutput(this, 'ApiUrl', {
+            value: httpApi.apiEndpoint,
+            description: 'The API Gateway endpoint URL',
         });
 
         /* const imageAsset = new DockerImageAsset(this, 'gtech-direct-api', {
