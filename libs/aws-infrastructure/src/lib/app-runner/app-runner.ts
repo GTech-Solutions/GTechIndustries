@@ -8,6 +8,7 @@ import { CfnService } from 'aws-cdk-lib/aws-apprunner';
 import { AwsCustomResourcePolicy, PhysicalResourceId } from 'aws-cdk-lib/custom-resources';
 import ImageConfigurationProperty = CfnService.ImageConfigurationProperty;
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
+import { DockerImageCode, DockerImageFunction } from 'aws-cdk-lib/aws-lambda';
 
 export class AppRunner extends cdk.Stack {
     constructor(
@@ -31,7 +32,11 @@ export class AppRunner extends cdk.Stack {
         Tags.of(scope).add('creator', 'Mike G');
         Tags.of(scope).add('automation', 'AWS CDK');
 
-        const imageAsset = new DockerImageAsset(this, 'gtech-direct-api', {
+        const myFunction = new DockerImageFunction(this, 'MyFunction', {
+            code: DockerImageCode.fromImageAsset(path.join(__dirname, dockerFilePath)),
+        });
+
+        /* const imageAsset = new DockerImageAsset(this, 'gtech-direct-api', {
             ignoreMode: IgnoreMode.DOCKER,
             file: dockerFile,
             directory: path.join(__dirname, dockerFilePath),
@@ -119,6 +124,6 @@ export class AppRunner extends cdk.Stack {
             policy: AwsCustomResourcePolicy.fromSdkCalls({
                 resources: AwsCustomResourcePolicy.ANY_RESOURCE,
             }),
-        });
+        });*/
     }
 }
